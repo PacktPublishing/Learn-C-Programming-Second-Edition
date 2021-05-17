@@ -1,7 +1,7 @@
 //
 // hello.c
 // Chapter 2
-// <book title>
+// Learn C Programming, 2nd Edition
 //
 // Simple "Hello, world!" program.
 //
