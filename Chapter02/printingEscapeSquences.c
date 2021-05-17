@@ -1,7 +1,7 @@
 // 
 // printingEscapeSequences.c
 // Chapter 2
-// <book title>
+// Learn C Programming, 2nd Ed.
 //
 // Demonstrate how escape sequences appear both
 // in the source code and on the console.
