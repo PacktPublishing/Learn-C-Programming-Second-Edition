@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-void printComma()  {
+void printComma( void )  {
   printf( ", " );
 }
 
@@ -27,7 +27,7 @@ void printGreeting( char* greeting , char* addressee )  {
   printf( "!\n" );
 }
 
-int main()  {
+int main( void )  {
   printGreeting( "Hello" , "world" );
   printGreeting( "Good day" , "Your Royal Highness" );
   printGreeting( "Howdy" , "John Q. and Jane P. Doe" );
