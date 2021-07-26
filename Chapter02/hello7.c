@@ -19,7 +19,7 @@ void printAComma(   void );
 void printANewLine( void );
 
 
-int main()  {
+int main( void )  {
   printGreeting( "Hi" , "Bub" );
 
   return 0; 
@@ -44,7 +44,7 @@ void printAComma( void )  {
   printf( ", " );
 }
 
-void printANewLine()  {
+void printANewLine( void )  {
   printf( "\n" );
 }
 
