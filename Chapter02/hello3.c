@@ -9,7 +9,7 @@
 
 #include <stdio.h>
 
-void printComma()  {
+void printComma( void )  {
   printf( ", " );
 }
 
