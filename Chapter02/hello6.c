@@ -20,7 +20,7 @@ void printAnAddressee( char* aName )  {
   printf( "%s" , aName );
 }
 
-void printANewLine()  {
+void printANewLine( void )  {
   printf( "\n" );
 }
 
@@ -31,7 +31,7 @@ void printGreeting( char* aGreeting , char* aName )  {
   printANewLine();
 }
 
-int main()  {
+int main( void )  {
   printGreeting( "Hi" , "Bub" );
 
   return 0; 
