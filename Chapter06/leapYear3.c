@@ -7,7 +7,7 @@
   //
   // Compile with:
   //
-  //    cc leapyear3.c -o leapyear3 -Wall -Werror -std=c2x
+  //    cc leapyear3.c -o leapyear3 -Wall -Werror -std=c17
 
 
 #include <stdio.h>
