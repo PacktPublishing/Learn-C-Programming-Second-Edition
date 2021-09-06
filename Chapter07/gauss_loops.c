@@ -35,13 +35,11 @@ int main( void )  {
 
 int sumNviaWhile( int N )  {
   int sum = 0;
-
   int num = 0;
   while( num < N )  {     // num: 0..99 (100 is not less than 100)
     sum += (num+1);       // Off-by-one: shift 0..99 to 1..100.
     num++;
-  }
-  
+  }  
   return sum;
 }
 
@@ -52,7 +50,6 @@ int sumNviaFor( int N )  {
   for( int num = 0 ; num < N ; num++ )  {  // num: 0..99 (it's a C thing)
     sum += (num+1);                        // Off-by-one: shift 0..99 to 1..100.
   }
-
   return sum;
 }
 
