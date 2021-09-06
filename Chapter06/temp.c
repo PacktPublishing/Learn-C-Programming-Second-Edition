@@ -8,7 +8,7 @@
   //
   // Compile with:
   //
-  //    cc temp.c -o temp -Wall -Werror -std=c2x
+  //    cc temp.c -o temp -Wall -Werror -std=c17
 
 
 #include <stdio.h>
