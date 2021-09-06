@@ -54,8 +54,7 @@ int sumNviaDoWhile( int N )  {
 }
 
 
-int sumNviaGoto_Do( int N )
-{
+int sumNviaGoto_Do( int N )  {
   int sum = 0;
   int num = 0;
 
@@ -75,8 +74,7 @@ end_loop:
 
   // ------------ While and Goto_While
 
-int sumNviaWhile( int N )
-{
+int sumNviaWhile( int N )  {
   int sum = 0;
   int num = 0;
 
