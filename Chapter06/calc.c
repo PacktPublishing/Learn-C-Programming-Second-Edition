@@ -7,7 +7,7 @@
   //
   // Compile with:
   //
-  //    cc calc.c -o calc -Wall -Werror -std=c2x
+  //    cc calc.c -o calc -Wall -Werror -std=c17
 
 
 #include <stdio.h>
