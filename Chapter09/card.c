@@ -9,34 +9,33 @@
 //    cc card.c -o card -Wall -Werror -std=c17
 
 
-
 #include <stdio.h>
 #include <stdbool.h>
 
 
 enum Suit  {
-  club  = 1, 
-  diamond, 
-  heart,
-  spade 
+  eClub  = 1, 
+  eDiamond, 
+  eHeart,
+  eSpade 
 };
 
 
 enum Face  { 
-  one = 1, 
-  two, 
-  three, 
-  four, 
-  five, 
-  six, 
-  seven, 
-  eight, 
-  nine, 
-  ten, 
-  jack, 
-  queen, 
-  king, 
-  ace
+  eOne = 1, 
+  eTwo, 
+  eThree, 
+  eFour, 
+  eFive, 
+  eSix, 
+  eSeven, 
+  eEight, 
+  eNine, 
+  eTen, 
+  eJack, 
+  eQueen, 
+  eKing, 
+  eAce
 };
 
 
