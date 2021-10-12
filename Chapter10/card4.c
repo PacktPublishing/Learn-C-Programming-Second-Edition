@@ -1,20 +1,64 @@
-// card5.c
+// card4.c
 // Chapter 10
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to create source file with its
-// own header file of typedefs, custom types, and 
-// function prototypes.
+// Demonstrate the use of typedef for
+// enums and structs.
 //
 // Compile with:
 //
-//    cc card5.c -o card5 -Wall -Werror -std=c17
+//    cc card4.c -o card4 -Wall -Werror -std=c17
 
 
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "card.h"
+
+typedef enum  {
+  eClub  = 1,
+  eDiamond, 
+  eHeart,
+  eSpade 
+} Suit;
+
+
+typedef enum {
+  eOne = 1, 
+  eTwo, 
+  eThree, 
+  eFour, 
+  eFive, 
+  eSix, 
+  eSeven, 
+  eEight, 
+  eNine, 
+  eTen, 
+  eJack, 
+  eQueen, 
+  eKing, 
+  eAce
+} Face;
+
+
+typedef struct  {
+ Suit suit;
+ int  suitValue;
+ Face face;
+ int  faceValue;
+ bool isWild;
+} Card;
+
+
+typedef struct  {
+  int  cardsDealt;
+  Card c1, c2, c3, c4, c5;
+} Hand;
+
+
+Hand addCard(    Hand oldHand , Card card );
+void printHand(  Hand h );
+void printHand2( Hand h );
+void printCard(  Card c );
 
 
 int main( void )  {
@@ -26,7 +70,7 @@ int main( void )  {
   Card c4 = { eClub    , (int)eClub    , eAce   , (int)eAce   , false };
   Card c5 = { eHeart   , (int)eHeart   , eJack  , (int)eJack  , false };
   Card c6 = { eClub    , (int)eClub    , eTwo   , (int)eTwo   , false };
-  
+    
   h = addCard( h , c1 );
   h = addCard( h , c2 );
   h = addCard( h , c3 );
@@ -84,7 +128,7 @@ void printHand( Hand h )  {
 void printHand2( Hand h )  {
   int dealt = h.cardsDealt;
   if( dealt == 0 ) return;
-  printCard( h.c1 ); if( dealt == 1 ) return;
+  printCard( h.c1 ); if( dealt == 1 ) return;  
   printCard( h.c2 ); if( dealt == 2 ) return;
   printCard( h.c3 ); if( dealt == 3 ) return;
   printCard( h.c4 ); if( dealt == 4 ) return;
