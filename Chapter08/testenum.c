@@ -30,34 +30,34 @@
 //  // see the desired behavior.
 //
 //enum suit {  
-//  spade   = 1, 
-//  heart   = 2,  
-//  diamond = 3,  
-//  club    = 4 
+//  eSpade   = 1, 
+//  eHeart   = 2,  
+//  eDiamond = 3,  
+//  eDlub    = 4 
 //}; 
 
   // all enumerated constants have the same value.
 enum suit {  
-  spade   = 5, 
-  heart   = 5,  
-  diamond = 5,  
-  club    = 5 
+  eSpade   = 5, 
+  eHeart   = 5,  
+  eDiamond = 5,  
+  eclub    = 5 
 }; 
 
 
 int main( void )  {
   enum suit card;
   
-  card = spade;
-  //  card = heart;
-  //  card = diamond;
-  //  card = club;
+  card = eSpade;
+  //  card = eHeart;
+  //  card = eDiamond;
+  //  card = eClub;
   //  card = 100;
 
-  if(      card == club )    printf( "club\n" ); 
-  else if( card == diamond ) printf( "diamond\n" ); 
-  else if( card == heart )   printf( "heart\n" );
-  else if( card == spade )   printf( "spade\n" ); 
+  if(      card == eClub )    printf( "club\n" ); 
+  else if( card == eDiamond ) printf( "diamond\n" ); 
+  else if( card == eHeart )   printf( "heart\n" );
+  else if( card == eSpade )   printf( "spade\n" ); 
   else 
       printf( "Unknown enumerated value\n" ); 
 
