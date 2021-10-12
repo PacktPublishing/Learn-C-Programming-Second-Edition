@@ -16,27 +16,28 @@
 
 
 enum Suit  {
-  club  = 1, 
-  diamond, 
-  heart,
-  spade 
+  eClub  = 1, 
+  eDiamond, 
+  eHeart,
+  eSpade 
 };
 
-enum Face  {
-  one = 1, 
-  two, 
-  three, 
-  four, 
-  five, 
-  six, 
-  seven, 
-  eight, 
-  nine, 
-  ten, 
-  jack, 
-  queen, 
-  king, 
-  ace
+
+enum Face  { 
+  eOne = 1, 
+  eTwo, 
+  eThree, 
+  eFour, 
+  eFive, 
+  eSix, 
+  eSeven, 
+  eEight, 
+  eNine, 
+  eTen, 
+  eJack, 
+  eQueen, 
+  eKing, 
+  eAce
 };
 
 
@@ -64,12 +65,12 @@ void        printCard(  struct Card c );
 int main( void )  {
   struct Hand h = {0};
 
-  struct Card c1 = { spade   , (int)spade   , ten   , (int)ten   , false };
-  struct Card c2 = { heart   , (int)heart   , queen , (int)queen , false };
-  struct Card c3 = { diamond , (int)diamond , five  , (int)ten   , false };
-  struct Card c4 = { club    , (int)club    , ace   , (int)ace   , false };
-  struct Card c5 = { heart   , (int)heart   , jack  , (int)jack  , false };
-  struct Card c6 = { club    , (int)club    , two   , (int)two   , false };
+  struct Card c1 = { eSpade   , (int)eSpade   , eTen   , (int)eTen   , false };
+  struct Card c2 = { eHeart   , (int)eHeart   , eQueen , (int)eQueen , false };
+  struct Card c3 = { eDiamond , (int)eDiamond , eFive  , (int)eFive  , false };
+  struct Card c4 = { eClub    , (int)eClub    , eAce   , (int)eAce   , false };
+  struct Card c5 = { eHeart   , (int)eHeart   , eJack  , (int)eJack  , false };
+  struct Card c6 = { eClub    , (int)eClub    , eTwo   , (int)eTwo   , false };
     
   h = addCard( h , c1 );
   h = addCard( h , c2 );
@@ -158,26 +159,26 @@ void printHand3( struct Hand h )  {
 
 void printCard( struct Card c )  {
   switch( c.face )  {
-    case two:   printf( "    2 " ); break;
-    case three: printf( "    3 " ); break;
-    case four:  printf( "    4 " ); break;
-    case five:  printf( "    5 " ); break;
-    case six:   printf( "    6 " ); break;
-    case seven: printf( "    7 " ); break;
-    case eight: printf( "    8 " ); break;
-    case nine:  printf( "    9 " ); break;
-    case ten:   printf( "   10 " ); break;
-    case jack:  printf( " Jack " ); break;
-    case queen: printf( "Queen " ); break;
-    case king:  printf( " King " ); break;
-    case ace:   printf( "  Ace " ); break;
+    case eTwo:   printf( "    2 " ); break;
+    case eThree: printf( "    3 " ); break;
+    case eFour:  printf( "    4 " ); break;
+    case eFive:  printf( "    5 " ); break;
+    case eSix:   printf( "    6 " ); break;
+    case eSeven: printf( "    7 " ); break;
+    case eEight: printf( "    8 " ); break;
+    case eNine:  printf( "    9 " ); break;
+    case eTen:   printf( "   10 " ); break;
+    case eJack:  printf( " Jack " ); break;
+    case eQueen: printf( "Queen " ); break;
+    case eKing:  printf( " King " ); break;
+    case eAce:   printf( "  Ace " ); break;
     default:    printf( "  ??? " ); break;
   }
   switch( c.suit )  {
-    case spade:   printf( "of Spades\n");   break;
-    case heart:   printf( "of Hearts\n");   break;
-    case diamond: printf( "of Diamonds\n"); break;
-    case club:    printf( "of Clubs\n");    break;
+    case eSpade:   printf( "of Spades\n");   break;
+    case eHeart:   printf( "of Hearts\n");   break;
+    case eDiamond: printf( "of Diamonds\n"); break;
+    case eClub:    printf( "of Clubs\n");    break;
     default:      printf( "of ???s\n");     break;
   }
 }
