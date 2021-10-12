@@ -15,28 +15,28 @@
 
 
 enum Suit  {
-  club  = 1, 
-  diamond, 
-  heart,
-  spade 
+  eClub  = 1, 
+  eDiamond, 
+  eHeart,
+  eSpade 
 };
 
 
-enum Face  {
-  one = 1, 
-  two, 
-  three, 
-  four, 
-  five, 
-  six, 
-  seven, 
-  eight, 
-  nine, 
-  ten, 
-  jack, 
-  queen, 
-  king, 
-  ace
+enum Face  { 
+  eOne = 1, 
+  eTwo, 
+  eThree, 
+  eFour, 
+  eFive, 
+  eSix, 
+  eSeven, 
+  eEight, 
+  eNine, 
+  eTen, 
+  eJack, 
+  eQueen, 
+  eKing, 
+  eAce
 };
 
 
@@ -54,15 +54,15 @@ int  sumCards( struct Card c1 , struct Card c2 );
 
 
 int main( void )  {
-  struct Card card1 = { heart , (int) heart , king, (int)king , false };
+  struct Card card1 = { eHeart , (int)eHeart , eKing, (int)eKing , false };
   
   struct Card card2 = card1;  // card 2 is now identical to card 1
 
   struct Card card3 = {0};
-  card3.suit      = spade;
-  card3.suitValue = (int)spade;
-  card3.face      = ace;
-  card3.faceValue = (int)ace;
+  card3.suit      = eSpade;
+  card3.suitValue = (int)eSpade;
+  card3.face      = eAce;
+  card3.faceValue = (int)eAce;
   card3.isWild    = true;
 
   bool cardsEqual = isEqual( card1 , card2 );
@@ -93,5 +93,5 @@ int  sumCards( struct Card c1 , struct Card c2 )  {
   return faceValue;
 }
 
-  //  eof
+  /*  eof */
   
