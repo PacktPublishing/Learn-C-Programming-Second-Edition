@@ -9,29 +9,31 @@
 //
 
 
+#include <stdbool.h>
+
 typedef enum  {
-  club  = 1, 
-  diamond, 
-  heart,
-  spade 
+  eClub  = 1, 
+  eDiamond, 
+  eHeart,
+  eSpade 
 } Suit;
 
 
-typedef enum  {
-  one = 1, 
-  two, 
-  three, 
-  four, 
-  five, 
-  six, 
-  seven, 
-  eight, 
-  nine, 
-  ten, 
-  jack, 
-  queen, 
-  king, 
-  ace
+typedef enum {
+  eOne = 1, 
+  eTwo, 
+  eThree, 
+  eFour, 
+  eFive, 
+  eSix, 
+  eSeven, 
+  eEight, 
+  eNine, 
+  eTen, 
+  eJack, 
+  eQueen, 
+  eKing, 
+  eAce
 } Face;
 
 
@@ -57,3 +59,4 @@ void printCard(  Card c );
 
 
   /* eof */
+  
