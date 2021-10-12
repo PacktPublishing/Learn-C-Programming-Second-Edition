@@ -11,11 +11,11 @@
 
 
 enum textStyle  {
-  lowercase     = 1, // equivalent to 0x00000001
-  bold          = 2, // equivalent to 0x00000010
-  italic        = 4, // equivalent to 0x00000100
-  underline     = 8, // equivalent to 0x00001000
-  strikethrough = 16 // equivalent to 0x00010000
+  lowercase     = 1, // equivalent to 0b00000001
+  bold          = 2, // equivalent to 0b00000010
+  italic        = 4, // equivalent to 0b00000100
+  underline     = 8, // equivalent to 0b00001000
+  strikethrough = 16 // equivalent to 0b00010000
 };
 
 
