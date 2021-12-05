@@ -240,7 +240,7 @@ void PrintHand( Hand* pHand , char* pHandStr , char* pLeadStr )  {
 
 
 Card* GetCardInHand(  Hand* pHand , int cardIndex )  {
-  Card* pC;
+  Card* pC = NULL;
   switch( cardIndex ) {
     case 0:  pC = &(pHand->card1); break;
     case 1:  pC = &(pHand->card2); break;
