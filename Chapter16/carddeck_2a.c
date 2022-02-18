@@ -219,7 +219,11 @@ void InitializeHand( Hand* pHand )  {
 
 void AddCardToHand( Hand* pHand , Card* pCard )  {
   int numInHand = pHand->cardsDealt;
-  if( numInHand == kCardsInHand ) return;
+  if( numInHand == kCardsInHand )  {
+    printf( "ERROR: hand is full\n" );
+    return; 
+  }
+
 
   Card* pC = GetCardInHand( pHand , numInHand );
   InitializeCard( pC , pCard->suit , pCard->face , pCard->isWild );
