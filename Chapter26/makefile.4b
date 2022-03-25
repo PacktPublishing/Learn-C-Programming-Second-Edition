@@ -1,0 +1,22 @@
+# makefile.4b
+# Chapter 26
+# Learn C Programming, 2nd Edition
+#
+# makefile for dealer program
+#
+# create macros for SRCS and INCS
+# only use SRCS in action
+
+
+CC      = clang
+CCFLAGS = -Wall -Werror -std=c17
+
+SRCS    = card.c hand.c deck.c dealer.c
+INCS    = card.h hand.h deck.h
+
+dealer: $(SRCS) $(INCLS)
+	$(CC) -o $@ $(SRCS) $(CCFLAGS)
+
+
+# eof
+

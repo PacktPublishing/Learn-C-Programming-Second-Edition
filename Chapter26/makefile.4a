@@ -1,0 +1,19 @@
+# makefile.4a
+# Chapter 26
+# Learn C Programming, 2nd Edition
+#
+# makefile for dealer program
+#
+# add header file dependencies
+# does this work?  (NO: see makefile.4b)
+
+
+CC      = clang
+CCFLAGS = -Wall -Werror -std=c17
+
+dealer: card.c card.h hand.c hand.h deck.c deck.h dealer.c
+	$(CC) $^ -o $@ $(CCFLAGS)
+
+
+# eof
+

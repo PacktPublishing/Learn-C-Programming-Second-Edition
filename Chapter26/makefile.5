@@ -1,0 +1,43 @@
+# makefile.5
+# Chapter 26
+# Learn C Programming, 2nd Edition
+#
+# makefile for dealer program
+#
+# 1. create rules for each source file (create object file only)
+# 2. create macro fo compiler options.
+
+
+CC      = clang
+CCFLAGS = -Wall -Werror -std=c17
+LDLIBS  =
+
+
+dealer: card.o hand.o deck.o dealer.o
+	$(CC) -o $@ $^ $(LDLIBS)
+	
+card.o: card.c card.h
+	cc -c card.c $(CCFLAGS)
+	
+hand.o: hand.c hand.h card.h
+	cc -c hand.c $(CCFLAGS)
+	
+deck.o: deck.c deck.h hand.h card.h
+	cc -c deck.c $(CCFLAGS)
+	
+dealer.o: dealer.c dealer.h
+	cc -c dealer.c $(CCFLAGS)
+	
+	
+.PHONY: clean
+clean:
+	rm -f *.o
+	rm dealer
+
+.PHONY: run
+run:
+	dealer
+
+
+# eof
+
