@@ -35,8 +35,8 @@ ListNode*  RemoveNodeAtPosition( LinkedList* pList , int pos );
 // printf() will need to either be a different form of printf() or it may be 
 // a different function call.
 ///////////////////////////////////////////////////////////////////////////////
-void PrintData( ListData* i )  {
-  printf( "[%d] ", *i );
+void PrintData( ListData* data )  {
+  printf( "[%d] ", *data );
 }
 ///////////////////////////////////////////////////////////////////////////////
 // This function _MAY_ need to be changed to correspond to the data type
