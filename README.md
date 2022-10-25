@@ -54,3 +54,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 ## Get to Know the Author
 **Jeff Szuhay**
 is the principal developer at QuarterTil2 which specializes in graphics-rich software chronographs for desktop environments. In his software career of over 35 years, he has engaged in a full range of development activities from systems analysis and systems performance tuning to application design, from initial development through full testing and final delivery. Throughout that time, he has taught computer applications and programming languages at various educational levels from elementary school students to university students, as well as developed and presented professional, on-site training.
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781801078450">https://packt.link/free-ebook/9781801078450 </a> </p>
