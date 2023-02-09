@@ -26,6 +26,13 @@ If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1801
 <a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
 alt="https://www.packtpub.com/" border="5" /></a>
 
+## Errata
+
+* Page 57: The sentences "The set of values a byte can represent is 256 or 28 values. These values range from 0 to 255 or 28–1. 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or 28–1, or a negative integer ranging from -128 to 127." must be read as "The set of values a byte can represent is 256 or 2<sup>8</sup> values. These values range from 0 to 255 or 2<sup>8</sup>–1. 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or 2<sup>8</sup>–1, or a negative integer ranging from -128 to 127."
+* Page 62: The term "significand x baseexponent" must be read as "significand x base<sup>exponent</sup>"
+* Page 121: Wrong table has been displayed for Table 5.1 – Operator precedence table. The correct Operator precedence table is present on Page 660.
+
+
 ## Instructions and Navigations
 All of the code is organized into folders. For example, Chapter02.
 
