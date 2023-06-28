@@ -1,0 +1,16 @@
+# makefile.1
+# Chapter 26
+# Learn C Programming, 2nd Edition
+#
+# makefile for dealer program
+#
+# simplest version -- duplicates what we've been typing on 
+# command line.
+
+
+dealer: card.c hand.c deck.c dealer.c
+	cc card.c hand.c deck.c dealer.c -o dealer -Wall -Werror -std=c17
+
+
+# eof
+

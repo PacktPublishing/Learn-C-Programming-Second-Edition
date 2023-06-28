@@ -1,0 +1,18 @@
+# makefile.3
+# Chapter 26
+# Learn C Programming, 2nd Edition
+#
+# makefile for dealer program
+#
+# Uses special macros for target and dependencies in the rule action.
+
+
+CC      = clang
+CCFLAGS = -Wall -Werror -std=c17
+
+dealer: card.c hand.c deck.c dealer.c
+	$(CC) $^ -o $@ $(CCFLAGS)
+	
+
+# eof
+

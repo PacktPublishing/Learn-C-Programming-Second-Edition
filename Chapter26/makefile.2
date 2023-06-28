@@ -1,0 +1,19 @@
+# makefile.2
+# Chapter 26
+# Learn C Programming, 2nd Edition
+#
+# makefile for dealer program
+#
+# add macros CC and CCFLAGS
+
+
+CC      = clang
+CCFLAGS = -Wall -Werror -std=c17
+
+dealer: card.c hand.c deck.c dealer.c
+	$(CC) card.c hand.c deck.c dealer.c -o dealer $(CCFLAGS)
+
+
+
+# eof
+
