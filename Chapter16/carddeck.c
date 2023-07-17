@@ -256,8 +256,11 @@ void InitializeHand( Hand* pHand )  {
 
 
 void AddCardToHand( Hand* pHand , Card* pCard )  {
-  if( pHand->cardsDealt == kCardsInHand ) return;
-  
+  if( pHand->cardsDealt == kCardsInHand )  {
+    printf( "ERROR: hand is full\n" );
+    return; 
+  }
+
   pHand->hand[ pHand->cardsDealt ] = pCard;
   pHand->cardsDealt++;
 }

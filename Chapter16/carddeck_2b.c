@@ -242,7 +242,10 @@ void AddCardToHand( Hand* pHand , Card* pCard )  {
   //
 void AddCardToHand( Hand* pHand , Card* pCard ) { 
   int numInHand = pHand->cardsDealt; 
-  if( numInHand == kCardsInHand ) return; 
+  if( numInHand == kCardsInHand )   {
+    printf( "ERROR: hand is full\n" );
+    return; 
+  } 
   
   switch( numInHand ) { 
     case 0: pHand->pCard1 = pCard; break; 
