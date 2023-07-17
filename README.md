@@ -57,10 +57,11 @@ All of the code is organized into folders. For example, Chapter02.
 
 The code will look like the following:
 ```
-html, body, #map {
- height: 100%;
- margin: 0;
- padding: 0
+#include <stdio.h>
+
+int main( void )  {
+  printf( "Hello, world!\n" );
+  return 0;
 }
 ```
 
