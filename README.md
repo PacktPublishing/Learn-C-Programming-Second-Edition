@@ -28,9 +28,28 @@ alt="https://www.packtpub.com/" border="5" /></a>
 
 ## Errata
 
-* Page 57: The sentences "The set of values a byte can represent is 256 or 28 values. These values range from 0 to 255 or 28–1. 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or 28–1, or a negative integer ranging from -128 to 127." must be read as "The set of values a byte can represent is 256 or 2<sup>8</sup> values. These values range from 0 to 255 or 2<sup>8</sup>–1. 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or 2<sup>8</sup>–1, or a negative integer ranging from -128 to 127."
-* Page 62: The term "significand x baseexponent" must be read as "significand x base<sup>exponent</sup>"
-* Page 121: Wrong table has been displayed for Table 5.1 – Operator precedence table. The correct Operator precedence table is present on Page 660.
+* **Page 57:** The sentences *"The set of values a byte can represent is 256 or 28 values. These values range from 0 to 255 or 28–1. 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or 28–1, or a negative integer ranging from -128 to 127."* leave out proper superscripts.<br>
+They should be *"The set of values a byte can represent is 256 or 2<sup>8</sup> values. These values range from 0 to 255 or 2<sup>8</sup>–1. 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or 2<sup>8</sup>–1, or a negative integer ranging from -128 to 127."*
+* **Page 62:** The term *"significand x baseexponent"* leaves out proper superscripting.<br>
+It should appear as *"significand x base<sup>exponent</sup>"*
+* **Page 121:** The wrong table has been displayed for *Table 5.1 – Operator precedence table*.<br>
+The correct Operator precedence table may be found on Page 660.
+* **Page 252:** The initialization shown for `array3D` is for a 3 x 2 x 5 array.<br>
+The initialization for a 3 x 4 x 5 array should appear as
+
+        int array3D[size3d][size2D][size1D] = 
+          { { { 111 , 112 , 113 , 114 , 115 },
+              { 121 , 122 , 123 , 124 , 125 }, 
+              { 131 , 132 , 133 , 134 , 135 },
+              { 141 , 142 , 143 , 144 , 145 } },
+            { { 211 , 212 , 213 , 214 , 215 },
+              { 221 , 222 , 223 , 224 , 225 }, 
+              { 231 , 232 , 233 , 234 , 235 },
+              { 241 , 242 , 243 , 244 , 245 } },
+            { { 311 , 312 , 313 , 314 , 315 },
+              { 321 , 322 , 323 , 324 , 325 }, 
+              { 331 , 332 , 333 , 334 , 335 },
+              { 341 , 342 , 343 , 344 , 345 } } };
 
 
 ## Instructions and Navigations
@@ -38,10 +57,11 @@ All of the code is organized into folders. For example, Chapter02.
 
 The code will look like the following:
 ```
-html, body, #map {
- height: 100%;
- margin: 0;
- padding: 0
+#include <stdio.h>
+
+int main( void )  {
+  printf( "Hello, world!\n" );
+  return 0;
 }
 ```
 
