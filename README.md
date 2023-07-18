@@ -121,6 +121,9 @@ The initialization for a 3 x 4 x 5 array should appear as
 
 * **Page 286:** Inconsistent indentation of code. Throughout the text, 2 spaces have been used for each level of indentation. Note that the added whitespace, while inconsistent, does not alter program behavior. Consistent whitespace formatting is a desireable programming trait.
   
+* **Page 293:** In the second paragraph, the dereference operator `->` is incorrectly shown. The text should read
+  > This is done using the [`->`]() operator.
+
 * **Page 447:** In the first code snippet, the text 
   > `The second is as follows:`
   
