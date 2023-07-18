@@ -17,7 +17,7 @@ void printWord( char* word )  {
   printf( "%s" , word );
 }
 
-int main()  {
+int main( void )  {
   printWord( "Hello" );
   printComma();
   printWord( "world" );
