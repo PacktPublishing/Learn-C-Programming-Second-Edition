@@ -68,7 +68,7 @@ alt="https://www.packtpub.com/" border="5" /></a>
           printf( "                  (int) %d   / (double) %.1f  = %.1f\n" , 
                   numerator , (double)denominator , result );
 
-* **Page 107:** In code listing for `convertDigitToInt.c`, `#include <stdio.h>` is missing. It should be the first line of the code listing.
+* **Page 107:** In code listing for `convertDigitToInt.c`, the line `#include <stdio.h>` is missing before `int main( void )`. It should be the first line of the code listing.
 
 * **Page 109:** The program name `logicals.c` is incorrectly given as `logical.c` (missing plural 's').
 
@@ -84,6 +84,8 @@ alt="https://www.packtpub.com/" border="5" /></a>
         const unsigned char bold      = 2;
         const unsigned char italic    = 4;
         const unsigned char underline = 8;
+
+* **Page 119:** In code listing for `prefixpostfix.c`, the line `#include <stdio.h>` is missing before `int main( void )  {`. It should be the first line of the code listing.
 
 * **Page 121:** The wrong table has been displayed for *Table 5.1 – Operator precedence table*.<br>
 The correct Operator precedence table may be found on Page 660.
