@@ -119,6 +119,8 @@ The initialization for a 3 x 4 x 5 array should appear as
 
         aPtr = &height;
 
+* **Page 286:** Inconsistent indentation of code. Throughout the text, 2 spaces have been used for each level of indentation. Note that the added whitespace, while inconsistent, does not alter program behavior. Consistent whitespace formatting is a desireable programming trait.
+  
 * **Page 447:** In the first code snippet, the text 
   > `The second is as follows:`
   
