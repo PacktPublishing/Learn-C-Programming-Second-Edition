@@ -47,6 +47,8 @@ alt="https://www.packtpub.com/" border="5" /></a>
          return 0;
        }
 
+* **Page 92:** The program `calcLength.c` uses variable names `aValue` and `aLength` whose units are ambiguous. On the repository, these are replaced with `inches` and `totalInches`. This clearly demonstrates the importance of giving variables names that more accurately represent the values they are intended to hold.
+
 * **Page 113:** At the bottom of the page, the declaration of constant values are missing the assignment operator (=). They should be declared as:
   
         const unsigned char lowercase = 1;
