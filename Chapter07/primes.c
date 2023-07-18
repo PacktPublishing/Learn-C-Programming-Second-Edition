@@ -32,7 +32,7 @@ int main( void )  {
 
 
 bool isPrime( int num )  {
-  if( num == 1 )  return false;
+  if( num <  2 )  return false;  // given num could be 0 or 1 (not just 1)
   if( num == 2 )  return true;
  
   bool isPrime = true;   // Make initial assumption that num is prime.
