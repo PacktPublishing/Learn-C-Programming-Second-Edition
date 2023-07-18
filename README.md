@@ -76,6 +76,12 @@ The initialization for a 3 x 4 x 5 array should appear as
               { 331 , 332 , 333 , 334 , 335 },
               { 341 , 342 , 343 , 344 , 345 } } };
 
+* **Page 447:** In the first code snippet, the text 
+  > `The second is as follows:`
+  
+  is shown as source code but it is not. It should be shown as descriptive text:
+  > The second is as follows:
+
 * **Page 489:** In the table, the cell in the 4th row and 5th column incorrectly shows
   > [scanf()]()
 
