@@ -28,10 +28,16 @@ alt="https://www.packtpub.com/" border="5" /></a>
 
 ## Errata
 
-* **Page 57:** The sentences *"The set of values a byte can represent is 256 or [28]() values. These values range from 0 to 255 or [28–1](). 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or [28–1](), or a negative integer ranging from -128 to 127."* leave out proper superscripts.<br>
-They should be *"The set of values a byte can represent is 256 or [2<sup>8</sup>]() values. These values range from 0 to 255 or [2<sup>8</sup>–1](). 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or [2<sup>8</sup>–1](), or a negative integer ranging from -128 to 127."*
-* **Page 62:** The term *["significand x baseexponent"]()* leaves out proper superscripting.<br>
-It should appear as *["significand x base<sup>exponent]()</sup>"*
+* **Page 57:** The sentences
+  > The set of values a byte can represent is 256 or [28]() values. These values range from 0 to 255 or [28–1](). 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or [28–1](), or a negative integer ranging from -128 to 127.
+
+  leave out proper superscripts. They should be
+  > The set of values a byte can represent is 256 or [2<sup>8</sup>]() values. These values range from 0 to 255 or [2<sup>8</sup>–1](). 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or [2<sup>8</sup>–1](), or a negative integer ranging from -128 to 127.
+* **Page 62:** The term
+  > significand x baseexponent
+  
+  leaves out proper superscripting. It should appear as
+  > significand x base<sup>exponent</sup>
 * **Page 121:** The wrong table has been displayed for *Table 5.1 – Operator precedence table*.<br>
 The correct Operator precedence table may be found on Page 660.
 * **Page 252:** The initialization shown for `array3D` is for a 3 x 2 x 5 array.<br>
