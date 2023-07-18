@@ -49,6 +49,11 @@ alt="https://www.packtpub.com/" border="5" /></a>
 
 * **Page 92:** The program `calcLength.c` uses variable names `aValue` and `aLength` whose units are ambiguous. On the repository, these are replaced with `inches` and `totalInches`. This clearly demonstrates the importance of giving variables names that more accurately represent the values they are intended to hold.
 
+* **Page 104:** The declaration and calls to `doubleFunc()` are correct whereas its name in its definition is missing an 'e'. The function should be defined as
+
+        void doubleFunc( double dbl ) {
+        ...
+
 * **Page 113:** At the bottom of the page, the declaration of constant values are missing the assignment operator (=). They should be declared as:
   
         const unsigned char lowercase = 1;
