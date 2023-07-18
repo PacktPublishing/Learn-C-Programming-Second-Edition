@@ -89,8 +89,8 @@ bool isEqual( struct Card c1 , struct Card c2 )  {
 
 
 int  sumCards( struct Card c1 , struct Card c2 )  {
-  int faceValue = c1.faceValue + c2.faceValue;
-  return faceValue;
+  int cardSum = c1.faceValue + c2.faceValue;
+  return cardSum;
 }
 
   /*  eof */
