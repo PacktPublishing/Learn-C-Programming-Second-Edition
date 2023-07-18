@@ -72,6 +72,10 @@ alt="https://www.packtpub.com/" border="5" /></a>
 
 * **Page 109:** The program name `logicals.c` is incorrectly given as `logical.c` (missing plural 's').
 
+* **Page 110:** The last `printf()` statement of the function `void printLogicalOR()` shows an incorrect parameter value. It should be
+
+        printf( "  %1d | %1d | %1d\n\n" , o ,  one_zero , one_one  );
+
 * **Page 113:** At the bottom of the page, the declaration of constant values are missing the assignment operator (=). They should be declared as:
   
         const unsigned char lowercase = 1;
