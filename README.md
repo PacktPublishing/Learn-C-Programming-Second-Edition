@@ -84,10 +84,12 @@ The initialization for a 3 x 4 x 5 array should appear as
 
 * **Page 463:** In the table output for `unsignedIn.c`, "HEX[I]()DECIMAL" should be "HEX[A]()DECIMAL"
 
-* **Page 489:** In the table, the cell in the 4th row and 5th column incorrectly shows
+* **Page 483:** In the last paragraph, [`getopt)`]() function call is missing an open parantheses. It should be [`getopt()`]()
+
+* **Page 489:** In the table, the cell in the 4th row and 5th column shows the incorrect function
   > [scanf()]()
 
-  when it should be
+  when the function should be
   > [sscanf()]()
 
 * **Page 504:** In the 3rd paragraph, it reads
