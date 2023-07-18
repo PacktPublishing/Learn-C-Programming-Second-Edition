@@ -33,13 +33,32 @@ alt="https://www.packtpub.com/" border="5" /></a>
 
   leave out proper superscripts. They should be
   > The set of values a byte can represent is 256 or [2<sup>8</sup>]() values. These values range from 0 to 255 or [2<sup>8</sup>–1](). 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or [2<sup>8</sup>–1](), or a negative integer ranging from -128 to 127.
+
 * **Page 62:** The term
   > significand x [baseexponent]()
   
   leaves out proper superscripting. It should appear as
   > significand x [base<sup>exponent</sup>]()
+
+* **Page 113:** At the bottom of the page, the declaration of constant values are missing the assignment operator (=). They should be declared as:
+  
+        const unsigned char lowercase = 1;
+        const unsigned char bold      = 2;
+        const unsigned char italic    = 4;
+        const unsigned char underline = 8;
+
 * **Page 121:** The wrong table has been displayed for *Table 5.1 – Operator precedence table*.<br>
 The correct Operator precedence table may be found on Page 660.
+
+* **Page 229:** In the 3rd paragraph, the sentence should be:
+  > The C compiler does not see any difference between a variable and constant variable [after]() they have been declared.
+
+* **Page 230:** The next to last paragraph should read
+  > All the values of each array are initialized to 0 when the value given within `{` and `}` is 0, 
+as in `int a[5] = {0};` otherwise the values are assigned in the sequence given within `{` and `}`, 
+as in `int b[5] = { 5 , 4 , 3 , 2 , 1 }`. Only the values given will initialize the corresponding elements; so,
+  >  `int c[5] = { 5 , 4 };` only initialized the first two elements and the remaining elements are unintialized.
+
 * **Page 252:** The initialization shown for `array3D` is for a 3 x 2 x 5 array.<br>
 The initialization for a 3 x 4 x 5 array should appear as
 
