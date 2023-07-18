@@ -134,6 +134,8 @@ The correct Operator precedence table may be found on Page 660.
 * **Page 204:** In the code listing for the function `printHand2()`, the variable `dealt` is declared and in the next line, it is incorrectly referenced as `d`; it should be
 
           if( dealt == 0 ) return;
+
+* **Page 206:** In the `main()` function code listing, `(int)eJeart` occurs. This should be `(int)eHeart`.
   
 * **Page 229:** In the 3rd paragraph, the sentence should be:
   > The C compiler does not see any difference between a variable and constant variable [after]() they have been declared.
