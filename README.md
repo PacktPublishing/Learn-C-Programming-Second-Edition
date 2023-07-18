@@ -82,6 +82,8 @@ The initialization for a 3 x 4 x 5 array should appear as
   is shown as source code but it is not. It should be shown as descriptive text:
   > The second is as follows:
 
+* **Page 463:** In the table output for `unsignedIn.c`, "HEX[I]()DECIMAL" should be "HEX[A]()DECIMAL"
+
 * **Page 489:** In the table, the cell in the 4th row and 5th column incorrectly shows
   > [scanf()]()
 
