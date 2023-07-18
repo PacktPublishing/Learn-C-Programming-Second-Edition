@@ -66,7 +66,15 @@ The correct Operator precedence table may be found on Page 660.
 
   Note that in this `for()...` declaration, the first `,` is used as a list operator in the 1st line, while in the 3rd line, the `,` is
   used as a sequence operator.
-  
+
+* **Page 170:** The macro symbol `HEART` is incorrectly shown at the bottom of this page. It should be
+
+        int card = HEART;
+
+* **Page 171:** The constant `kHeart` is incorrectly shown in the first code snippet. It should be
+
+        int card = kHeart;
+
 * **Page 198:** The following function is given:
 
         int sumCards( struct Card c1 , struct Card c2 )  {   
