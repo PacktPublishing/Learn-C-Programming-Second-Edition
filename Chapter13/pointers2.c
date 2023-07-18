@@ -34,6 +34,16 @@ void showInfo( int height, int width , int length )  {
 
 
 void showVariable( char* pId , int* pDim )  {
+
+  // NOTE: The book listing does not use the %p pointer format specifier.
+  //       Instead it prints out a long hex value which requires a cast of the pointer variable
+  //
+  //         printf( "  address of %s = %#lx, value at address = %2d\n" , 
+  //                  pId, (unsigned long)pDim , *pDim );
+  //
+  //       While the text gives the desired output, the %p format specifier is preferred
+  //       (added in C99) for the use of pointer variable values.
+  
   printf( "  address of %s = %p, value at address = %2d\n" , 
            pId, pDim , *pDim );
 }
