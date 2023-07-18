@@ -89,7 +89,7 @@ The correct Operator precedence table may be found on Page 660.
           return cardSum;
         }
 
-* * **Page 229:** In the 3rd paragraph, the sentence should be:
+* **Page 229:** In the 3rd paragraph, the sentence should be:
   > The C compiler does not see any difference between a variable and constant variable [after]() they have been declared.
 
 * **Page 230:** The next to last paragraph should read
