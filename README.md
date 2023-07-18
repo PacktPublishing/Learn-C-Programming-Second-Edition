@@ -40,7 +40,7 @@ alt="https://www.packtpub.com/" border="5" /></a>
   leaves out proper superscripting. It should appear as
   > significand x [base<sup>exponent</sup>]()
 
-* **Page 66:** There is no `return 0;` in `main()`. There should be a `return 0` statement. The code should appear as
+* **Page 66 & page 69:** There is no `return 0;` in `main()`. There should be a `return 0` statement. The code should appear as
 
        int main( void )  {
          printSizes();
