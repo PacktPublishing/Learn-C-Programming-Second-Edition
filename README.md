@@ -50,7 +50,21 @@ alt="https://www.packtpub.com/" border="5" /></a>
 * **Page 121:** The wrong table has been displayed for *Table 5.1 – Operator precedence table*.<br>
 The correct Operator precedence table may be found on Page 660.
 
-* **Page 229:** In the 3rd paragraph, the sentence should be:
+* **Page 198:** The following function is given:
+
+        int sumCards( struct Card c1 , struct Card c2 )  {   
+          int faceValue = c1.faceFalue + c2.faceValue;
+          return faceValue;
+        }
+
+  but the intent of the function would be much clearer if the local variable `faceValue` was renamed to `cardSum`: 
+
+        int sumCards( struct Card c1 , struct Card c2 )  {   
+          int cardSum = c1.faceFalue + c2.faceValue;
+          return cardSum;
+        }
+
+* * **Page 229:** In the 3rd paragraph, the sentence should be:
   > The C compiler does not see any difference between a variable and constant variable [after]() they have been declared.
 
 * **Page 230:** The next to last paragraph should read
