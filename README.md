@@ -57,6 +57,11 @@ The initialization for a 3 x 4 x 5 array should appear as
               { 331 , 332 , 333 , 334 , 335 },
               { 341 , 342 , 343 , 344 , 345 } } };
 
+* **Page 489:** In the table, the cell in the 4th row and 5th column incorrectly shows
+  > [scanf()]()
+
+  when it should be
+  > [sscanf()]()
 
 ## Instructions and Navigations
 All of the code is organized into folders. For example, Chapter02.
