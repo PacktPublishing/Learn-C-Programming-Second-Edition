@@ -115,6 +115,10 @@ The initialization for a 3 x 4 x 5 array should appear as
               { 331 , 332 , 333 , 334 , 335 },
               { 341 , 342 , 343 , 344 , 345 } } };
 
+* **Page 279:** In the code snippet of `main()`, there appears a `]` where there should be none:
+
+        aPtr = &height;
+
 * **Page 447:** In the first code snippet, the text 
   > `The second is as follows:`
   
