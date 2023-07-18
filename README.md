@@ -54,6 +54,20 @@ alt="https://www.packtpub.com/" border="5" /></a>
         void doubleFunc( double dbl ) {
         ...
 
+* **Page 105:** The format strings of the `printf()` do not match the output shown. The `printf()` format strings should include the expected numerical conversion for the given values. The format strings should have appropriate `"(int)"` or `"(double)"` as follows:
+
+          result = numerator / denominator; 
+          printf( "Truncation:       (int) %d   /    (int) %d    = %.1g\n\n" ,
+                  numerator , denominator , result );
+  
+          result = (double) numerator / denominator;
+          printf( "No truncation: (double) %.1f /    (int) %d    = %.1f\n" , 
+                  (double)numerator , denominator , result );
+
+          result = numerator / (double)denominator;
+          printf( "                  (int) %d   / (double) %.1f  = %.1f\n" , 
+                  numerator , (double)denominator , result );
+
 * **Page 113:** At the bottom of the page, the declaration of constant values are missing the assignment operator (=). They should be declared as:
   
         const unsigned char lowercase = 1;
