@@ -50,6 +50,23 @@ alt="https://www.packtpub.com/" border="5" /></a>
 * **Page 121:** The wrong table has been displayed for *Table 5.1 – Operator precedence table*.<br>
 The correct Operator precedence table may be found on Page 660.
 
+* **Page 153:** In the second code snippet, the list operator is incorrectly used when declaring `i` and `j`. The code is shown as
+
+        for( int i = 0 , int j = maxlen ;
+             (i < maxlen) && (j > 0);
+             i++ , j-- )
+        { ... }
+  
+  The 2nd `int` should be removed and the snippet should be
+
+        for( int i = 0 , j = maxlen ;
+             (i < maxlen) && (j > 0);
+             i++ , j-- )
+        { ... }
+
+  Note that in this `for()...` declaration, the first `,` is used as a list operator in the 1st line, while in the 3rd line, the `,` is
+  used as a sequence operator.
+  
 * **Page 198:** The following function is given:
 
         int sumCards( struct Card c1 , struct Card c2 )  {   
