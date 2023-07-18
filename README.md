@@ -63,6 +63,14 @@ The initialization for a 3 x 4 x 5 array should appear as
   when it should be
   > [sscanf()]()
 
+* **Page 504:** In the 3rd paragraph, it reads
+  > The following program reads a group of digits, each of which is intended to represent a date—[the first four digits for the year, the next two for the month, and the last two for the day]():
+  
+  This should read
+  > The following program reads a group of digits, each of which is intended to represent a date—[the first two digits for the month, the next two for the day and the last four digits for the year]():
+
+
+
 ## Instructions and Navigations
 All of the code is organized into folders. For example, Chapter02.
 
