@@ -23,7 +23,7 @@ int main( void )  {
 
   printf( " Unsigned Printf \n"
           "  Base        Base-8        Base-10         Base-16         BASE-16\n"
-          "  Name         octal        unsigned     hexadeximal     HEXIDECIMAL\n"
+          "  Name         octal        unsigned     hexadeximal     HEXADECIMAL\n"
           "  Specifier     %%12o            %%12u            %%12x            %%12X \n" );
   printf( "       [%12o]  [%12u]  [%12x]  [%12X]\n" ,
                   smallInt , smallInt , smallInt , smallInt );

@@ -28,12 +28,76 @@ alt="https://www.packtpub.com/" border="5" /></a>
 
 ## Errata
 
-* **Page 57:** The sentences *"The set of values a byte can represent is 256 or 28 values. These values range from 0 to 255 or 28–1. 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or 28–1, or a negative integer ranging from -128 to 127."* leave out proper superscripts.<br>
-They should be *"The set of values a byte can represent is 256 or 2<sup>8</sup> values. These values range from 0 to 255 or 2<sup>8</sup>–1. 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or 2<sup>8</sup>–1, or a negative integer ranging from -128 to 127."*
-* **Page 62:** The term *"significand x baseexponent"* leaves out proper superscripting.<br>
-It should appear as *"significand x base<sup>exponent</sup>"*
+* **Page 57:** The sentences
+  > The set of values a byte can represent is 256 or [28]() values. These values range from 0 to 255 or [28–1](). 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or [28–1](), or a negative integer ranging from -128 to 127.
+
+  leave out proper superscripts. They should be
+  > The set of values a byte can represent is 256 or [2<sup>8</sup>]() values. These values range from 0 to 255 or [2<sup>8</sup>–1](). 0 is a value that must be represented in the set of 256 values; we can't leave that value out. A byte can either represent a positive integer ranging from 0 to 255, or [2<sup>8</sup>–1](), or a negative integer ranging from -128 to 127.
+
+* **Page 62:** The term
+  > significand x [baseexponent]()
+  
+  leaves out proper superscripting. It should appear as
+  > significand x [base<sup>exponent</sup>]()
+
+* **Page 113:** At the bottom of the page, the declaration of constant values are missing the assignment operator (=). They should be declared as:
+  
+        const unsigned char lowercase = 1;
+        const unsigned char bold      = 2;
+        const unsigned char italic    = 4;
+        const unsigned char underline = 8;
+
 * **Page 121:** The wrong table has been displayed for *Table 5.1 – Operator precedence table*.<br>
 The correct Operator precedence table may be found on Page 660.
+
+* **Page 153:** In the second code snippet, the list operator is incorrectly used when declaring `i` and `j`. The code is shown as
+
+        for( int i = 0 , int j = maxlen ;
+             (i < maxlen) && (j > 0);
+             i++ , j-- )
+        { ... }
+  
+  The 2nd `int` should be removed and the snippet should be
+
+        for( int i = 0 , j = maxlen ;
+             (i < maxlen) && (j > 0);
+             i++ , j-- )
+        { ... }
+
+  Note that in this `for()...` declaration, the first `,` is used as a list operator in the 1st line, while in the 3rd line, the `,` is
+  used as a sequence operator.
+
+* **Page 170:** The macro symbol `HEART` is incorrectly shown at the bottom of this page. It should be
+
+        int card = HEART;
+
+* **Page 171:** The constant `kHeart` is incorrectly shown in the first code snippet. It should be
+
+        int card = kHeart;
+
+* **Page 198:** The following function is given:
+
+        int sumCards( struct Card c1 , struct Card c2 )  {   
+          int faceValue = c1.faceFalue + c2.faceValue;
+          return faceValue;
+        }
+
+  but the intent of the function would be much clearer if the local variable `faceValue` was renamed to `cardSum`: 
+
+        int sumCards( struct Card c1 , struct Card c2 )  {   
+          int cardSum = c1.faceFalue + c2.faceValue;
+          return cardSum;
+        }
+
+* **Page 229:** In the 3rd paragraph, the sentence should be:
+  > The C compiler does not see any difference between a variable and constant variable [after]() they have been declared.
+
+* **Page 230:** The next to last paragraph should read
+  > All the values of each array are initialized to 0 when the value given within `{` and `}` is 0, 
+as in `int a[5] = {0};` otherwise the values are assigned in the sequence given within `{` and `}`, 
+as in `int b[5] = { 5 , 4 , 3 , 2 , 1 }`. Only the values given will initialize the corresponding elements; so,
+  >  `int c[5] = { 5 , 4 };` only initialized the first two elements and the remaining elements are unintialized.
+
 * **Page 252:** The initialization shown for `array3D` is for a 3 x 2 x 5 array.<br>
 The initialization for a 3 x 4 x 5 array should appear as
 
@@ -50,6 +114,44 @@ The initialization for a 3 x 4 x 5 array should appear as
               { 321 , 322 , 323 , 324 , 325 }, 
               { 331 , 332 , 333 , 334 , 335 },
               { 341 , 342 , 343 , 344 , 345 } } };
+
+* **Page 279:** In the code snippet of `main()`, there appears a `]` where there should be none:
+
+        aPtr = &height;
+
+* **Page 286:** Inconsistent indentation of code. Throughout the text, 2 spaces have been used for each level of indentation. Note that the added whitespace, while inconsistent, does not alter program behavior. Consistent whitespace formatting is a desireable programming trait.
+  
+* **Page 293:** In the second paragraph, the dereference operator `->` is incorrectly shown. The text should read
+  > This is done using the [`->`]() operator.
+
+* **Page 325:** The text of the last sentence on this page incorrectly shows the range of an `unsigned char`
+  > Finally, we declare an unsigned single-byte variable, `aByte`, which can hold a value between 0 and [128]().
+
+  This should be
+  > Finally, we declare an unsigned single-byte variable, `aByte`, which can hold a value between 0 and [256]().
+
+* * **Page 447:** In the first code snippet, the text 
+  > `The second is as follows:`
+  
+  is shown as source code but it is not. It should be shown as descriptive text:
+  > The second is as follows:
+
+* **Page 463:** In the table output for `unsignedIn.c`, "HEX[I]()DECIMAL" should be "HEX[A]()DECIMAL"
+
+* **Page 483:** In the last paragraph, [`getopt)`]() function call is missing an open parantheses. It should be [`getopt()`]()
+
+* **Page 489:** In the table, the cell in the 4th row and 5th column shows the incorrect function
+  > [scanf()]()
+
+  when the function should be
+  > [sscanf()]()
+
+* **Page 504:** In the 3rd paragraph, it reads
+  > The following program reads a group of digits, each of which is intended to represent a date—[the first four digits for the year, the next two for the month, and the last two for the day]():
+  
+  This should read
+  > The following program reads a group of digits, each of which is intended to represent a date—[the first two digits for the month, the next two for the day and the last four digits for the year]():
+
 
 
 ## Instructions and Navigations
