@@ -68,6 +68,10 @@ alt="https://www.packtpub.com/" border="5" /></a>
           printf( "                  (int) %d   / (double) %.1f  = %.1f\n" , 
                   numerator , (double)denominator , result );
 
+* **Page 107:** In code listing for `convertDigitToInt.c`, `#include <stdio.h>` is missing. It should be the first line of the code listing.
+
+* **Page 109:** The program name `logicals.c` is incorrectly given as `logical.c` (missing plural 's').
+
 * **Page 113:** At the bottom of the page, the declaration of constant values are missing the assignment operator (=). They should be declared as:
   
         const unsigned char lowercase = 1;
