@@ -40,6 +40,13 @@ alt="https://www.packtpub.com/" border="5" /></a>
   leaves out proper superscripting. It should appear as
   > significand x [base<sup>exponent</sup>]()
 
+* **Page 66:** There is no `return 0;` in `main()`. There should be a `return 0` statement. The code should appear as
+
+       int main( void )  {
+         printSizes();
+         return 0;
+       }
+
 * **Page 113:** At the bottom of the page, the declaration of constant values are missing the assignment operator (=). They should be declared as:
   
         const unsigned char lowercase = 1;
