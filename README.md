@@ -76,6 +76,8 @@ alt="https://www.packtpub.com/" border="5" /></a>
 
         printf( "  %1d | %1d | %1d\n\n" , o ,  one_zero , one_one  );
 
+* **Page 111:** In the function `main()`, the call shown is `PrintLogicalXOR(...)` whereas it should be initial lowercase, `printLogicalXOR(...)`
+
 * **Page 113:** At the bottom of the page, the declaration of constant values are missing the assignment operator (=). They should be declared as:
   
         const unsigned char lowercase = 1;
