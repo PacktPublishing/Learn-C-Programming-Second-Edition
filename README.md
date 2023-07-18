@@ -124,7 +124,13 @@ The initialization for a 3 x 4 x 5 array should appear as
 * **Page 293:** In the second paragraph, the dereference operator `->` is incorrectly shown. The text should read
   > This is done using the [`->`]() operator.
 
-* **Page 447:** In the first code snippet, the text 
+* **Page 325:** The text of the last sentence on this page incorrectly shows the range of an `unsigned char`
+  > Finally, we declare an unsigned single-byte variable, `aByte`, which can hold a value between 0 and [128]().
+
+  This should be
+  > Finally, we declare an unsigned single-byte variable, `aByte`, which can hold a value between 0 and [256]().
+
+* * **Page 447:** In the first code snippet, the text 
   > `The second is as follows:`
   
   is shown as source code but it is not. It should be shown as descriptive text:
