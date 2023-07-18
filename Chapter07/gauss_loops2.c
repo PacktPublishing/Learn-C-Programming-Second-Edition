@@ -44,12 +44,19 @@ int main( void )  {
 int sumNviaWhile2( int N )  {
   int sum = 0;
 
-  while( N )      // N: N down to 1 (stops at 0).
-  {
+  while( N > 0)  {    // N: N down to 1 (stops at 0).
     sum += N;
     N--;
   }
-
+  // NOTE: in the above loop-condition, we don't need the comparison operator 
+  //       since only 0 evaluates to false and everything else to true.
+  //       This type of loop-condition is often written simply as
+  //
+  //           while( N )
+  //
+  //       But be careful with this kind of C idiom; it has caused me
+  //       headaches when the loop conditions change
+  
   return sum;
 }
 
