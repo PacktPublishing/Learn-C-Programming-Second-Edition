@@ -129,6 +129,8 @@ The correct Operator precedence table may be found on Page 660.
           return cardSum;
         }
 
+* **Page 202:** In the code listing for the function `addCard()`, the `struct Hand newHand` is incorrectly referred to as `hewHand` (3 occurrences) in the `switch` statement. In each occurrence, the structure name should be `newhand`
+
 * **Page 229:** In the 3rd paragraph, the sentence should be:
   > The C compiler does not see any difference between a variable and constant variable [after]() they have been declared.
 
