@@ -217,6 +217,11 @@ The initialization for a 3 x 4 x 5 array should appear as
             exit( EXIT_FAILURE );
           }
 
+* **Page 544:** In the source code listing for the function `int getName(...)`, the 2nd parameter to the function  `fgets()` is incorrect. Instead of `stringMax`, it should be `kStringMax` as follows:
+
+          fgets( pStr , kStringMax , inFileDesc );
+
+
 
 ## Instructions and Navigations
 All of the code is organized into folders. For example, Chapter02.
