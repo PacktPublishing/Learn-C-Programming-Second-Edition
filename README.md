@@ -221,8 +221,10 @@ The initialization for a 3 x 4 x 5 array should appear as
 
         char nameBuffer[ kStringMax ];
 
-* **Page 548:** In the source code listing for the function `int getName(...)`, the 2nd parameter to the function  `fgets()` is incorrect. Instead of `stringMax`, it should be `kStringMax` as follows:
+* **Page 548:** In the source code listing for the function `int getName(...)`, the parameters to the functions `memset()` and  `fgets()` are incorrect. Instead of `stringMax`, they should be `kStringMax` as follows:
 
+          memset( pStr , 0 , kStringMax );
+          ...
           fgets( pStr , kStringMax , inFileDesc );
 
 * **Page 551:** In the code snippet for `sortNames.c`, two functions at the bottom of the page show incorrect function signatures for those functions.
