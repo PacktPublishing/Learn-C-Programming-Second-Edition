@@ -210,6 +210,12 @@ The initialization for a 3 x 4 x 5 array should appear as
   This should read
   > The following program reads a group of digits, each of which is intended to represent a date—[the first two digits for the month, the next two for the day and the last four digits for the year]():
 
+* **Page 532:** In the source code listing where `outputFilename` is opened, `ERROR: input file` is shown in the error message instead of `ERROR: output file`, as follows:
+
+          if( NULL == outputFile )  {
+            fprintf( stderr, "ERROR: output file: [%s]: %s\n", outputFilename , strerror( errno ) );
+            exit( EXIT_FAILURE );
+          }
 
 
 ## Instructions and Navigations
