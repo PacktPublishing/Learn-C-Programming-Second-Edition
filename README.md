@@ -1,6 +1,5 @@
 
 
-
 # Learn C Programming - Second Edition
 
 <a href="https://www.packtpub.com/product/learn-c-programming-second-edition/9781801078450?utm_source=github&utm_medium=repository&utm_campaign=9781801078450"><img src="https://static.packt-cdn.com/products/9781801078450/cover/smaller" alt="Learn C Programming - Second Edition" height="256px" align="right"></a>
@@ -213,7 +212,8 @@ The initialization for a 3 x 4 x 5 array should appear as
 * **Page 532:** In the source code listing where `outputFilename` is opened, `ERROR: input file` is shown in the error message instead of `ERROR: output file`, as follows:
 
           if( NULL == outputFile )  {
-            fprintf( stderr, "ERROR: output file: [%s]: %s\n", outputFilename , strerror( errno ) );
+            fprintf( stderr, "ERROR: output file: [%s]: %s\n",
+                     outputFilename , strerror( errno ) );
             exit( EXIT_FAILURE );
           }
 
