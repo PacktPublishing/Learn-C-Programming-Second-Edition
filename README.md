@@ -225,6 +225,11 @@ The initialization for a 3 x 4 x 5 array should appear as
 
           fgets( pStr , kStringMax , inFileDesc );
 
+* **Page 551:** In the code snippet for `sortNames.c`, two functions at the bottom of the page show incorrect function signatures for those functions.
+    Each function takes a pointer to `nameList`. They pass in `nameList` when they should pass in `&nameList` and should appear as follows:
+
+          PrintNames( outputFile , &nameList );
+          DeleteNames( &nameList );
 
 
 ## Instructions and Navigations
