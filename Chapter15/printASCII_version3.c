@@ -31,16 +31,16 @@ int main( void )  {
     c3 = i+64;
     c4 = i+96;
     
-    if( c4 != 127 )  {
-      printf( "|  %c %3d %#x |  %c %3d %#x |  %c %3d %#x | " ,
-              c2 , c2 , c2 ,
-              c3 , c3 , c3 ,
-              c4 , c4 , c4  );
-    } else {
+    if( c4 == 127 )  {   // Handle case of DEL character
       printf( "|  %c %3d %#x |  %c %3d %#x |%s %3d %#x |" ,
               c2 , c2 , c2 ,
               c3 , c3 , c3 ,
               "DEL" , c4 , c4 );
+    } else {             // all other charcters EXCEPT DEL character
+      printf( "|  %c %3d %#x |  %c %3d %#x |  %c %3d %#x | " ,
+              c2 , c2 , c2 ,
+              c3 , c3 , c3 ,
+              c4 , c4 , c4  );
     }
     printf( "\n" );
 

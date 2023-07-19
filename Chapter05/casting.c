@@ -12,7 +12,7 @@
 int main( void )  {
   int    numerator   = 33;
   int    denominator =  5;
-  double result;
+  double result      = 0.0;
   
   
   result = numerator / denominator; 

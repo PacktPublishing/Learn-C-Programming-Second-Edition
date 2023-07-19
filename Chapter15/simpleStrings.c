@@ -32,8 +32,8 @@ int main( void )  {
   
   string0[0] = 'H';
   string1[0] = 'H';
-  string2[0] = toupper( string0[0] );
-  string3[0] = toupper( string0[0] );
+  string2[0] = toupper( string2[0] );
+  string3[0] = toupper( string3[0] );
 // string4[0] = 'H';     // Can't do this because its a pointer
                          // to a literal string (a constant).
   string4    = "Hello";  // assign pointer to new string.

@@ -40,12 +40,52 @@ alt="https://www.packtpub.com/" border="5" /></a>
   leaves out proper superscripting. It should appear as
   > significand x [base<sup>exponent</sup>]()
 
+* **Page 66 & page 69:** There is no `return 0;` in `main()`. There should be a `return 0` statement. The code should appear as
+
+       int main( void )  {
+         printSizes();
+         return 0;
+       }
+
+* **Page 92:** The program `calcLength.c` uses variable names `aValue` and `aLength` whose units are ambiguous. On the repository, these are replaced with `inches` and `totalInches`. This clearly demonstrates the importance of giving variables names that more accurately represent the values they are intended to hold.
+
+* **Page 104:** The declaration and calls to `doubleFunc()` are correct whereas its name in its definition is missing an 'e'. The function should be defined as
+
+        void doubleFunc( double dbl ) {
+        ...
+
+* **Page 105:** The format strings of the `printf()` do not match the output shown. The `printf()` format strings should include the expected numerical conversion for the given values. The format strings should have appropriate `"(int)"` or `"(double)"` as follows:
+
+          result = numerator / denominator; 
+          printf( "Truncation:       (int) %d   /    (int) %d    = %.1g\n\n" ,
+                  numerator , denominator , result );
+  
+          result = (double) numerator / denominator;
+          printf( "No truncation: (double) %.1f /    (int) %d    = %.1f\n" , 
+                  (double)numerator , denominator , result );
+
+          result = numerator / (double)denominator;
+          printf( "                  (int) %d   / (double) %.1f  = %.1f\n" , 
+                  numerator , (double)denominator , result );
+
+* **Page 107:** In code listing for `convertDigitToInt.c`, the line `#include <stdio.h>` is missing before `int main( void )`. It should be the first line of the code listing.
+
+* **Page 109:** The program name `logicals.c` is incorrectly given as `logical.c` (missing plural 's').
+
+* **Page 110:** The last `printf()` statement of the function `void printLogicalOR()` shows an incorrect parameter value. It should be
+
+        printf( "  %1d | %1d | %1d\n\n" , o ,  one_zero , one_one  );
+
+* **Page 111:** In the function `main()`, the call shown is `PrintLogicalXOR(...)` whereas it should be initial lowercase, `printLogicalXOR(...)`
+
 * **Page 113:** At the bottom of the page, the declaration of constant values are missing the assignment operator (=). They should be declared as:
   
         const unsigned char lowercase = 1;
         const unsigned char bold      = 2;
         const unsigned char italic    = 4;
         const unsigned char underline = 8;
+
+* **Page 119:** In code listing for `prefixpostfix.c`, the line `#include <stdio.h>` is missing before `int main( void )  {`. It should be the first line of the code listing.
 
 * **Page 121:** The wrong table has been displayed for *Table 5.1 – Operator precedence table*.<br>
 The correct Operator precedence table may be found on Page 660.
@@ -89,6 +129,14 @@ The correct Operator precedence table may be found on Page 660.
           return cardSum;
         }
 
+* **Page 202:** In the code listing for the function `addCard()`, the `struct Hand newHand` is incorrectly referred to as `hewHand` (3 occurrences) in the `switch` statement. In each occurrence, the structure name should be `newhand`
+
+* **Page 204:** In the code listing for the function `printHand2()`, the variable `dealt` is declared and in the next line, it is incorrectly referenced as `d`; it should be
+
+          if( dealt == 0 ) return;
+
+* **Page 206:** In the `main()` function code listing, `(int)eJeart` occurs. This should be `(int)eHeart`.
+  
 * **Page 229:** In the 3rd paragraph, the sentence should be:
   > The C compiler does not see any difference between a variable and constant variable [after]() they have been declared.
 
@@ -121,6 +169,16 @@ The initialization for a 3 x 4 x 5 array should appear as
 
 * **Page 286:** Inconsistent indentation of code. Throughout the text, 2 spaces have been used for each level of indentation. Note that the added whitespace, while inconsistent, does not alter program behavior. Consistent whitespace formatting is a desireable programming trait.
   
+* **Page 290:** In the code snippet
+
+        printf( "  address of pDimension = %#lx\n" , (unsigned long) &pDimension );
+
+  uses the `%#lx` format specifier for a pointer variable. Instead, it should use `%p`, as follows:
+
+        printf( "  address of pDimension = %p\n" , &pDimension );
+
+  The latter is both clearer and more correct.
+
 * **Page 293:** In the second paragraph, the dereference operator `->` is incorrectly shown. The text should read
   > This is done using the [`->`]() operator.
 
@@ -152,6 +210,26 @@ The initialization for a 3 x 4 x 5 array should appear as
   This should read
   > The following program reads a group of digits, each of which is intended to represent a date—[the first two digits for the month, the next two for the day and the last four digits for the year]():
 
+* **Page 532:** In the source code listing where `outputFilename` is opened, `ERROR: input file` is shown in the error message instead of `ERROR: output file`, as follows:
+
+          if( NULL == outputFile )  {
+            fprintf( stderr, "ERROR: output file: [%s]: %s\n", outputFilename , strerror( errno ) );
+            exit( EXIT_FAILURE );
+          }
+
+* **Page 547:** In the source code snippet to declare the `nameBuffer` array, the symbol `stringMax` is incorrect; it should be `kStringMax` as follows:
+
+        char nameBuffer[ kStringMax ];
+
+* **Page 548:** In the source code listing for the function `int getName(...)`, the 2nd parameter to the function  `fgets()` is incorrect. Instead of `stringMax`, it should be `kStringMax` as follows:
+
+          fgets( pStr , kStringMax , inFileDesc );
+
+* **Page 551:** In the code snippet for `sortNames.c`, two functions at the bottom of the page show incorrect function signatures for those functions.
+    Each function takes a pointer to `nameList`. They pass in `nameList` when they should pass in `&nameList` and should appear as follows:
+
+          PrintNames( outputFile , &nameList );
+          DeleteNames( &nameList );
 
 
 ## Instructions and Navigations
