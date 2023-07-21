@@ -69,7 +69,7 @@ alt="https://www.packtpub.com/" border="5" /></a>
 
 * **Page 107:** In code listing for `convertDigitToInt.c`, the line `#include <stdio.h>` is missing before `int main( void )`. It should be the first line of the code listing.
 
-* **Page 109:** The program name `logicals.c` is incorrectly given as `logical.c` (missing plural 's').
+* **Page 109:** In the last paragraph before the code listing, the program name `logical.c` is missing a plural 's'. It should be `logicals.c`.
 
 * **Page 110:** The last `printf()` statement of the function `void printLogicalOR()` shows an incorrect parameter value. It should be
 
@@ -142,8 +142,8 @@ The correct Operator precedence table may be found on Page 660.
 * **Page 230:** The next to last paragraph should read
   > All the values of each array are initialized to 0 when the value given within `{` and `}` is 0, 
 as in `int a[5] = {0};` otherwise the values are assigned in the sequence given within `{` and `}`, 
-as in `int b[5] = { 5 , 4 , 3 , 2 , 1 }`. Only the values given will initialize the corresponding elements; so,
-  >  `int c[5] = { 5 , 4 };` only initialized the first two elements and the remaining elements are unintialized.
+as in `int b[5] = { 5 , 4 , 3 , 2 , 1 }`. Only values given will initialize the corresponding elements; so,
+  >  `int c[5] = { 5 , 4 };` initializes onlly the first two elements while the remaining elements are unintialized.
 
 * **Page 252:** The initialization shown for `array3D` is for a 3 x 2 x 5 array.<br>
 The initialization for a 3 x 4 x 5 array should appear as
