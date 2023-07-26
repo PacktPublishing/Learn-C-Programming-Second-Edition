@@ -87,10 +87,10 @@ int trimStrInPlace( char* pString )  {
   size_t first , last , lenIn , lenOut ;
   first = last = lenIn = lenOut = 0;
   
-  lenIn = strlen( pString );   //
-  char tmpStr[ lenIn+1 ];      // Create working copy.
-  strcpy( tmpStr , pString );  // 
-  char* pTmp = tmpStr;         // pTmp may change in Left Trim segment.
+  lenIn = strlen( pString );      //
+  char tmpString[ lenIn+1 ];      // Create working copy.
+  strcpy( tmpString , pString );  // 
+  char* pTmp = tmpString;         // pTmp may change in Left Trim segment.
   
     // Left Trim
     // Find 1st non-whitespace char; pStr will point to that.
