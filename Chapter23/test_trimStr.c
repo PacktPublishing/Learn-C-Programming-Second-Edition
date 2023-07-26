@@ -79,7 +79,7 @@ char* trimStr( char* pStr )  {
   //                  the original string in place. 
   //
   // Parameter:
-  //   pString - pointer of string to be trimmed/modified.
+  //   pStr - pointer of string to be trimmed/modified.
   // Returns:
   //   The length of the string after trimming.
   //
