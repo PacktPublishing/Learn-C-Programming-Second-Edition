@@ -217,6 +217,39 @@ The initialization for a 3 x 4 x 5 array should appear as
             exit( EXIT_FAILURE );
           }
 
+* **Pages 544-545:** In the source code listing for `trimStr()`, there is inconsistent naming of the variables `pStr` (should not be `pString`) and `tmpStr` (should not be `tmpString`). The function `trimStr()` should thus appear as follows:
+
+        int trimStr( char* pStr )  {
+          size_t first , last , lenIn , lenOut ;
+          first = last = lenIn = lenOut = 0;
+  
+            lenIn = strlen( pStr );   //
+            char tmpStr[ lenIn+1 ];   // Create working copy.
+            strcpy( tmpStr , pStr );  // 
+            char* pTmp = tmpStr;      // pTmp may change in Left Trim segment.
+  
+              // Left Trim
+              // Find 1st non-whitespace char; pStr will point to that.
+            while( isspace( pTmp[ first ] ) )
+              first++;
+            pTmp += first;
+
+            lenOut = strlen( pTmp );     // Get new length after Left Trim.
+            if( lenOut )  {              // Check for empty string.
+                                         //  e.g. "   " trimmed to nothing.
+                // Right Trim
+                // Find 1st non-whitespace char & set NUL character there.
+              last = lenOut-1;           // off-by-1 adjustment.
+              while( isspace( pTmp[ last ] ) )
+                last--;
+              pTmp[ last+1 ] = '\0';  // Terminate trimmed string.
+            }
+            lenOut = strlen( pTmp );  // Length of trimmed string.
+            if( lenIn != lenOut )     // Did we change anything?
+              strcpy( pStr , pTmp );  // Yes, copy trimmed string back.
+            return lenOut;
+          }
+
 * **Page 547:** In the source code snippet to declare the `nameBuffer` array, the symbol `stringMax` is incorrect; it should be `kStringMax` as follows:
 
         char nameBuffer[ kStringMax ];
