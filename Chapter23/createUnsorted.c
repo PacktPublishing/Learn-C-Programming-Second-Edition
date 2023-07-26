@@ -143,13 +143,13 @@ void putName( char* pStr , FILE* outFileDesc )  {
   // Returns:
   //   The length of the string after trimming.
   //
-int trimStr( char* pString )  {
+int trimStr( char* pStr )  {
   size_t first , last , lenIn , lenOut ;
   first = last = lenIn = lenOut = 0;
   
-  lenIn = strlen( pString );
+  lenIn = strlen( pStr );
   char tmpStr[ lenIn+1 ];      // Create working copy.
-  strcpy( tmpStr , pString );
+  strcpy( tmpStr , pStr );
   char* pTmp = tmpStr;         // pTmp may change in Left Trim segment.
   
     // Left Trim
@@ -170,7 +170,7 @@ int trimStr( char* pString )  {
   }
   lenOut = strlen( pTmp );     // Length of trimmed string.
   if( lenIn != lenOut )        // Did we change anything?
-    strcpy( pString , pTmp );  // Yes, copy trimmed string back.
+    strcpy( pStr , pTmp );     // Yes, copy trimmed string back.
   return lenOut;
 }
 

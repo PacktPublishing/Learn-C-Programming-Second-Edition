@@ -69,7 +69,7 @@ alt="https://www.packtpub.com/" border="5" /></a>
 
 * **Page 107:** In code listing for `convertDigitToInt.c`, the line `#include <stdio.h>` is missing before `int main( void )`. It should be the first line of the code listing.
 
-* **Page 109:** The program name `logicals.c` is incorrectly given as `logical.c` (missing plural 's').
+* **Page 109:** In the last paragraph before the code listing, the program name `logical.c` is missing a plural 's'. It should be `logicals.c`.
 
 * **Page 110:** The last `printf()` statement of the function `void printLogicalOR()` shows an incorrect parameter value. It should be
 
@@ -142,8 +142,8 @@ The correct Operator precedence table may be found on Page 660.
 * **Page 230:** The next to last paragraph should read
   > All the values of each array are initialized to 0 when the value given within `{` and `}` is 0, 
 as in `int a[5] = {0};` otherwise the values are assigned in the sequence given within `{` and `}`, 
-as in `int b[5] = { 5 , 4 , 3 , 2 , 1 }`. Only the values given will initialize the corresponding elements; so,
-  >  `int c[5] = { 5 , 4 };` only initialized the first two elements and the remaining elements are unintialized.
+as in `int b[5] = { 5 , 4 , 3 , 2 , 1 }`. Only values given will initialize the corresponding elements; so,
+  >  `int c[5] = { 5 , 4 };` initializes onlly the first two elements while the remaining elements are unintialized.
 
 * **Page 252:** The initialization shown for `array3D` is for a 3 x 2 x 5 array.<br>
 The initialization for a 3 x 4 x 5 array should appear as
@@ -215,6 +215,39 @@ The initialization for a 3 x 4 x 5 array should appear as
             fprintf( stderr, "ERROR: output file: [%s]: %s\n",
                      outputFilename , strerror( errno ) );
             exit( EXIT_FAILURE );
+          }
+
+* **Pages 544-545:** In the source code listing for `trimStr()`, there is inconsistent naming of the variables `pStr` (should not be `pString`) and `tmpStr` (should not be `tmpString`). The function `trimStr()` should thus appear as follows:
+
+        int trimStr( char* pStr )  {
+          size_t first , last , lenIn , lenOut ;
+          first = last = lenIn = lenOut = 0;
+  
+            lenIn = strlen( pStr );   //
+            char tmpStr[ lenIn+1 ];   // Create working copy.
+            strcpy( tmpStr , pStr );  // 
+            char* pTmp = tmpStr;      // pTmp may change in Left Trim segment.
+  
+              // Left Trim
+              // Find 1st non-whitespace char; pStr will point to that.
+            while( isspace( pTmp[ first ] ) )
+              first++;
+            pTmp += first;
+
+            lenOut = strlen( pTmp );     // Get new length after Left Trim.
+            if( lenOut )  {              // Check for empty string.
+                                         //  e.g. "   " trimmed to nothing.
+                // Right Trim
+                // Find 1st non-whitespace char & set NUL character there.
+              last = lenOut-1;           // off-by-1 adjustment.
+              while( isspace( pTmp[ last ] ) )
+                last--;
+              pTmp[ last+1 ] = '\0';  // Terminate trimmed string.
+            }
+            lenOut = strlen( pTmp );  // Length of trimmed string.
+            if( lenIn != lenOut )     // Did we change anything?
+              strcpy( pStr , pTmp );  // Yes, copy trimmed string back.
+            return lenOut;
           }
 
 * **Page 547:** In the source code snippet to declare the `nameBuffer` array, the symbol `stringMax` is incorrect; it should be `kStringMax` as follows:
