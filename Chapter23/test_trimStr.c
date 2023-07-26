@@ -21,9 +21,9 @@
 #include <string.h>
 
 
-char* trimStr(        char* pString );
-int   trimStrInPlace( char* pString );
-void  testTrim( int testNum , char* pString );
+char* trimStr(        char* pStr );
+int   trimStrInPlace( char* pStr );
+void  testTrim( int testNum , char* pStr );
 
 
 int main( void )  {
@@ -42,30 +42,30 @@ int main( void )  {
   //           modified; therefore, return value is essential.
   //
   // Parameter:
-  //   pString - pointer to string to be trimmed.
+  //   pStr - pointer to string to be trimmed.
   // Returns:
   //   A pointer to the beginning of the trimmed string.
   //
-char* trimStr( char* pString )  {
+char* trimStr( char* pStr )  {
   size_t first , last , len ;
   first = last = len = 0;
 
     // Left Trim
     // Find 1st non-whitespace char; pStr will point to that.
-  while( isspace( pString[ first ] ) )
+  while( isspace( pStr[ first ] ) )
     first++;
-  pString += first;
+  pStr += first;
 
-  len = strlen( pString ); // Get new length after Left Trim.
-  if( len )  {             // Check for empty string. e.g. "   " trimmed to nothing.
+  len = strlen( pStr ); // Get new length after Left Trim.
+  if( len )  {          // Check for empty string. e.g. "   " trimmed to nothing.
       // Right Trim
       // Find 1st non-whitespace char & set NUL character there.
     last = len-1; // off-by-1 adjustment.
-    while( isspace( pString[ last ] ) )
+    while( isspace( pStr[ last ] ) )
       last--;
-    pString[ last+1 ] = 0;  // Terminate trimmed string.
+    pStr[ last+1 ] = 0;  // Terminate trimmed string.
   }
-  return pString;
+  return pStr;
 }
 
 
@@ -83,14 +83,14 @@ char* trimStr( char* pString )  {
   // Returns:
   //   The length of the string after trimming.
   //
-int trimStrInPlace( char* pString )  {
+int trimStrInPlace( char* pStr )  {
   size_t first , last , lenIn , lenOut ;
   first = last = lenIn = lenOut = 0;
   
-  lenIn = strlen( pString );      //
-  char tmpString[ lenIn+1 ];      // Create working copy.
-  strcpy( tmpString , pString );  // 
-  char* pTmp = tmpString;         // pTmp may change in Left Trim segment.
+  lenIn = strlen( pStr );   //
+  char tmpStr[ lenIn+1 ];   // Create working copy.
+  strcpy( tmpStr , pStr );  // 
+  char* pTmp = tmpStr;      // pTmp may change in Left Trim segment.
   
     // Left Trim
     // Find 1st non-whitespace char; pStr will point to that.
@@ -108,26 +108,26 @@ int trimStrInPlace( char* pString )  {
       last--;
     pTmp[ last+1 ] = '\0';  // Terminate trimmed string.
   }
-  lenOut = strlen( pTmp );     // Length of trimmed string.
-  if( lenIn != lenOut )        // Did we change anything?
-    strcpy( pString , pTmp );  // Yes, copy trimmed string back.
+  lenOut = strlen( pTmp );  // Length of trimmed string.
+  if( lenIn != lenOut )     // Did we change anything?
+    strcpy( pStr , pTmp );  // Yes, copy trimmed string back.
   return lenOut;
 }
 
 
-void testTrim( int testNum , char* pString )  {
+void testTrim( int testNum , char* pStr )  {
   size_t len;
-  char testString[ strlen( pString ) + 1];
+  char testStr[ strlen( pStr ) + 1];
   char* pTest;
   
-  strcpy( testString , pString );
-  fprintf( stderr , "%1d. original: \"%s\" [len:%d]\n"   , testNum, testString , (int)strlen(pString) );
-  pTest = trimStr( testString );
+  strcpy( testStr , pStr );
+  fprintf( stderr , "%1d. original: \"%s\" [len:%d]\n"   , testNum, testStr , (int)strlen( pStr ) );
+  pTest = trimStr( testStr );
   fprintf( stderr , "    trimStr: \"%s\" [len:%d]\n" , pTest ,  (int)strlen( pTest ));
 
-  strcpy( testString , pString );
-  len = trimStrInPlace( testString );
-  fprintf( stderr , "   trimStr2: \"%s\" [len:%d]\n\n" , testString , (int)len ) ;
+  strcpy( testStr , pStr );
+  len = trimStrInPlace( testStr );
+  fprintf( stderr , "   trimStr2: \"%s\" [len:%d]\n\n" , testStr , (int)len ) ;
 }
 
   /* eof */
