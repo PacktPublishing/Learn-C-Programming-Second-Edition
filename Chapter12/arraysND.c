@@ -87,7 +87,7 @@ void initialize2DArray( int col , int row , int array[row][col] )  {
 }
 
 
-void initialize3DArray( int x , int y , int z , int array[x][y][x] )  {
+void initialize3DArray( int x , int y , int z , int array[z][y][x] )  {
   for( int k = 0 ; k < z ; k++ )  {      // k : 0..(z-1)
     for( int j = 0 ; j < y ; j++ )  {    // j : 0..(y-1)
       for( int i = 0; i < x ; i++ )   {  // i : 0..(x-1)
