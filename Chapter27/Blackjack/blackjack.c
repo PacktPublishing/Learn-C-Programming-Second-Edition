@@ -155,7 +155,7 @@ void DoPlay( Deck* pDeck , Hand* hands[] ) {
   // while 1) you are under 21 and 2) dealer is under 17
   //  ask you for another card
   //  see if dealer wants another card
-  //  if you are over 21 or delaer over 21, game over.
+  //  if you are over 21 or delayer over 21, game over.
 
   Command command;
   do {

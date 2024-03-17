@@ -40,7 +40,7 @@ int main( void)  {
 
     // Sub-arrays.
     //
-    // NOTE: Are all 15 of these array elements contiquous as 
+    // NOTE: Are all 15 of these array elements contiguous as
     //       all 15 elements of arrayStd are?
     //       Maybe. Most of the time, yes, but this contiguity
     //       when declaring sub-arrays in this manner is not
@@ -90,7 +90,7 @@ int main( void)  {
   //  Then rerun with EXPERIMENT set to 1.
   //  When EXPERIMENT == 0, the array will be correctly traversed
   //  When EXPERIMENT == 1, the array will be incorrectly traversed
-  //    (traversed as if it were a contiguous 2D array)
+  //   (traversed as if it were a contiguous 2D array)
 
 #define EXPERIMENT 1
 

@@ -9,7 +9,7 @@
 //
 // Every library that you use or develop for yourself or others SHOULD
 // have a corresponding test program which exercises the library as
-// commpletely as possible.
+// completely as possible.
 //
 // Include this file and its source code file in your project.
 

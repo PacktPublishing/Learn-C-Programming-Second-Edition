@@ -4,11 +4,11 @@
 //
 // This is the linkedlist "library" program derived from linkedlisttester.c from
 // Chapter 18, herein called linked linkedlisttester_int_1file.c.
-// This test file contains all of the functions to implement a linked list..
+// This test file contains all of the functions to implement a linked list.
 //
 // Every library that you use or develop for yourself or others SHOULD
 // have a corresponding test program which exercises the library as
-// commpletely as possible.
+// completely as possible.
 //
 // Include this file and its header file in your project.
 
@@ -19,7 +19,7 @@
   // functions internal to this file
   //
   // These are internal because we wanted to keep the interface for our
-  // linked list library as simple as possoble.
+  // linked list library as simple as possible.
 
 void  AddNodeToFront(    LinkedList* pList , ListNode* pNode );
 void  AddNodeToBack(     LinkedList* pList , ListNode* pNode );

@@ -26,7 +26,7 @@ enum  {
                       // cards, etc.
   kCardsInSuit = 13,  // For now, kCardsInDeck / 4. This will change
                       // depending upon the card game.
-  kCardsInHand = 5,   // For now, 5 cards dealt for each hange. This will
+  kCardsInHand = 5,   // For now, 5 cards dealt for each change. This will
                       // change depending upon the card game.
   kNumHands    = 4    // For now, for hands per "table". This will change
                       // depending on the game we want to implement.
@@ -87,7 +87,7 @@ int  GetCardSuitValue( Card* pCard );
 
 
   // ============================================
-  // Defintions for a hand
+  // Definitions for a hand
   // ============================================
 
   // A Hand
@@ -212,7 +212,7 @@ void CardToString( Card* pCard , char pCardStr[20] )  {
 
 
   // For now, rely upon proper definition of enum Faces.
-  // If, at some future time, face values need to chage,
+  // If, at some future time, face values need to change,
   // this function can be changed as needed and program will continue
   // to work as expected.
 inline int GetCardFaceValue( Card* pCard )  {
@@ -220,8 +220,8 @@ inline int GetCardFaceValue( Card* pCard )  {
 }
 
 
-  // For now, realy upon proper definition of enum Suits.
-  // If, at some future time, the suit values need to chage,
+  // For now, rely upon proper definition of enum Suits.
+  // If, at some future time, the suit values need to change,
   // this function can be changed as needed and program will continue
   // to work as expected.
 inline int GetCardSuitValue( Card* pCard ) {
@@ -312,7 +312,7 @@ void ShuffleDeck( Deck* pDeck )  {
 
       // Using a constant will give the same sequence each time.
       // The actual number doesn't matter (could be 1). This is handy for
-      // reproducibility to verify your program as you developt it.
+      // reproducibility to verify your program as you develop it.
     seed = 8*1024*1024; // Just some number (~8 million for giggles)
   }
   srand( seed );
@@ -320,7 +320,7 @@ void ShuffleDeck( Deck* pDeck )  {
   Card* pTmpCard;
 
     // Now, walk through the shuffled array, swapping the pointer
-    // at a random card index in shuffuled with the pointer at the
+    // at a random card index in shuffled with the pointer at the
     // current card index.
     //
   for( int thisIndex = 0 ; thisIndex < kCardsInDeck ; thisIndex++ )  {

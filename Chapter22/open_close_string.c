@@ -36,7 +36,7 @@ int main( void ) {
 
   outputFile = fopen( outputFilename , "w" );
   if( NULL == outputFile )  {
-    fprintf( stderr, "ERROR: input file %s: %s\n",
+    fprintf( stderr, "ERROR: output file %s: %s\n",
              outputFilename , strerror( errno ) );
     exit( EXIT_FAILURE );
   }

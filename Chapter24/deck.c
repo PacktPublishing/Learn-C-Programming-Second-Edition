@@ -57,7 +57,7 @@ void ShuffleDeck( Deck* pDeck )  {
 
     // Using a constant will give the same sequence each time.
     // The actual number doesn't matter (could be 1). This is handy for
-    // reproducibility to verify your program as you developt it.
+    // reproducibility to verify your program as you develop it.
     seed = 0x800000;   // Just some number ( 8*1024*1024 for giggles)
   }
   printf( "srand seed is %u [%#x]\n\n" , seed , seed );
@@ -66,7 +66,7 @@ void ShuffleDeck( Deck* pDeck )  {
   Card* pTmpCard;
 
   // Now, walk through the shuffled array, swapping the pointer
-  // at a random card index in shuffuled with the pointer at the
+  // at a random card index in shuffled with the pointer at the
   // current card index.
   //
   for( int thisIndex = 0 ; thisIndex < kCardsInDeck ; thisIndex++ )  {

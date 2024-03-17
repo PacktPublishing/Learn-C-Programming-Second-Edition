@@ -24,7 +24,7 @@
 //
 // Sample inputs:
 //
-//   getopts_long_GNUC --verbose -a -b --num=3 --size=10 --delete=Bye-bye \
+//   getopts_long_GNUC --verbose -a -p --num=3 --size=10 --delete=Bye-bye \
 //                     -c Hello -f AFile.dat Red Green Blue
 //   (try many other variations yourself)
 
@@ -42,15 +42,15 @@ static int num_flag = 0;
 static struct option long_options[] = {
     // These options set a flag. They are handled by getopt_long()
     // and are not processed in the switch statement.
-    // When --verborse is encountered, verbose_flag is set to 1.
+    // When --verbose is encountered, verbose_flag is set to 1.
     // When --brief is encountered, verbose_flag is set to 0.
   {"verbose", no_argument,       &verbose_flag, 1},
   {"brief",   no_argument,       &verbose_flag, 0},
     // These options don’t set a flag.
     // We distinguish them by their single character.
-    // Each is processed in the switch statment.
+    // Each is processed in the switch statement.
     //
-    // Options without an any following argument.
+    // Options without any following argument.
   {"add",     no_argument,       0, 'a'},
   {"append",  no_argument,       0, 'p'},
     // Options with a required following argument.
@@ -59,7 +59,7 @@ static struct option long_options[] = {
   {"file",    required_argument, 0, 'f'},
     // Option which sets a default value if no additional argument
     // is given. The default value is specified here as 14.
-    // An additional argument is optionsl.
+    // An additional argument is optional.
     // This option will only be processed in the switch statement if
     // the optional following argument is given.
   {"number",  optional_argument, &num_flag, 14},
@@ -162,7 +162,7 @@ int main( int argc , char** argv )  {
 
     // If the optional additional argument is encountered, num_flag will be set
     // to that value in the switch statement.
-    // If no additonal argumeent is encountered, the value given in the options table
+    // If no additional argument is encountered, the value given in the options table
     // will be assigned by getopt_long().
   if( num_flag )
     printf( "num_flag=%d\n" , num_flag );

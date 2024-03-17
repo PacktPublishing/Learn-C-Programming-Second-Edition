@@ -14,7 +14,7 @@
 //
 // Compile with:
 //
-//    cc circle_piRounding.c trig.c -o cirle_piRounding -Wall -Werror -std=c17
+//    cc circle_piRounding.c trig.c -o circle_piRounding -Wall -Werror -std=c17
 //
 
 #include <stdio.h>
@@ -23,7 +23,7 @@
   //
   // #incude "trig.h"
   //     becomes the following source code in this file
-  //      vbefore the file is compiled.
+  //     before the file is compiled.
   //
 double circle_circumference( double diameter );
 double circle_area( double radius );

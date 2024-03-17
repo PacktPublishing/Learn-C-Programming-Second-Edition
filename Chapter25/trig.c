@@ -18,7 +18,7 @@
 //
 // Compile with:
 //
-//    cc circle.c trig.c -o cirle -Wall -Werror -std=c18
+//    cc circle.c trig.c -o circle -Wall -Werror -std=c18
 //
 
   // === trig.h

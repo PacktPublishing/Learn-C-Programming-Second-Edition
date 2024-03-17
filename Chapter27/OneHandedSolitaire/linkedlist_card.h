@@ -6,9 +6,9 @@
 //
 // Modified from linklist_int.h.
 //
-// Only typeded Card ListData changed from linkedlist_int.h
+// Only typedef Card ListData changed from linkedlist_int.h
 // and card.h included.
-// Function prototypes otherwise identital.
+// Function prototypes otherwise identical.
 
 
 #ifndef _LINKED_LIST_CARD_

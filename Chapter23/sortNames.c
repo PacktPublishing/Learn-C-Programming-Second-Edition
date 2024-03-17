@@ -104,7 +104,7 @@ void usage( char* cmd )
   //            If input is from stdin, give prompt.
   //            Trim excess whitespace before and after string
   //            (including <newline> which fgets() preserves).
-  //  parametrs:
+  //  parameters:
   //    inFileDesc - input stream
   //    nameStr    - array of characters allocated by caller
   //  returns:
@@ -120,7 +120,7 @@ int getName( FILE* inFileDesc , char* pStr )  {
     fprintf( stdout , "Name %d: ", numNames+1 );
 
     // In this use of fgets(), we do not need to be concerned here about the
-    // final newling; it will be removed along with other possible whitespace
+    // final newline; it will be removed along with other possible whitespace
     // in the subsequent call to trimStr().
     //
   fgets( pStr , kStringMax , inFileDesc );
@@ -146,7 +146,7 @@ void putName( char* pStr , FILE* outFileDesc )  {
   //
   //           Because a trimmed string will always be the same
   //           or fewer characters than the original, the only
-  //           side effect of this function is the modifiction of
+  //           side effect of this function is the modification of
   //           the original string in place.
   //
   // Parameter:

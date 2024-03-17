@@ -7,11 +7,11 @@
 // This test file does the same thing as linkedlisttester_int_1file.c.
 //
 // Notice that the use of test functions make this source file much smaller
-// than the companion verions, linkedlisttester_int_simple.c.
+// than the companion versions, linkedlisttester_int_simple.c.
 //
 // Every library that you use or develop for yourself or others SHOULD
 // have a corresponding test program which exercises the library as
-// commpletely as possible.
+// completely as possible.
 //
 // compile with:
 //   cc linkedlisttester_int.c linkedlist_int.c -o linkedlisttester_int_simple -Wall -Werror -std=c17
@@ -28,7 +28,7 @@ typedef enum  {
   eBack
 } eWhere;
 
-// Describe acctions being performed upon the list.
+// Describe actions being performed upon the list.
 //
 typedef enum  {
   eLook = 0 ,

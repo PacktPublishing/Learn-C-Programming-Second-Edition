@@ -75,7 +75,7 @@ char* trimStr( char* pStr )  {
   //
   //                  Because a trimmed string will always be the same
   //                  or fewer characters than the original, the only
-  //                  side effect of this function is the modifiction of
+  //                  side effect of this function is the modification of
   //                  the original string in place.
   //
   // Parameter:

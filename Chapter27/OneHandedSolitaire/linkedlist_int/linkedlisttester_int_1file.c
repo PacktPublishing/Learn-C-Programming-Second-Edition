@@ -26,7 +26,7 @@ typedef enum  {
   eBack
 } eWhere;
 
-  // Describe acctions being performed upon the list.
+  // Describe actions being performed upon the list.
   //
 typedef enum  {
   eLook = 0 ,

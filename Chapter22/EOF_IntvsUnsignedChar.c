@@ -30,7 +30,7 @@ int main(int argc, char *argv[])  {
            char c  =  -1; // ?? (implementation dependent)
 
   signed int unsignedCh = uc; // unsigned char (-1) converted to int:
-                              //   unsigned bit pattern presevered in wider int size.
+                              //   unsigned bit pattern persevered in wider int size.
 
   signed int signedCh = sc;   // signed char (-1) converted to int
                               //   signed-ness extended from byte to wider int size.

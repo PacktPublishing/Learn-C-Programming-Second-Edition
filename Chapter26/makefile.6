@@ -17,7 +17,7 @@ CCFLAGS = -Wall -Werror -std=c17
 LDLIBS  =
 
 
-# Project files (only need to change PROG to match your prorgram name)
+# Project files (only need to change PROG to match your program name)
 
 SRCS = $(wildcard *.c)
 HDRS = $(wildcard *.h)

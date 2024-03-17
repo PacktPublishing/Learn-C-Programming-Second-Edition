@@ -54,7 +54,7 @@ int main( void )  {
               c4 , c4 , c4  );
     }
 
-    // Print extended ASCII for your your system.
+    // Print extended ASCII for your system.
     //
     printf("  %c %3d %#x |  %c %3d %#x |  %c %3d %#x |  %c %3d %#x |" ,
             c5 , c5 , c5 ,

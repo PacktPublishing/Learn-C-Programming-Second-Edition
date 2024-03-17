@@ -26,7 +26,7 @@
                         // cards, etc.
     kCardsInSuit = 13,  // For now, kCardsInDeck / 4. This will change
                         // depending upon the card game.
-    kCardsInHand = 5,   // For now, 5 cards dealt for each hange. This will
+    kCardsInHand = 5,   // For now, 5 cards dealt for each change. This will
                         // change depending upon the card game.
     kNumHands    = 4    // For now, for hands per "table". This will change
                         // depending on the game we want to implement.
@@ -84,7 +84,7 @@ int  GetCardSuitValue( Card* pCard );
 
 
   // ============================================
-  // Defintions related to a hand
+  // Definitions related to a hand
   // ============================================
 
   // A Hand
@@ -196,7 +196,7 @@ void CardToString( Card* pCard , char pCardStr[20] )  {
 
 
   // For now, rely upon proper definition of enum Faces.
-  // If, at some future time, face values need to chage,
+  // If, at some future time, face values need to change,
   // this function can be changed as needed and program will continue
   // to work as expected.
 inline int GetCardFaceValue( Card* pCard )  {
@@ -204,8 +204,8 @@ inline int GetCardFaceValue( Card* pCard )  {
 }
 
 
-  // For now, realy upon proper definition of enum Suits.
-  // If, at some future time, the suit values need to chage,
+  // For now, rely upon proper definition of enum Suits.
+  // If, at some future time, the suit values need to change,
   // this function can be changed as needed and program will continue
   // to work as expected.
 inline int GetCardSuitValue( Card* pCard ) {

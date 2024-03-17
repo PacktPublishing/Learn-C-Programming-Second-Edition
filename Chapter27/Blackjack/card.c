@@ -63,7 +63,7 @@ void CardToString( Card* pCard , char pCardStr[20] )  {
 
 
   // In Blackjack, cards have specific values.
-  // This routines sets them initially for Blackjak.
+  // This routine sets them initially for Blackjack.
   // NOTE: Aces will start out with value=11. We'll later
   //       give the option to change to value = 1.
 inline int GetCardFaceValue( Card* pCard )  {
@@ -90,8 +90,8 @@ inline int GetCardFaceValue( Card* pCard )  {
 }
 
 
-  // For now, realy upon proper definition of enum Suits.
-  // If, at some future time, the suit values need to chage,
+  // For now, rely upon proper definition of enum Suits.
+  // If, at some future time, the suit values need to change,
   // this function can be changed as needed and program will continue
   // to work as expected.
 inline int GetCardSuitValue( Card* pCard ) {

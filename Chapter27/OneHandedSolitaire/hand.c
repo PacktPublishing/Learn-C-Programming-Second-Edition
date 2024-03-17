@@ -46,7 +46,7 @@ void PrintHand( Hand* pHand , char* pHandStr , char* pLeadStr )  {
 }
 
 
-  // beginCard & endCard are indicds (0-based)
+  // beginCard & endCard are indices (0-based)
   // Do bounds-checking for beginCard & endCard.
 void PrintTop4Cards( Hand* pHand ) {
 
