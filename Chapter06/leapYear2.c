@@ -4,7 +4,7 @@
   //
   // Our second pass at a leap year program.
   // In this version, we use "if/else if/else" logic.
-  // Note: in if/else logic, only one of each condition is 
+  // Note: in if/else logic, only one of each condition is
   //       evaluated. Once the condition is met, execution
   //       resumes at the end of the complex statement.
   //
@@ -34,7 +34,7 @@ int main( void )  {
 }
 
 
-  // isLeapYear logic conforms to algorithm given in 
+  // isLeapYear logic conforms to algorithm given in
   // https://en.wikipedia.org/wiki/Leap_year.
   //
 bool isLeapYear( int year )  {
@@ -50,7 +50,7 @@ bool isLeapYear( int year )  {
   else if( (year % 100) == 0 )    // Year is multiple of 100.
     isLeap = false;
   else
-    isLeap = true;                // Year is a multiple of 4 (other conditions 
+    isLeap = true;                // Year is a multiple of 4 (other conditions
                                   // 400 years, 100 years) already considered.
   return isLeap;
 }

@@ -32,7 +32,7 @@ int main(int argc, char *argv[])  {
   int   ch;
   FILE* inputFile  = NULL;
   FILE* outputFile = NULL;
-  
+
   while( ( ch = getopt( argc , argv , "i:o:h" ) ) != -1 )  {
     switch (ch)  {
       case 'i':
@@ -56,19 +56,19 @@ int main(int argc, char *argv[])  {
         break;
     }
   }
-  
+
   if( !inputFile )  {
     inputFile = stdin;
     fprintf( stderr , "Using stdin for input.\n" );
   }
-  
+
   if( !outputFile )  {
     outputFile = stdout;
     fprintf( stderr , "Using stdout for output.\n" );
   }
-  
+
   char  nameBuffer[ kStringMax ];
-  
+
   while( getName( inputFile , nameBuffer ) )  {
     putName( nameBuffer , outputFile );
   }
@@ -100,7 +100,7 @@ void usage( char* cmd )  {
   //    length of nameStr. 0, or empty string, means end of input.
   //
 int getName( FILE* inFileDesc , char* pStr )  {
-  static int numNames = 0; 
+  static int numNames = 0;
          int len;
 
   memset( pStr , 0 , kStringMax );
@@ -113,11 +113,11 @@ int getName( FILE* inFileDesc , char* pStr )  {
     // in the subsequent call to trimStr().
     //
   fgets( pStr , kStringMax , inFileDesc );
-  
+
   len = trimStr( pStr );  // Here's where pStr could change.
 
   if( len ) numNames++;
-  return len; 
+  return len;
 }
 
 
@@ -130,13 +130,13 @@ void putName( char* pStr , FILE* outFileDesc )  {
 
 
   // trimStr - Trims beginning and end of a string.
-  //           Creates a working copy of string, trims that, 
+  //           Creates a working copy of string, trims that,
   //           and copies the trimmed string back to original.
   //
-  //           Because a trimmed string will always be the same 
-  //           or fewer characters than the original, the only 
+  //           Because a trimmed string will always be the same
+  //           or fewer characters than the original, the only
   //           side effect of this function is the modifiction of
-  //           the original string in place. 
+  //           the original string in place.
   //
   // Parameter:
   //   pString - pointer of string to be trimmed/modified.
@@ -146,12 +146,12 @@ void putName( char* pStr , FILE* outFileDesc )  {
 int trimStr( char* pStr )  {
   size_t first , last , lenIn , lenOut ;
   first = last = lenIn = lenOut = 0;
-  
+
   lenIn = strlen( pStr );
   char tmpStr[ lenIn+1 ];      // Create working copy.
   strcpy( tmpStr , pStr );
   char* pTmp = tmpStr;         // pTmp may change in Left Trim segment.
-  
+
     // Left Trim
     // Find 1st non-whitespace char; pStr will point to that.
   while( isspace( pTmp[ first ] ) )

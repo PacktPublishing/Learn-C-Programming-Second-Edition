@@ -7,7 +7,7 @@
 # A general makefile
 # 1. All source & header files are in the same directory.
 # 2. Change ghe macro PROG to the name of the executable.
-# 3. 
+# 3.
 
 
 # Compiler & Linker flags

@@ -25,7 +25,7 @@ enum { bufferSize = 80 };
 
 int main( void )  {
   char stringBuffer[ bufferSize ] = {0};
-  
+
   printf( "Enter a string: " );
   scanf(  "%s" , stringBuffer );
   printf( "Processed string: [%s]\n\n" , stringBuffer );

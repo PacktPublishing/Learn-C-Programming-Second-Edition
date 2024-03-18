@@ -39,7 +39,7 @@ int sumNviaWhile( int N )  {
   while( num < N )  {     // num: 0..99 (100 is not less than 100)
     sum += (num+1);       // Off-by-one: shift 0..99 to 1..100.
     num++;
-  }  
+  }
   return sum;
 }
 

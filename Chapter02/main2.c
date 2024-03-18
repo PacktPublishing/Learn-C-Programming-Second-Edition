@@ -3,7 +3,7 @@
 //  Chapter 2
 //  Learn C Programming, 2nd Ed.
 //
-//  Adding a simple function. 
+//  Adding a simple function.
 //  The program still does nothing.
 //
 

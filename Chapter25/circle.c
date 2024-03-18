@@ -23,9 +23,9 @@
 
 #include <stdio.h>
 
-  // === trig.h 
+  // === trig.h
   //
-  // #incude "trig.h" 
+  // #incude "trig.h"
   //     becomes the following source code in this file
   //      vbefore the file is compiled.
   //
@@ -45,18 +45,18 @@ int main( void ) {
   circle(  2.5 );
   return 0;
 }
-  
+
 void circle( double radius )  {
   double r = 0.0;
   double d = 0.0;
 
-  if( radius <= 0.0 ) r = unit_circle_radius; 
-  else                r = radius; 
+  if( radius <= 0.0 ) r = unit_circle_radius;
+  else                r = radius;
   d = 2 * r;
 
   if( radius <= 0.0 ) printf( "Unit circle:\n" );
   else                printf( "Circle\n");
-  
+
   printf( "         radius = %10.4f inches\n" , r );
   printf( "  circumference = %10.4f inches\n" , circle_circumference( d ) );
   printf( "           area = %10.4f square inches\n" , circle_area( r ) );

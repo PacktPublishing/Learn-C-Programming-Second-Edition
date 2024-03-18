@@ -1,6 +1,6 @@
   // styles.c
   // Chapter 8
-  // Learn C Programming, 2nd Edition  
+  // Learn C Programming, 2nd Edition
   //
   // Compile with:
   //
@@ -20,12 +20,12 @@ enum textStyle  {
 
 
 int main( void )  {
-  int style      = bold | italic;      // Style has bold and italic 
-                                       // turned on. 
-  int otherStyle = italic + underline; // OtherStyle has italic and  
-                                       // underline turned on. 
-  
-  if( style & bold ) 
+  int style      = bold | italic;      // Style has bold and italic
+                                       // turned on.
+  int otherStyle = italic + underline; // OtherStyle has italic and
+                                       // underline turned on.
+
+  if( style & bold )
     printf( "For 'style' bold is turned on.\n");
   if( !(otherStyle & bold) )
     printf( "For 'otherStyel' bold is turned off\n" );

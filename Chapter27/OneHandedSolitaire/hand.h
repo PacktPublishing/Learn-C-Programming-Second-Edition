@@ -37,4 +37,4 @@ void PrintTop4Cards( Hand* pHand );
 void RemovedCardsFromHand( Hand* pHand , int beginCard , int numCards );
 
 
-#endif 
+#endif

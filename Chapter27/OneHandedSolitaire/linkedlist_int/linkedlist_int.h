@@ -8,7 +8,7 @@
 // implemented in linkedlist_int.c.
 //
 // Every library that you use or develop for yourself or others SHOULD
-// have a corresponding test program which exercises the library as 
+// have a corresponding test program which exercises the library as
 // commpletely as possible.
 //
 // Include this file and its source code file in your project.
@@ -64,7 +64,7 @@ void              OutOfStorage( void );
 
 void              PrintList(  LinkedList* pList ,
                               void (*printData)(ListData* pData ) );
-void              PrintNode(  ListNode* pNode , 
+void              PrintNode(  ListNode* pNode ,
                               void (*printData)(ListData* pData));
 
 #endif

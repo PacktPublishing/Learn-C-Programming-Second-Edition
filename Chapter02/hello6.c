@@ -34,7 +34,7 @@ void printGreeting( char* aGreeting , char* aName )  {
 int main( void )  {
   printGreeting( "Hi" , "Bub" );
 
-  return 0; 
+  return 0;
 }
 
 //  <eof>

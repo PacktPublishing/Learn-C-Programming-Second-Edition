@@ -24,14 +24,14 @@ int main( void )  {
   Deck  deck;
   Deck* pDeck = &deck;
   InitializeDeck( pDeck );
-  
+
   bRandomize = true;
-  
-  Hand h1 , h2 ;  
-  Hand* hands[] = { &h1 , &h2 }; 
-  
+
+  Hand h1 , h2 ;
+  Hand* hands[] = { &h1 , &h2 };
+
   Command command;
-  
+
   do {
     command  = GetGameOption();
     switch( command ) {
@@ -75,14 +75,14 @@ Command GetGameOption( void ) {
   Command command;
   char*   prompt = "Would you like to play Blackjack? [ynQ?] " ;
   char    inputStr[80]={0};
-  
+
   printf( "%s" , prompt );
-  fgets( (char*)inputStr , 79 , stdin ); // Get a string, but...  
+  fgets( (char*)inputStr , 79 , stdin ); // Get a string, but...
   ch = inputStr[0];                 // Throw away everything but 1st character
   if( isspace( ch ) ) ch = 'q';     // <return>-only string. Set to default.
   ch = tolower( ch );
   switch( ch ) {
-    case 'y': 
+    case 'y':
       command = ePlay;
       break;
     case 'n':
@@ -105,14 +105,14 @@ Command GetPlayOption( void )  {
   Command command;
   char*   prompt = "Hit or stand? [hsq?] " ;
   char    inputStr[80]={0};
-  
+
   printf( "%s" , prompt );
-  fgets( (char*)inputStr , 80 , stdin ); // Get a string, but...  
+  fgets( (char*)inputStr , 80 , stdin ); // Get a string, but...
   ch = inputStr[0];                 // Throw away everything but 1st character
   if( isspace( ch ) ) ch = ' ';     // <return>-only string. Set to default.
   ch = tolower( ch );
   switch( ch ) {
-    case 'h': 
+    case 'h':
       command = eHit;
       break;
     case 's':
@@ -140,11 +140,11 @@ void DoPlay( Deck* pDeck , Hand* hands[] ) {
   int dealerHandValue;
 
   ShuffleDeck( pDeck );
-  
+
   for( int i = 0 ; i < kNumHands ; i++ )  {
     InitializeHand( hands[i] );
   }
-  
+
   for( int i = 0 ; i < 2 ; i++ )  {
     for( int j = 0 ; j < kNumHands ; j++ )  {
       AddCardToHand( hands[j] , DealCardFromDeck( pDeck ) );
@@ -156,7 +156,7 @@ void DoPlay( Deck* pDeck , Hand* hands[] ) {
   //  ask you for another card
   //  see if dealer wants another card
   //  if you are over 21 or delaer over 21, game over.
-  
+
   Command command;
   do {
     command = GetPlayOption();
@@ -184,27 +184,27 @@ void DoPlay( Deck* pDeck , Hand* hands[] ) {
       // play logic goes here.
     playerHandValue = GetHandValue( hands[kPlayerHand] );
     dealerHandValue = GetHandValue( hands[kDealerHand] );
-    
+
        //if dealerHand < 17, --> dealer gets a card.
-      
+
     if( playerHandValue < 22 && dealerHandValue < 17 )  {
       printf( "  Dealer requests a card.\n");
       AddCardToHand( hands[ kDealerHand ] , DealCardFromDeck( pDeck ) );
       dealerHandValue = GetHandValue( hands[kDealerHand] );
     }
-    
+
     PrintAllHands( hands );
-    
+
     if( dealerHandValue > 16 )  bDealerDone = true;
     if( dealerHandValue > 21 || playerHandValue > 21 )  {
       bPlayerDone = true;
       bDealerDone = true;
     }
-    
+
   } while( !bPlayerDone && !bDealerDone );
-  
+
     // winner logic goes here.
-  
+
   if( playerHandValue > 21 )
     printf( "\n    Sorry, you lost.\n\n" );
   else if( dealerHandValue > 21 )
@@ -220,13 +220,13 @@ void DoPlay( Deck* pDeck , Hand* hands[] ) {
 
 
 void PrintDeck( Deck* pDeck )  {
-  printf( "%d cards in the deck\n" , 
+  printf( "%d cards in the deck\n" ,
     kCardsInDeck );
-  printf( "Deck %s shuffled\n", 
+  printf( "Deck %s shuffled\n",
     pDeck->bIsShuffled ? "is" : "is not" );
-  printf( "%d cards dealt into %d hands\n" , 
+  printf( "%d cards dealt into %d hands\n" ,
     pDeck->numDealt ,  kNumHands );
-   
+
   if( pDeck->bIsShuffled == true )  {        // Deck is shuffled.
     if( pDeck->numDealt > 0 )  {
       printf( "The remaining shuffled deck:\n" );
@@ -249,15 +249,15 @@ void PrintDeck( Deck* pDeck )  {
       int index  = i + (0*kCardsInSuit);
       printf( "(%2d)" , index+1 );
       PrintCard( &(pDeck->ordered[ index ] ) );
-      
+
       index = i + (1*kCardsInSuit);
       printf( "   (%2d)" , index+1 );
       PrintCard( &(pDeck->ordered[ index ] ) );
-      
+
       index = i + (2*kCardsInSuit);
       printf( "   (%2d)" , index+1 );
       PrintCard( &(pDeck->ordered[ i + (2*kCardsInSuit) ] ) );
-      
+
       index = i + (3*kCardsInSuit);
       printf( "   (%2d)" , index+1 );
       PrintCard( &(pDeck->ordered[ index ] ) );
@@ -269,4 +269,3 @@ void PrintDeck( Deck* pDeck )  {
 
 
   /* eof */
-  

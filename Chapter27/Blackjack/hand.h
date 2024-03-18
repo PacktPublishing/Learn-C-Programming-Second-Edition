@@ -35,4 +35,4 @@ void PrintAllHands(  Hand* hands[ kNumHands ] );
 int  GetHandValue(   Hand* pHand );
 
 
-#endif 
+#endif

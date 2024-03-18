@@ -1,7 +1,7 @@
   // convertTemp1.c
   // Chapter 5: Exploring Operators and Expressions
   // Learn C Programming, 2nd Edition
-  // 
+  //
   // Program to convert temperature values
   // to and from Celsius and Fahrenheit.
   //

@@ -2,11 +2,11 @@
 // Chapter 15
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to 
+// Demonstrate how to
 // 1) use a string more than once
 // 2) manipulate each element of a string with while()...
 //
-// compile with: 
+// compile with:
 //   cc greet.c -o greet -Wall -Werror -std=c17
 
 

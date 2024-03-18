@@ -5,8 +5,8 @@
   // A function which demonstrates assignment via
   // return value.
   //
-  // There are 2 assignments. 
-  // 1 to the function expression and the 2nd to 
+  // There are 2 assignments.
+  // 1 to the function expression and the 2nd to
   // the variable feet via the = operator.
   //
 

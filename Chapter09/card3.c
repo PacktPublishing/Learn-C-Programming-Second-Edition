@@ -16,27 +16,27 @@
 
 
 enum Suit  {
-  eClub  = 1, 
-  eDiamond, 
+  eClub  = 1,
+  eDiamond,
   eHeart,
-  eSpade 
+  eSpade
 };
 
 
-enum Face  { 
-  eOne = 1, 
-  eTwo, 
-  eThree, 
-  eFour, 
-  eFive, 
-  eSix, 
-  eSeven, 
-  eEight, 
-  eNine, 
-  eTen, 
-  eJack, 
-  eQueen, 
-  eKing, 
+enum Face  {
+  eOne = 1,
+  eTwo,
+  eThree,
+  eFour,
+  eFive,
+  eSix,
+  eSeven,
+  eEight,
+  eNine,
+  eTen,
+  eJack,
+  eQueen,
+  eKing,
   eAce
 };
 
@@ -71,25 +71,25 @@ int main( void )  {
   struct Card c4 = { eClub    , (int)eClub    , eAce   , (int)eAce   , false };
   struct Card c5 = { eHeart   , (int)eHeart   , eJack  , (int)eJack  , false };
   struct Card c6 = { eClub    , (int)eClub    , eTwo   , (int)eTwo   , false };
-    
+
   h = addCard( h , c1 );
   h = addCard( h , c2 );
   h = addCard( h , c3 );
   h = addCard( h , c4 );
   h = addCard( h , c5 );
   h = addCard( h , c6 );
-  
+
   printHand( h );
   printf("\n");
   printHand2( h );
-  
-  return 0;  
+
+  return 0;
 }
 
 
 struct Hand addCard( struct Hand oldHand , struct Card card )  {
   struct Hand newHand = oldHand;
-  switch( newHand.cardsDealt ) 
+  switch( newHand.cardsDealt )
   {
     case 0:
       newHand.c1 = card;  newHand.cardsDealt++;  break;
@@ -129,7 +129,7 @@ void printHand( struct Hand h )  {
 void printHand2( struct Hand h )  {
   int dealt = h.cardsDealt;
   if( dealt == 0 ) return;
-  printCard( h.c1 ); if( dealt == 1 ) return;  
+  printCard( h.c1 ); if( dealt == 1 ) return;
   printCard( h.c2 ); if( dealt == 2 ) return;
   printCard( h.c3 ); if( dealt == 3 ) return;
   printCard( h.c4 ); if( dealt == 4 ) return;
@@ -148,9 +148,9 @@ void printHand3( struct Hand h )  {
       case 4: printCard( h.c4 ); break;
       case 5: printCard( h.c5 ); break;
       default:
-          // here is makes sense to do nothing 
+          // here is makes sense to do nothing
           // (we only need 1 to 5 cards, not less than 1, not more than 5)
-        return; 
+        return;
         break;
     }
   }

@@ -4,11 +4,11 @@
 //
 // This is an alternative file to linkedlisttester_int.c.
 // This test file does the same thing as linkedlisttester_int.c.
-// Instead of using a bunch of test functions, it makes all of the 
+// Instead of using a bunch of test functions, it makes all of the
 // calls directly to test them.
 //
 // Every library that you use or develop for yourself or others SHOULD
-// have a corresponding test program which exercises the library as 
+// have a corresponding test program which exercises the library as
 // commpletely as possible.
 //
 // compile with:
@@ -24,22 +24,22 @@
 int main( void )
 {
   LinkedList* pLL = CreateLinkedList();
-  
+
   ListData  data;
   ListData* pData;
   ListNode* pNode;
-  
+
   printf( "Using int array[ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 ]\n\n" );
   int dataArray[] = { 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 };
   int dataArraySize = 10;
-  
+
   for( int i = 0 ; i < dataArraySize ; i++)  {
     pData = (ListData*)calloc( 1 , sizeof( data ) );
     *pData = dataArray[ i ];
     pNode = CreateNode( pData );
     AddNode( pLL , pNode , 0 );
   }
-  
+
   printf( "The Linked List has %d entries.  " , Size( pLL ) );
   PrintList( pLL , PrintData );
   printf( "\n\n" );
@@ -71,7 +71,7 @@ int main( void )
   pNode = RemoveNode( pLL , 2 ); // 0-based indexing.
   printf( "Removed 3rd entry from list, value = " );
   PrintNode( pNode, PrintData );
-  printf( "\n" );  
+  printf( "\n" );
   printf( "The Linked List has %d entries.  " , Size( pLL ) );
   PrintList( pLL , PrintData );
   printf( "\n\n" );
@@ -83,7 +83,7 @@ int main( void )
   printf( "The Linked List has %d entries.  " , Size( pLL ) );
   PrintList( pLL , PrintData );
   printf( "\n\n" );
-  
+
   pNode = RemoveNode( pLL , 5 ); // 0-based indexing.
   printf( "Removed 6th entry from list, value = " );
   PrintNode( pNode, PrintData );
@@ -91,7 +91,7 @@ int main( void )
   printf( "The Linked List has %d entries.  " , Size( pLL ) );
   PrintList( pLL , PrintData );
   printf( "\n\n" );
- 
+
   pNode = RemoveNode( pLL , 3 ); // 0-based indexing.
   printf( "Removed 4th entry from list, value = " );
   PrintNode( pNode, PrintData );
@@ -147,4 +147,3 @@ int main( void )
 }
 
   // eof
-  

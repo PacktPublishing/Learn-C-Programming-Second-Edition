@@ -25,7 +25,7 @@ void usage( char* cmd )  {
 int main( int argc, char *argv[] )  {
   FILE* inputFile  = NULL;
   FILE* outputFile = NULL;
-  
+
   if( argc != 3 ) usage( argv[0] );
 
   if( NULL == ( inputFile = fopen( argv[1] , "r") ) )  {
@@ -41,14 +41,14 @@ int main( int argc, char *argv[] )  {
   fprintf( stderr , "%s opened for writing.\n" , argv[2] );
 
   fprintf( stderr , "\nDo work here.\n\n" );
-  
+
   fprintf( stderr , "Closing files.\n" );
   fclose(  inputFile );
   fflush( outputFile );
   fclose( outputFile );
-  
+
   fprintf( stderr , "Done.\n" );
-  
+
   return 0;
 }
 

@@ -2,13 +2,13 @@
 // Chapter 15
 // <book title>
 //
-// Demonstrate how to 
+// Demonstrate how to
 // 1) builds upon printASCII_version3.c
 // 2) print the ASCII values 0 through 127
 //    a) uses a lookup table to print control character mnemonics.
 //    b) simplifies printf statements fron a single one to multiple statements.
 //
-// compile with: 
+// compile with:
 //   cc printASCIIwithControl.c -o printASCIIwithControl -Wall -Werror -std=c17
 
 
@@ -35,7 +35,7 @@ int main( void )  {
     c2 = i+32;
     c3 = i+64;
     c4 = i+96;
- 
+
     printf( "| %s ^%c %3d %#4x " ,
             ctrl[i] , c1+64 , c1 , c1 );
     printf( "|  %c %3d %#x " ,
@@ -56,4 +56,3 @@ int main( void )  {
 }  // main
 
   /* eof */
-  

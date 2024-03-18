@@ -7,14 +7,14 @@
   // 2. While() ... goto loop
   // 3. For() ... goto loop
   //
-  // For each goto loop function, the corresponding C statement function 
+  // For each goto loop function, the corresponding C statement function
   // is included for comparison.
   //
   // Compile with:
   //
   //    cc gauss_goto.c -o gauss_goto -Wall -Werror -std=c17
 
-  
+
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -49,7 +49,7 @@ int sumNviaDoWhile( int N )  {
     sum += (num+1);      // Off-by-one: shift 0..99 to 1..100.
     num++;
   } while ( num < N );   // num: 0..99 (100 is not less than 100).
-  
+
   return sum;
 }
 
@@ -62,7 +62,7 @@ begin_loop:
 
   sum += (num+1);
   num++;
-  
+
   if( num < N ) goto begin_loop; // loop!
   // else fall-through out of loop.
 
@@ -81,7 +81,7 @@ int sumNviaWhile( int N )  {
   while( num < N )  {  // num: 0..99 (100 is not less than 100)
     sum += (num+1);    // Off-by-one: shift 0..99 to 1..100.
     num++;
-  } 
+  }
 
   return sum;
 }
@@ -129,7 +129,7 @@ begin_loop:
 
   sum += (num+1);
   num++;
-  
+
   i++;                           // counter increment
   goto begin_loop;
 

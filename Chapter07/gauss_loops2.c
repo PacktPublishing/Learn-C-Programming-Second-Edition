@@ -6,12 +6,12 @@
   // 1. Counter-controlled looping with while()... C idioms.
   // 1. Counter-controlled looping with for()... C idioms
   // 3. Counter-controlled looping with do...while() C idioms.
-  // 
+  //
   // The purpose here is to show looping with idiomatic C styles.
   // The minimum of local variables are used; the input parameter
-  // is used/altered as appropriate. 
+  // is used/altered as appropriate.
   //
-  // Note how it can sometimes be clearer to count down rather 
+  // Note how it can sometimes be clearer to count down rather
   // than up. Remember to be certain for your loop ranges!
   //
   // Compile with:
@@ -48,7 +48,7 @@ int sumNviaWhile2( int N )  {
     sum += N;
     N--;
   }
-  // NOTE: in the above loop-condition, we don't need the comparison operator 
+  // NOTE: in the above loop-condition, we don't need the comparison operator
   //       since only 0 evaluates to false and everything else to true.
   //       This type of loop-condition is often written simply as
   //
@@ -56,7 +56,7 @@ int sumNviaWhile2( int N )  {
   //
   //       But be careful with this kind of C idiom; it has caused me
   //       headaches when the loop conditions change
-  
+
   return sum;
 }
 

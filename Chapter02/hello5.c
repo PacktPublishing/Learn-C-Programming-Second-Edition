@@ -18,7 +18,7 @@ int main( void )  {
   printGreeting( "Howdy" , "John Q. and Jane P. Doe" );
   printGreeting( "Hey" , "Moe, Larry, and Curly" );
 
-  return 0; 
+  return 0;
 }
 
 //  <eof>

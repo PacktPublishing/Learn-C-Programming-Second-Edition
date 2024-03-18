@@ -17,12 +17,12 @@ const bool bNotWildCard = false;
 
 
 void InitializeCard( Card* pCard, Suit s , Face f , bool w )  {
-  pCard->suit = s; 
+  pCard->suit = s;
   pCard->suitValue = GetCardSuitValue( pCard );
-  
+
   pCard->face = f;
   pCard->faceValue = GetCardFaceValue( pCard );
-  
+
   pCard->isWild = w;
 }
 
@@ -68,8 +68,8 @@ void CardToString( Card* pCard , char pCardStr[20] )  {
   //       give the option to change to value = 1.
 inline int GetCardFaceValue( Card* pCard )  {
   int value = 0;
-  switch( pCard->face )  { 
-    case eTwo:    value = 2; break; 
+  switch( pCard->face )  {
+    case eTwo:    value = 2; break;
     case eThree:  value = 3; break;
     case eFour:   value = 4; break;
     case eFive:   value = 5; break;
@@ -99,4 +99,3 @@ inline int GetCardSuitValue( Card* pCard ) {
 }
 
   /* eof */
-  

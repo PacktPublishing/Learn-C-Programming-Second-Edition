@@ -2,7 +2,7 @@
 // Chapter 15
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to 
+// Demonstrate how to
 // 1) builds upon printASCII_version2.c
 // 2) print the ASCII values 32 through 127
 //    a) correctly handles DEL character.
@@ -30,7 +30,7 @@ int main( void )  {
     c2 = i+32;
     c3 = i+64;
     c4 = i+96;
-    
+
     if( c4 == 127 )  {   // Handle case of DEL character
       printf( "|  %c %3d %#x |  %c %3d %#x |%s %3d %#x |" ,
               c2 , c2 , c2 ,

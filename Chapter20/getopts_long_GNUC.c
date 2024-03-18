@@ -12,14 +12,14 @@
 // * use various argument types:
 //   1. flag arguments with no parameters
 //   2. required arguments
-//   3. optional arguments with default setting 
+//   3. optional arguments with default setting
 //      (can be set to something else.)
 // For each option, we show the option and its parameter. When using
-// this in a program, instead of showing the option, you would set the 
+// this in a program, instead of showing the option, you would set the
 // appropriate variable with the value for that option. Later, your program
 // would use that variable as appropriate.
 //
-// compile with: 
+// compile with:
 //   cc getopts_long_GNUC.c -o getopts_long_GNUC -Wall -Werror -std=c17
 //
 // Sample inputs:
@@ -60,17 +60,17 @@ static struct option long_options[] = {
     // Option which sets a default value if no additional argument
     // is given. The default value is specified here as 14.
     // An additional argument is optionsl.
-    // This option will only be processed in the switch statement if 
+    // This option will only be processed in the switch statement if
     // the optional following argument is given.
   {"number",  optional_argument, &num_flag, 14},
     // Option with an optional following argument.
     // In this case, this option will always be processed in the switch
-    // statement. 
+    // statement.
   {"size",    optional_argument, 0 , 's'},
   {0, 0, 0, 0}
 };
 
-  // These are the single-character options to be processed in the 
+  // These are the single-character options to be processed in the
   // switch statement.
 static char* option_string = "apc:d:f:s:n:";
 
@@ -87,7 +87,7 @@ void PrintArgs( int argc , char** argv )  {
 
 void Usage( int c , char** argv )  {
   printf( "Invalid option: %c\n" , c );
-  printf( "Usage: %s \n\t\t--verbose | --brief \n" 
+  printf( "Usage: %s \n\t\t--verbose | --brief \n"
     "\t\t--add --append --num <n> \n"
     "\t\t--create <string> --delete=<string>\n"
     "\t\t[--file <string>] [--size=<n>]\n" , argv[0] );
@@ -115,7 +115,7 @@ int main( int argc , char** argv )  {
     switch (c)  {
       case 0:
         // The options which are configured to set
-        // a flag (verbose, brief, and number without an additional argument) 
+        // a flag (verbose, brief, and number without an additional argument)
         // return zero, so do nothing.
         break;
 
@@ -130,7 +130,7 @@ int main( int argc , char** argv )  {
       case 'n':
          // This will only occur if --num has an additional argument.
         printf( "Option -n or --num");
-        if( optarg ) 
+        if( optarg )
           printf( " with value %s" , optarg );
         putchar( '\n' );
         num_flag = atoi( optarg );
@@ -160,13 +160,13 @@ int main( int argc , char** argv )  {
       }
     }
 
-    // If the optional additional argument is encountered, num_flag will be set 
+    // If the optional additional argument is encountered, num_flag will be set
     // to that value in the switch statement.
     // If no additonal argumeent is encountered, the value given in the options table
     // will be assigned by getopt_long().
   if( num_flag )
     printf( "num_flag=%d\n" , num_flag );
-  
+
     // Instead of reporting ‘--verbose’
     // and ‘--brief’ as they are encountered,
     // we report the final status resulting from them.

@@ -23,7 +23,7 @@ void printRanges( void );
 int main( void )  {
   printSizes();
   printRanges();
-  
+
   return 0;
 }
 

@@ -18,12 +18,12 @@ const bool bNotWildCard = false;
 
 
 void InitializeCard( Card* pCard, Suit s , Face f , bool w )  {
-  pCard->suit = s; 
+  pCard->suit = s;
   pCard->suitValue = GetCardSuitValue( pCard );
-  
+
   pCard->face = f;
   pCard->faceValue = GetCardFaceValue( pCard );
-  
+
   pCard->isWild = w;
 }
 
@@ -80,4 +80,3 @@ inline int GetCardSuitValue( Card* pCard ) {
 }
 
   /* eof */
-  

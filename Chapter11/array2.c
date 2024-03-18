@@ -18,7 +18,7 @@ int main( void )  {
   x = 11;
   y = 12;
   z = 13;
-  
+
 //  anArray[ 11 ] = 7;  // Compiler error!
   anArray[ x ]  = 0;  // No compiler error, but runtime error!
 
@@ -26,4 +26,3 @@ int main( void )  {
 }
 
   /* eof */
-  

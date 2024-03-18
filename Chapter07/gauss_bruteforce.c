@@ -7,7 +7,7 @@
   // 2. A 2nd ugly brute-force method.
   // 3. Gauss's single line calculation.
   //
-  // As you can see, we go from the ridiculous to the 
+  // As you can see, we go from the ridiculous to the
   // sublime.
   //
   // Compile with:
@@ -45,7 +45,7 @@ int sum100bruteForce( void )  {
   sum += 8;
   sum += 9;
   sum += 10;
-  
+
   sum += 11;
   sum += 12;
   sum += 13;
@@ -56,7 +56,7 @@ int sum100bruteForce( void )  {
   sum += 18;
   sum += 19;
   sum += 20;
- 
+
   sum += 21;
   sum += 22;
   sum += 23;
@@ -162,7 +162,7 @@ int sum100bruteForce2( void )  {
   sum += ++num;
   sum += ++num;
   sum += ++num;  // 10
-  
+
   sum += ++num;
   sum += ++num;
   sum += ++num;
@@ -173,7 +173,7 @@ int sum100bruteForce2( void )  {
   sum += ++num;
   sum += ++num;
   sum += ++num;  // 20
-  
+
   sum += ++num;
   sum += ++num;
   sum += ++num;
@@ -184,7 +184,7 @@ int sum100bruteForce2( void )  {
   sum += ++num;
   sum += ++num;
   sum += ++num;  // 30
-  
+
   sum += ++num;
   sum += ++num;
   sum += ++num;
@@ -195,7 +195,7 @@ int sum100bruteForce2( void )  {
   sum += ++num;
   sum += ++num;
   sum += ++num;  // 40
-  
+
   sum += ++num;
   sum += ++num;
   sum += ++num;
@@ -206,7 +206,7 @@ int sum100bruteForce2( void )  {
   sum += ++num;
   sum += ++num;
   sum += ++num;  // 50
-  
+
   sum += ++num;
   sum += ++num;
   sum += ++num;
@@ -217,7 +217,7 @@ int sum100bruteForce2( void )  {
   sum += ++num;
   sum += ++num;
   sum += ++num;  // 60
-  
+
   sum += ++num;
   sum += ++num;
   sum += ++num;
@@ -228,7 +228,7 @@ int sum100bruteForce2( void )  {
   sum += ++num;
   sum += ++num;
   sum += ++num;  // 70
-  
+
   sum += ++num;
   sum += ++num;
   sum += ++num;
@@ -239,7 +239,7 @@ int sum100bruteForce2( void )  {
   sum += ++num;
   sum += ++num;
   sum += ++num;  // 80
-  
+
   sum += ++num;
   sum += ++num;
   sum += ++num;
@@ -250,7 +250,7 @@ int sum100bruteForce2( void )  {
   sum += ++num;
   sum += ++num;
   sum += ++num;  // 90
- 
+
   sum += ++num;
   sum += ++num;
   sum += ++num;
@@ -266,10 +266,10 @@ int sum100bruteForce2( void )  {
 }
 
 
-  // The brilliant mathematician Gauss solved the tedious 
-  // "busy work" problem of adding the numbers 1 to 100 with the 
+  // The brilliant mathematician Gauss solved the tedious
+  // "busy work" problem of adding the numbers 1 to 100 with the
   // following simple equation when he was in elementary school.
-  // 
+  //
   // See http://mathcentral.uregina.ca/QQ/database/QQ.02.06/jo1.html
   // and https://trans4mind.com/personal_development/mathematics/series/sumNaturalNumbers.htm
   // for delightful explanations.

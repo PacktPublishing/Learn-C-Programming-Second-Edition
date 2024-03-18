@@ -2,7 +2,7 @@
 // Chapter 18
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to 
+// Demonstrate how to
 // 1) define structures for a linked list
 // 2) define operations on that linked list
 // 3) fully exercise (test) the link list implementation
@@ -29,7 +29,7 @@ typedef enum  {
 typedef enum  {
   eLook = 0 ,
   eInsert ,
-  eDelete 
+  eDelete
 } eAction;
 
 
@@ -61,7 +61,7 @@ ListNode*  CreateNode( ListData* pData );
 void       DeleteNode( ListNode* pNode );
 void       PrintList(  LinkedList* pList ,
                        void (*printData)(ListData* pData ) );
-void       PrintNode(  ListNode* pNode , 
+void       PrintNode(  ListNode* pNode ,
                        void (*printData)(ListData* pData ) );
 
 void       OutOfStorage( void );
@@ -99,7 +99,7 @@ void InsertNodeToBack( LinkedList* pList , ListNode* pNode )  {
   if( IsEmpty( pList ) )  {  // list is empty
     pList->pFirstNode = pNode;
   } else {
-    ListNode* pCurr = pList->pFirstNode ; 
+    ListNode* pCurr = pList->pFirstNode ;
     while( NULL != pCurr->pNext )  {
       pCurr = pCurr->pNext;
     }
@@ -111,7 +111,7 @@ void InsertNodeToBack( LinkedList* pList , ListNode* pNode )  {
 
 ListNode*  RemoveNodeFromFront( LinkedList* pList )  {
   if( IsEmpty( pList )) return NULL;
-  
+
   ListNode* pCurr   = pList->pFirstNode;
   pList->pFirstNode = pList->pFirstNode->pNext;
   pList->nodeCount--;
@@ -131,7 +131,7 @@ ListNode* RemoveNodeFromBack( LinkedList* pList )  {
     }
     pPrev->pNext = NULL;
     pList->nodeCount--;
-    
+
     return pCurr;
   }
 }
@@ -158,9 +158,9 @@ ListNode*  GetNode( LinkedList* pList , int pos )  {
 ListNode*  CreateNode( ListData* pData )  {
   ListNode* pNewNode = (ListNode*) calloc( 1 , sizeof( ListNode ) );
   if( pNewNode == NULL ) OutOfStorage();
-  
+
   pNewNode->pData = pData;
-  
+
   return pNewNode;
 }
 
@@ -173,7 +173,7 @@ void  DeleteNode( ListNode* pNode )  {
 
 void  PrintList( LinkedList* pList , void (*printData)(ListData* pData ) )  {
   ListNode* pCurr = pList->pFirstNode;
-  
+
   printf( "List has %2d entries: [" , Size( pList ) );
   while( NULL != pCurr )  {
     PrintNode( pCurr , printData );
@@ -217,7 +217,7 @@ ListData* CreateData( ListData d )  {
 void TestCreateNodeAndInsert( LinkedList* pLL , ListData data ,  eWhere where )  {
   ListData* pData = CreateData( data );
   ListNode* pNode = CreateNode( pData );
-  
+
   switch( where ) {
     case eFront: InsertNodeToFront( pLL , pNode ); break;
     case eBack:  InsertNodeToBack(  pLL , pNode ); break;
@@ -248,22 +248,22 @@ ListData TestRemoveNodeAndFree( LinkedList* pLL , eWhere where )  {
 }
 
 
-void TestPrintOperation( LinkedList* pLL , eAction action , 
+void TestPrintOperation( LinkedList* pLL , eAction action ,
                          ListData data , eWhere where )  {
   switch( action )  {
     case eLook:
       data = TestExamineNode( pLL , where );
-      printf( "Get %s node, see [%2d].  " , 
+      printf( "Get %s node, see [%2d].  " ,
               where==eFront ? "front" : " back" , data );
       break;
     case eInsert:
-      printf( "Insert [%2d] to %s.      " , 
+      printf( "Insert [%2d] to %s.      " ,
               data , where==eFront ? "front" : " back" );
       TestCreateNodeAndInsert( pLL , data , where );
       break;
     case eDelete:
       data = TestRemoveNodeAndFree( pLL , where );
-      printf( "Remove [%2d] from %s.    " , 
+      printf( "Remove [%2d] from %s.    " ,
               data , where==eFront ? "front" : " back" );
       break;
     default:
@@ -278,7 +278,7 @@ void TestPrintOperation( LinkedList* pLL , eAction action ,
 
 int main( void )  {
   LinkedList* pLL = CreateLinkedList();
-  
+
   printf( "Input or operation         "
           "Current state of linked list\n"
           "=========================  "
@@ -291,19 +291,19 @@ int main( void )  {
   for( int i = 0 ; i < data1Size ; i++)  {
     TestPrintOperation( pLL , eInsert , data1[i] , eFront );
   }
-  
+
   TestPrintOperation( pLL , eLook   , 0   , eFront );
   TestPrintOperation( pLL , eDelete , 0   , eBack );
-  
+
   printf( "\nUsing input{ 31 32 33 }.   " );
-  PrintList( pLL , PrintInt );  
+  PrintList( pLL , PrintInt );
   int data2[]   = { 31 , 32 , 33 };
   int data2Size = 3;
   for( int i = 0 ; i < data2Size ; i++)  {
     TestPrintOperation( pLL , eInsert , data2[i] , eBack );
   }
   TestPrintOperation( pLL , eLook   , 0   , eBack );
-  
+
   int count = pLL->nodeCount;
   for( int i = 0 ; i < count ; i++)  {
     TestPrintOperation( pLL , eDelete, 0 , eFront );
@@ -311,4 +311,3 @@ int main( void )  {
 }
 
   /*  eof  */
-  

@@ -5,7 +5,7 @@
 // carddeck_3.c builds upon carddeck_2b.c.
 // In this version, we add an structure with an array of structures, called Deck
 // and some functions to manipulate the Deck array.
-// 
+//
 // compile with cc carddeck_3.c -o carddeck_3 -Wall -Werror =std=c11
 //
 
@@ -41,13 +41,13 @@ const bool kNotWildCard = false;
   // ============================================
   // Definitions related to a Card
   // ============================================
-  
+
   // Card Suits
 typedef enum  {
-  eClub  = 1, 
-  eDiamond, 
+  eClub  = 1,
+  eDiamond,
   eHeart,
-  eSpade 
+  eSpade
 } Suit;
 
   // Card Faces
@@ -88,7 +88,7 @@ int  GetCardSuitValue( Card* pCard );
   // ============================================
   // Defintions related to a hand
   // ============================================
-  
+
   // A Hand
 typedef struct  {
   int   cardsDealt;
@@ -105,7 +105,7 @@ void PrintAllHands(  Hand* hands[ kNumHands ] );
   // ============================================
   // Definitions related to a Deck
   // ============================================
-  
+
   // A Deck
 typedef struct  {
   Card  ordered[ kCardsInDeck ];
@@ -120,7 +120,7 @@ void  ShuffleDeck(      Deck* pDeck );
 Card* DealCardFromDeck( Deck* pDeck );
 void  PrintDeck(        Deck* pDeck );
 
-  // At this point, we have only defined structures and 
+  // At this point, we have only defined structures and
   // declared functions (operations on those structures) for
   // * card
   // * hand
@@ -134,18 +134,18 @@ void  PrintDeck(        Deck* pDeck );
 int main( void )  {
   Deck  deck;
   Deck* pDeck = &deck;
-  
+
   InitializeDeck( pDeck );
   PrintDeck(      pDeck );
-  
+
   ShuffleDeck( pDeck );
   PrintDeck(   pDeck );
-  
+
   Hand h1 , h2 , h3 , h4;
-  
+
 #if 1
-  Hand* hands[] = { &h1 , &h2 , &h3 , &h4 }; 
-  
+  Hand* hands[] = { &h1 , &h2 , &h3 , &h4 };
+
   for( int i = 0 ; i < kNumHands ; i++ )  {
     InitializeHand( hands[i] );
   }
@@ -155,7 +155,7 @@ int main( void )  {
   InitializeHand( &h3 );
   InitializeHand( &h4 );
 #endif
-  
+
   for( int i = 0 ; i < kCardsInHand ; i++ )  {
 #if 1
     for( int j = 0 ; j < kNumHands ; j++ )  {
@@ -179,12 +179,12 @@ int main( void )  {
 
 
 void InitializeCard( Card* pCard, Suit s , Face f , bool w )  {
-  pCard->suit = s; 
+  pCard->suit = s;
   pCard->suitValue = GetCardSuitValue( pCard );
-  
+
   pCard->face = f;
   pCard->faceValue = GetCardFaceValue( pCard );
-  
+
   pCard->isWild = w;
 }
 
@@ -257,9 +257,9 @@ void InitializeHand( Hand* pHand )  {
 void AddCardToHand( Hand* pHand , Card* pCard )  {
   if( pHand->cardsDealt == kCardsInHand )  {
     printf( "ERROR: hand is full\n" );
-    return; 
+    return;
   }
-  
+
   pHand->hand[ pHand->cardsDealt ] = pCard;
   pHand->cardsDealt++;
 }
@@ -295,18 +295,18 @@ void InitializeDeck( Deck* pDeck )  {
   for( int i = 0 ; i < kCardsInSuit ; i++ )  {
     pC = &(pDeck->ordered[ i + (0*kCardsInSuit) ]);
     InitializeCard( pC , eSpade , f[i], kNotWildCard );
-    
+
     pC = &(pDeck->ordered[ i + (1*kCardsInSuit) ]);
     InitializeCard( pC , eHeart , f[i], kNotWildCard );
-    
+
     pC = &(pDeck->ordered[ i + (2*kCardsInSuit) ]);
     InitializeCard( pC , eDiamond , f[i], kNotWildCard );
-    
+
     pC = &(pDeck->ordered[ i + (3*kCardsInSuit) ]);
     InitializeCard( pC , eClub , f[i], kNotWildCard );
   }
-    
-  for( int i = 0 ; i < kCardsInDeck ; i++ )  { 
+
+  for( int i = 0 ; i < kCardsInDeck ; i++ )  {
     pDeck->shuffled[i] = &(pDeck->ordered[i]);
   }
 
@@ -323,21 +323,21 @@ void ShuffleDeck( Deck* pDeck )  {
                         // this is handy for reproducibility and verifying
                         // your program as you developt it.
 #else
-  srand( time(NULL) );  // Seed our PRNG using time() function. 
-                        // Because time() ever increases, we'll 
+  srand( time(NULL) );  // Seed our PRNG using time() function.
+                        // Because time() ever increases, we'll
                         // get a different series each time we
                         // run the program.
 #endif
   Card* pTmpCard;
-  
+
     // Now, walk through the shuffled array, swapping the pointer
-    // at a random card index in shuffuled with the pointer at the 
+    // at a random card index in shuffuled with the pointer at the
     // current card index.
     //
   for( int thisIndex = 0 ; thisIndex < kCardsInDeck ; thisIndex++ )  {
       // get a random index
     randIndex = rand() % kCardsInDeck;  // get next random number between 0..52
-    
+
       // swap card pointers between thisIndex and randIndex
     pTmpCard = pDeck->shuffled[ thisIndex ];
     pDeck->shuffled[ thisIndex ] = pDeck->shuffled[ randIndex ];
@@ -351,16 +351,16 @@ Card* DealCardFromDeck( Deck* pDeck )  {
   Card* pCard = pDeck->shuffled[ pDeck->numDealt ];
   pDeck->shuffled[ pDeck->numDealt ] = NULL;
   pDeck->numDealt++;
-  return pCard;  
+  return pCard;
 }
 
 
 void PrintDeck( Deck* pDeck )  {
-  printf( "%d cards in the deck\n" , 
+  printf( "%d cards in the deck\n" ,
           kCardsInDeck );
-  printf( "Deck %s shuffled\n", 
+  printf( "Deck %s shuffled\n",
           pDeck->bIsShuffled ? "is" : "is not" );
-  printf( "%d cards dealt into %d hands\n" , 
+  printf( "%d cards dealt into %d hands\n" ,
           pDeck->numDealt ,  kNumHands );
 
   if( pDeck->bIsShuffled == true )  {   // Deck is shuffled.
@@ -385,15 +385,15 @@ void PrintDeck( Deck* pDeck )  {
       int index  = i + (0*kCardsInSuit);
       printf( "(%2d)" , index+1 );
       PrintCard( &(pDeck->ordered[ index ] ) );
-      
+
       index = i + (1*kCardsInSuit);
       printf( "   (%2d)" , index+1 );
       PrintCard( &(pDeck->ordered[ index ] ) );
-  
+
       index = i + (2*kCardsInSuit);
       printf( "   (%2d)" , index+1 );
       PrintCard( &(pDeck->ordered[ i + (2*kCardsInSuit) ] ) );
-  
+
       index = i + (3*kCardsInSuit);
       printf( "   (%2d)" , index+1 );
       PrintCard( &(pDeck->ordered[ index ] ) );
@@ -404,4 +404,4 @@ void PrintDeck( Deck* pDeck )  {
 }
 
   /*  eof  */
-  
+

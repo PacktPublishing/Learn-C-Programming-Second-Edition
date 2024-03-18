@@ -6,7 +6,7 @@
 // and demonstrates double indirection in a function
 // parameter.
 //
-// Specifically 
+// Specifically
 //   modifies showInfo() to pass a pointer to a pointer
 //   (double indirection) so the address of pDimension
 //   can be properly accessed in the function.
@@ -23,14 +23,14 @@ void showInfo( int height, int width , int length , int** ppDim )  {
   printf( "  sizeof(int)  = %2lu\n" ,  sizeof(int) );
   printf( "  sizeof(int*) = %2lu\n" , sizeof(int*) );
   printf( "  [height, width, length] = [%2d,%2d,%2d]\n\n" ,
-             height , width , length ); 
-  printf( "  address of pDimension = %p\n" , 
+             height , width , length );
+  printf( "  address of pDimension = %p\n" ,
              ppDim  );
 }
 
 
 void showVariable( char* pId , int* pDim )  {
-  printf( "  address of %s = %p, value at address = %2d\n" , 
+  printf( "  address of %s = %p, value at address = %2d\n" ,
               pId, pDim , *pDim );
 }
 
@@ -43,7 +43,7 @@ int main( void )  {
   int*  pDimension = NULL;
   int** ppDimension = &pDimension;
   char* pIdentifier = NULL;
-  
+
   printf( "\nValues:\n\n");
 
   showInfo( height , width , length , ppDimension );
@@ -59,9 +59,8 @@ int main( void )  {
   pIdentifier = "height";
   pDimension = &length;
   showVariable( pIdentifier , pDimension );
-  
+
   return 0;
 }
 
   /* eof */
-  

@@ -6,7 +6,7 @@
 // gets() and puts().
 // Compare this program to readString.c
 //
-// compile with: 
+// compile with:
 //   cc readString2.c -o readString2 -Wall -Werror -std=c17
 
 
@@ -22,11 +22,11 @@ enum { kBufferSize = 132 };
 
 
   // safe_gets uses fgets() and then removes the trailing '\n'
-  // from the character buffer/input string. 
+  // from the character buffer/input string.
   // Like fgets(), safe_gets() returns either the pointer
-  // to the string to indicate success or 
+  // to the string to indicate success or
   // NULL to indicate invalid input, EOF, or some other error.
-  
+
 char* safe_gets(char* buf, int size )  {
   if( fgets( buf , size , stdin ) )  {   // fgets() preserves last '\n'
     for( int i = 0; i < size ; i++ )  {  // Find the last '\n'.
@@ -44,7 +44,7 @@ char* safe_gets(char* buf, int size )  {
 
 int main( void )  {
   char stringBuffer[ kBufferSize ] = {0};
-  
+
     // UNSAFE: Do Not Ever Use gets().
     //         gets() removed in C11 and later, but may still  be present.
     //         Even if present, do not use.
@@ -53,7 +53,7 @@ int main( void )  {
   gets( stringBuffer );
   puts( "You entered: " );
   puts( stringBuffer );
-  
+
     // SAFE: Instead, use fgets() & remove trailing '\n'.
     //       Or, use safe_gets() given above.
     //       Or, if available, use gets_s().
@@ -62,9 +62,8 @@ int main( void )  {
   safe_gets( stringBuffer , kBufferSize );
   puts( "You entered: " );
   puts( stringBuffer );
-  
+
   return 0;
 }
 
   /* eof */
-  

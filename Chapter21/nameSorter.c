@@ -9,7 +9,7 @@
 
 
 #include <stdio.h>
-#include <string.h> 
+#include <string.h>
 #include <stdbool.h>
 
 
@@ -18,10 +18,10 @@ enum   {
   kStringMax =  80
 };
 
-typedef char string [ kStringMax ]; 
+typedef char string [ kStringMax ];
 
-void addName(    string* names , string newOne , int* listSize ); 
-void printNames( string* names , int listSize ); 
+void addName(    string* names , string newOne , int* listSize );
+void printNames( string* names , int listSize );
 
 
   // removeNewline() needed when fgets() used because fgets() preserves
@@ -32,10 +32,10 @@ void removeNewline( string s )  {
 }
 
 
-  // 1. Use fgets() for user input, 
-  // 2. remove trailing '\n', and 
-  // 3. return length of string or 0 if failure or empty. 
-  
+  // 1. Use fgets() for user input,
+  // 2. remove trailing '\n', and
+  // 3. return length of string or 0 if failure or empty.
+
 int getName(char* buf, int size )  {
   if( fgets( buf , size , stdin ) )  {     /* 1 */
     int len;
@@ -49,72 +49,72 @@ int getName(char* buf, int size )  {
     }
     return len;                            /* 3 */
   } else {
-    return 0; 
+    return 0;
   }
 }
 
 
 int main( void )  {
-  string newName; 
-  string nameList[ kListMax ]; 
+  string newName;
+  string nameList[ kListMax ];
   int    numNames = 0;
- 
+
 #if 0
     // You can do a lot with the sequence , operator.
     // However, what's going on is rather confusing.
-  
+
   while( printf( "Name: %d: ", numNames+1 ),
          fgets( newName , kStringMax , stdin ),
          removeNewline( newName ) ,
          strlen( newName ) > 0 )  {
-    addName( nameList , newName , &numNames ); 
+    addName( nameList , newName , &numNames );
   }
 #else
     // But why when you can write a single function?
-    
+
   while( printf( "Name: %d: ", numNames+1 ),
          getName( newName , kStringMax ) > 0 )  {
-    addName( nameList , newName , &numNames ); 
+    addName( nameList , newName , &numNames );
   }
 #endif
-  printNames( nameList , numNames ); 
+  printNames( nameList , numNames );
 
   return 0;
 }
 
 
-void addName( string* names , string newName , int* pNumEntries )  { 
+void addName( string* names , string newName , int* pNumEntries )  {
   if( *pNumEntries >= kListMax )  {
     puts( "List is full!" );
-    return; /* the array is full  (this return is unnecessary) */ 
-  } else { 
+    return; /* the array is full  (this return is unnecessary) */
+  } else {
     int  k     = 0;     /* k is position in list to insert newName. */
-    bool found = false; /* When found is true, newName goes before an existing 
+    bool found = false; /* When found is true, newName goes before an existing
                            name in the list. */
-     
-      /* Scan through list looking for existing name that newName should come 
+
+      /* Scan through list looking for existing name that newName should come
          before. If not found, k is the end of the list. */
     while( !found && k < *pNumEntries )  {
       found = (strcmp( newName, names[ k++ ] ) < 0);
     }
-    
+
     if( found )  {
-         /* Move k back one place to insert newName at k-th position.*/ 
+         /* Move k back one place to insert newName at k-th position.*/
       k-- ;
          /* Move each exising name back in the list, making a space newName */
       for( int j = *pNumEntries ; j > k ; j-- )  {
-        strcpy( names[ j ] , names[ j-1 ] ); 
+        strcpy( names[ j ] , names[ j-1 ] );
       }
     }
       /* Insert new string in list at k-th position. */
-    strcpy( names[ k ] , newName ); 
-    (*pNumEntries)++; 
+    strcpy( names[ k ] , newName );
+    (*pNumEntries)++;
   }
 }
 
 
 void printNames( string *names , int numEntries )  {
-  printf("\nNumber of Entries: %d\n\n" , numEntries ); 
+  printf("\nNumber of Entries: %d\n\n" , numEntries );
   for( int i = 0 ; i < numEntries ; i++ )  {
     fputs( names[i] , stdout );
     fputc( '\n' , stdout );
@@ -122,4 +122,3 @@ void printNames( string *names , int numEntries )  {
 }
 
   /* eof */
-  

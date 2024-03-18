@@ -2,13 +2,13 @@
 // Chapter 13
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to 
+// Demonstrate how to
 // 1) declare a void pointer
 // 2) assign the address of various data types to the void pointer
 // 3) correctly get the target value of the void pointer with casting
 // 4) print out info about the data types directly and via the void pointer.
 // 5) correctly set the target value of the the void pointer with casting.
-// compile with: 
+// compile with:
 //
 //   cc voidPointerCasting.c -o voidPointerCasting -Wall -Werror -std=c17
 
@@ -21,12 +21,12 @@ int main(int argc, char *argv[]) {
   void* aPtr = NULL;
   aPtr       = &height; // Value of aPter is address of height,
                         // but we don't yet know the type that aPtr points to.
-  
+
     // get the value at the target
-    
+
   int h = *(int*)aPtr;  // Cast aPtr to (int*) from (void*) with
                         //      (int*)aPtr
-                        // Get the integer value found there with 
+                        // Get the integer value found there with
                         //     *(int*)aPtr
                         //
                         // Or, to me more explicit:
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
                         // required.
                         //
                         // NOTE: Must cast aPtr _before_ dereferencing the pointer.
-      
+
   printf( "             height = [%d]\n" , height );
   printf( "        *(int*)aPtr = [%d]\n" , *(int*)aPtr );
   printf( "                  h = [%d]\n" , h );
@@ -45,7 +45,7 @@ int main(int argc, char *argv[]) {
   *(int*)aPtr = 3;
   printf( "        *(int*)aPtr = [%d]\n" , *(int*)aPtr );
   printf( "             height = [%d]\n\n" , height );
-  
+
     // same thing but using a double data type.
 
   double width = 36.8651;
@@ -61,9 +61,9 @@ int main(int argc, char *argv[]) {
   *(double*)aPtr = 1.7439;
   printf( "        *(double*)aPtr = [%f]\n" , *(double*)aPtr );
   printf( "                 width = [%f]\n\n" , width );
-  
+
   // same thing but using a char data type.
-  
+
   char ch = 'A';
   aPtr    = &ch;
     // get the value at the target
@@ -73,13 +73,12 @@ int main(int argc, char *argv[]) {
   printf( "                   c = [%c]\n" , c );
   printf( "        sizeof( ch ) = %lu\n" , sizeof( ch ) );
   printf( "sizeof(*(char*)aPtr) = %lu\n" , sizeof( *(char*)aPtr ) );
-    // set the value at the target 
+    // set the value at the target
   *(char*)aPtr = 'z';
   printf( "        *(char*)aPtr = [%c]\n" , *(char*)aPtr );
   printf( "                  ch = [%c]\n\n" , ch );
-  
+
   return 0;
 }
 
   /* eof */
-    

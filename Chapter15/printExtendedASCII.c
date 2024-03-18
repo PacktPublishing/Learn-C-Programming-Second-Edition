@@ -2,7 +2,7 @@
 // Chapter 15
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to 
+// Demonstrate how to
 // 1) builds upon printASCII_version3.c
 // 2) print the ASCII values 32 through 255
 //
@@ -10,7 +10,7 @@
 //   cc printExtendedASCII.c -o printExtendedASCII -Wall -Werror -std=c17
 
 
-/* 
+/*
  * Extended ASCII table for Apple operating systems.
  * see <http://ascii-table.com/ascii-extended-mac-list.php>
  */
@@ -21,7 +21,7 @@
 
 int main( void )  {
   unsigned char c1 , c2 , c3 , c4 , c5 , c6 , c7 , c8 ;
-  
+
   printf( "                                     Table of 8-Bit ASCII, or\n"      );
   printf( "                                  Vendor-specific Extended ASCII\n " );
   printf( "                                  (excluding control characters)\n\n" );
@@ -41,7 +41,7 @@ int main( void )  {
     c6 = i+160;
     c7 = i+192;
     c8 = i+224;
-    
+
     printf( "|  %c %3d %#x " ,
             c2 , c2 , c2 );
     printf( "|  %c %3d %#x " ,
@@ -67,4 +67,3 @@ int main( void )  {
 } // main
 
  /* eof */
-  

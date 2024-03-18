@@ -3,18 +3,18 @@
 // Learn C Programming, 2nd Edition
 //
 // Starting point (from Chapter 10, card4.c) for complex structures.
-// Modify it to reflect data structures and operations using arrays and 
+// Modify it to reflect data structures and operations using arrays and
 // pointers.
 //
 // In carddeck_0.c, remove unneeded functions (we'll add them back later)
 // and demonstrate an array of structures.
 //
-// Also: 
+// Also:
 //  1. add GetCardFaceValue() and GetCardSuitValue()
 //  2. use these functions in InitializeCard()
 //  3. enum names
 //
-// compile with 
+// compile with
 //   cc carddeck_0.c -o carddeck_0 -Wall -Werror =std=c11
 
 
@@ -29,10 +29,10 @@
 
   // Card Suits
 typedef enum {
-  eClub  = 1, 
-  eDiamond, 
+  eClub  = 1,
+  eDiamond,
   eHeart,
-  eSpade 
+  eSpade
 } Suit;
 
   // Card Faces
@@ -85,12 +85,12 @@ int main( void )  {
 
 
 void InitializeCard( Card* pCard, Suit s , Face f , bool w ) {
-  pCard->suit = s; 
+  pCard->suit = s;
   pCard->suitValue = GetCardSuitValue( pCard );
-  
+
   pCard->face = f;
   pCard->faceValue = GetCardFaceValue( pCard );
-  
+
   pCard->isWild = w;
 }
 
@@ -148,4 +148,3 @@ inline int GetCardSuitValue( Card* pCard ) {
 
 
   /* eof */
-  

@@ -2,13 +2,13 @@
 // Chapter 19
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to 
+// Demonstrate how to
 // 1) print unsigned values in octal, decimal, and hexadecimal
 // 2) see what happens when you print negative numbers as unsigned values
 // 3) explore powers of 2 and powers of 9
 // 4) print out pointer values.
 //
-// compile with: 
+// compile with:
 //   cc unsignedInt.c -o unsignedInt -Wall -Werror -std=c17
 
 
@@ -31,7 +31,7 @@ int main( void )  {
                   largeInt , largeInt , largeInt , largeInt );
   printf( "       [%12o]  [%12u]  [%12x]  [%12X]\n\n" ,
                   anUnsigned , anUnsigned , anUnsigned , anUnsigned );
-                     
+
   printf( "  Specifier      %%#o             %%#u             %%#x             %%#X\n");
   printf( "       [%#12o]  [%12u]  [%#12x]  [%#12X]\n" ,
                   smallInt , smallInt , smallInt , smallInt );
@@ -39,7 +39,7 @@ int main( void )  {
                   largeInt , largeInt , largeInt , largeInt );
   printf( "       [%#12o]  [%12u]  [%#12x]  [%#12X]\n\n" ,
                   anUnsigned , anUnsigned , anUnsigned , anUnsigned );
-   
+
   printf( "  Negative Numbers as Unsigned:\n" );
   printf( "  -0   [%12o]  [%12u]  [%12x]  [%12X]\n" ,
                   -0 , -0 , -0 , -0 );

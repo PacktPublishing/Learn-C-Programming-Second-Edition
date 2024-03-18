@@ -2,7 +2,7 @@
 //  Chapter 4: Using Variables and Assignment
 //  Learn C Programming, 2nd Edition
 //
-//  A function that demonstrates the use of 
+//  A function that demonstrates the use of
 //  assignment via actual parameters and
 //  explicit assignment inside the function.
 //
@@ -29,4 +29,4 @@ void printDistance( double f ) {
 }
 
   // eof
-  
+

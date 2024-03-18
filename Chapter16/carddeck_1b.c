@@ -38,10 +38,10 @@ const bool kNotWildCard = false;
 
   // Card Suits
 typedef enum  {
-  eClub  = 1, 
-  eDiamond, 
+  eClub  = 1,
+  eDiamond,
   eHeart,
-  eSpade 
+  eSpade
 } Suit;
 
   // Card Faces
@@ -79,7 +79,7 @@ int  GetCardFaceValue( Card* pCard );
 int  GetCardSuitValue( Card* pCard );
 
 
-int main( void ) 
+int main( void )
 {
   Card deck[ kCardsInDeck ];
   Card* pCard = &deck[3];
@@ -95,12 +95,12 @@ int main( void )
 
 
 void InitializeCard( Card* pCard, Suit s , Face f , bool w )  {
-  pCard->suit = s; 
+  pCard->suit = s;
   pCard->suitValue = GetCardSuitValue( pCard );
-  
+
   pCard->face = f;
   pCard->faceValue = GetCardFaceValue( pCard );
-  
+
   pCard->isWild = w;
 }
 
@@ -157,4 +157,3 @@ inline int GetCardSuitValue( Card* pCard ) {
 }
 
   /*  eof  */
-  

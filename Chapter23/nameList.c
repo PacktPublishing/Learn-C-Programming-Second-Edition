@@ -3,7 +3,7 @@
 // Learn C Programming, 2nd Edition
 //
 //
-// A family of singly-linked list routines to 
+// A family of singly-linked list routines to
 // perform insertion sort.
 //
 // Do not compile alone. No main(). Part of sortNames.c
@@ -25,13 +25,13 @@ ListNode* CreateListNode( char* pNameToAdd ) {
 
 void AddName(  NameList* pNames , char* pNameToAdd ) {
   ListNode* pNewName = CreateListNode( pNameToAdd );
-  
+
   if( IsEmpty( pNames ) )  {  // Empty list. Insert as 1st item.
     pNames->pFirstNode = pNewName;
     (pNames->nodeCount)++;
     return;
   }
-  
+
   (pNames->nodeCount)++;
   ListNode* curr;
   ListNode* prev;

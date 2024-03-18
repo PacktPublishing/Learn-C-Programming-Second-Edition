@@ -32,4 +32,4 @@ void PrintHand(      Hand* pHand , char* pHandStr , char* pLeadStr );
 void PrintAllHands(  Hand* hands[ kNumHands ] );
 
 
-#endif 
+#endif

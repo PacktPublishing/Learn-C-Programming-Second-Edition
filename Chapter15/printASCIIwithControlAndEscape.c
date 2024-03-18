@@ -2,12 +2,12 @@
 // Chapter 15
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to 
+// Demonstrate how to
 // 1) builds upon printASCIIwithControl.c
 // 2) print the ASCII values 0 through 127
 //    a) uses a lookup table to print control character escape sequences.
 //
-// compile with: 
+// compile with:
 //   cc printASCIIwithControlAndEscape.c -o printASCIIwithControlAndEscape -Wall -Werror -std=c17
 
 
@@ -20,9 +20,9 @@ int main( void )  {
                    " BS", " HT", " LF", " VT", " FF", " CR", " SO", " SI" ,
                    "DLE", "DC1", "DC2", "DC3", "DC4", "NAK", "SYN", "ETB" ,
                    "CAN", " EM", "SUB", "ESC", " FS", " GS", " RS", " US"  };
-  char format[] = {  '0' ,   0  ,   0  ,   0  ,   0  ,   0  ,   0  ,  'a' , 
-                     'b' ,  't' ,  'n' ,  'v' ,  'f' ,  'r' ,   0  ,   0 , 
-                      0  ,   0  ,   0  ,   0  ,   0  ,   0  ,   0  ,   0 , 
+  char format[] = {  '0' ,   0  ,   0  ,   0  ,   0  ,   0  ,   0  ,  'a' ,
+                     'b' ,  't' ,  'n' ,  'v' ,  'f' ,  'r' ,   0  ,   0 ,
+                      0  ,   0  ,   0  ,   0  ,   0  ,   0  ,   0  ,   0 ,
                       0  ,   0  ,   0  ,  'e' ,   0  ,   0  ,   0  ,   0  };
   char c1 , c2 , c3 , c4;
 
@@ -33,13 +33,13 @@ int main( void )  {
   printf( "|---------------------|-----------------------------------------|\n" );
   printf( "| SYM Fmt Ch Dec  Hex | Ch Dec  Hex | Ch Dec  Hex | Ch Dec  Hex |\n" );
   printf( "|---------------------|-------------|-------------|-------------|\n" );
- 
+
   for( int i = 0 ; i < 32; i++)  {
     c1 = i;
     c2 = i+32;
     c3 = i+64;
     c4 = i+96;
- 
+
     char fmtStr[] = "   ";
     if( format[i] )  {
       fmtStr[1] = '\\';

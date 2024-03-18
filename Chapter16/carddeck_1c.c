@@ -38,10 +38,10 @@ const bool kNotWildCard = false;
 
   // Card Suits
 typedef enum  {
-  eClub  = 1, 
-  eDiamond, 
+  eClub  = 1,
+  eDiamond,
   eHeart,
-  eSpade 
+  eSpade
 } Suit;
 
   // Card Faces
@@ -83,7 +83,7 @@ int  GetCardSuitValue( Card* pCard );
   // ============================================
 
   // A Deck
-  
+
   // For now, the deck will be declared as an array of Cards in main().
   // So, nothing to declare here.
 
@@ -104,12 +104,12 @@ int main( void ) {
   // ============================================
 
 void InitializeCard( Card* pCard, Suit s , Face f , bool w )  {
-  pCard->suit = s; 
+  pCard->suit = s;
   pCard->suitValue = GetCardSuitValue( pCard );
-  
+
   pCard->face = f;
   pCard->faceValue = GetCardFaceValue( pCard );
-  
+
   pCard->isWild = w;
 }
 
@@ -173,17 +173,17 @@ inline int GetCardSuitValue( Card* pCard ) {
 void InitializeDeck( Card* pDeck )  {
   Face f[] = { eTwo   , eThree , eFour , eFive , eSix   , eSeven ,
                eEight , eNine  , eTen  , eJack , eQueen , eKing  , eAce };
-  Card* pC;  
+  Card* pC;
   for( int i = 0 ; i < kCardsInSuit ; i++ )  {
     pC = &(pDeck[ i + (0*kCardsInSuit) ]);
     InitializeCard( pC , eSpade , f[i], kNotWildCard );
-    
+
     pC = &(pDeck[ i + (1*kCardsInSuit) ]);
     InitializeCard( pC , eHeart , f[i], kNotWildCard );
 
     pC = &(pDeck[ i + (2*kCardsInSuit) ]);
     InitializeCard( pC , eDiamond , f[i], kNotWildCard );
- 
+
     pC = &(pDeck[ i + (3*kCardsInSuit) ]);
     InitializeCard( pC , eClub , f[i], kNotWildCard );
   }
@@ -191,14 +191,14 @@ void InitializeDeck( Card* pDeck )  {
 
 
 void PrintDeck( Card* pDeck )  {
-  printf( "%d cards in the deck\n\n" , 
+  printf( "%d cards in the deck\n\n" ,
           kCardsInDeck );
   printf( "The ordered deck: \n" );
   for( int i = 0 ; i < kCardsInSuit ; i++ )  {
     int index  = i + (0*kCardsInSuit);
     printf( "(%2d)" , index+1 );
     PrintCard( &(pDeck[ index ] ) );
-    
+
     index = i + (1*kCardsInSuit);
     printf( "   (%2d)" , index+1 );
     PrintCard( &(pDeck[ index ] ) );
@@ -216,4 +216,3 @@ void PrintDeck( Card* pDeck )  {
 }
 
   /*  eof  */
-  

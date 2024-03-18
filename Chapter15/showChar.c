@@ -2,15 +2,15 @@
 // Chapter 15
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to 
+// Demonstrate how to
 // 1) create character variables
 // 2) assign character values as characters and as integer values
-// 3) print out an individual characer as 
+// 3) print out an individual characer as
 //    a) a character
 //    b) its decimal value
 //    c) its hexadecimal value
 //
-// compile with: 
+// compile with:
 //   cc showCar.c -o showCar -Wall -Werror -std=c17
 
 
@@ -21,9 +21,9 @@ void showChar( char ch );
 
 int main( void )  {
     signed char aChar = 'A';
-           char c1    = 65 ; 
-           char c2    = 'a'; 
-           char c3    = 97 ; 
+           char c1    = 65 ;
+           char c2    = 'a';
+           char c3    = 97 ;
            char c4    = '7';
   unsigned char aByte = 7;
 
@@ -37,7 +37,7 @@ int main( void )  {
 }
 
 void showChar( char ch )  {
-  printf( "ch = '%c' (%d) [%#x]\n" , ch , ch , ch ); 
+  printf( "ch = '%c' (%d) [%#x]\n" , ch , ch , ch );
 }
 
   /* eof */

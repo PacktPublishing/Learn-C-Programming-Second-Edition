@@ -15,27 +15,27 @@
 
 
 enum Suit  {
-  eClub  = 1, 
-  eDiamond, 
+  eClub  = 1,
+  eDiamond,
   eHeart,
-  eSpade 
+  eSpade
 };
 
 
-enum Face  { 
-  eOne = 1, 
-  eTwo, 
-  eThree, 
-  eFour, 
-  eFive, 
-  eSix, 
-  eSeven, 
-  eEight, 
-  eNine, 
-  eTen, 
-  eJack, 
-  eQueen, 
-  eKing, 
+enum Face  {
+  eOne = 1,
+  eTwo,
+  eThree,
+  eFour,
+  eFive,
+  eSix,
+  eSeven,
+  eEight,
+  eNine,
+  eTen,
+  eJack,
+  eQueen,
+  eKing,
   eAce
 };
 
@@ -55,7 +55,7 @@ int  sumCards( struct Card c1 , struct Card c2 );
 
 int main( void )  {
   struct Card card1 = { eHeart , (int)eHeart , eKing, (int)eKing , false };
-  
+
   struct Card card2 = card1;  // card 2 is now identical to card 1
 
   struct Card card3 = {0};
@@ -67,16 +67,16 @@ int main( void )  {
 
   bool cardsEqual = isEqual( card1 , card2 );
   printf( "card1 is%s equal to card2\n" , cardsEqual? "" : " not" );
-  
-  cardsEqual = isEqual( card2 , card3 ); 
-  printf( "card2 is%s equal to card3\n" , cardsEqual? "" : " not" ); 
-  
-  printf( "The combined faceValue of card2(%d) + card3(%d) is %d\n" , 
-           card2.faceValue , 
+
+  cardsEqual = isEqual( card2 , card3 );
+  printf( "card2 is%s equal to card3\n" , cardsEqual? "" : " not" );
+
+  printf( "The combined faceValue of card2(%d) + card3(%d) is %d\n" ,
+           card2.faceValue ,
            card3.faceValue ,
            sumCards( card2 , card3 ) );
 
-  return 0;  
+  return 0;
 }
 
 
@@ -94,4 +94,4 @@ int  sumCards( struct Card c1 , struct Card c2 )  {
 }
 
   /*  eof */
-  
+
