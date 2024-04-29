@@ -80,11 +80,11 @@ int main( void )  {
 
 #if 0
   int i = 0;
-  while( string7[i] != '\0' )  {
-    string7[i] = toupper( string7[i]);
+  while( string3[i] != '\0' )  {
+    string3[i] = toupper( string7[i]);
     i++;
   }
-  printf( "E3) \"%s\" \n" , string7 );
+  printf( "E3) \"%s\" \n" , string3 );
 #endif
 
   return 0;

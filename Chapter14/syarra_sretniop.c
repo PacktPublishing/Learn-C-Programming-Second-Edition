@@ -46,7 +46,7 @@ int main(int argc, char *argv[])  {
 
   for( int i = arraySize ; i > 0 ; i-- )  {
     int j = i-1;
-    printf( "  &(array[%1d]) = %p, array[%1d] = %1d, i++\n", 
+    printf( "  &(array[%1d]) = %p, array[%1d] = %1d, i--\n", 
             j , &(array[j]), 
             j ,   array[j] );
   }
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])  {
   printf("\n(2) Array values using a pointer addition (offset is decremented):\n\n");
 
   for( int i = arraySize-1 ; i > -1 ; i-- )  {
-    printf( "  pArray2+%1d = %p, *(pArray2+%1d) = %1d, i++\n", 
+    printf( "  pArray2+%1d = %p, *(pArray2+%1d) = %1d, i--\n", 
             i ,  (pArray2+i) ,
             i , *(pArray2+i) ); 
   }
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])  {
   for( pArray1 = &array[arraySize-1], i = 0 ;
        i < arraySize ; 
        i++ , pArray1-- )  {
-    printf( "  pArray1 = %p, *pArray1 = %1d, pArray1++\n", 
+    printf( "  pArray1 = %p, *pArray1 = %1d, pArray1--\n", 
             pArray1 , *pArray1 );
   }
 }
