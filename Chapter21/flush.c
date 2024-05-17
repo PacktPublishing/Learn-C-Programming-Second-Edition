@@ -2,7 +2,7 @@
 // Chapter 21
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate input buffering works in 
+// Demonstrate input buffering works in
 // "cooked mode" of console i/o.
 // Final output is flushed with \n or when program ends.
 //
@@ -25,4 +25,3 @@ int main( void  )  {
 }
 
   /* eof */
-  

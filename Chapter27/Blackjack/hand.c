@@ -26,9 +26,9 @@ void InitializeHand( Hand* pHand )  {
 void AddCardToHand( Hand* pHand , Card* pCard )  {
   if( pHand->cardsDealt == kCardsInHand )  {
     printf( "ERROR: hand is full\n" );
-    return; 
+    return;
   }
-  
+
   pHand->hand[ pHand->cardsDealt ] = pCard;
   pHand->handValue += pCard->faceValue;
   pHand->cardsDealt++;
@@ -64,4 +64,3 @@ int  GetHandValue(   Hand* pHand )  {
 
 
   /* eof */
-  

@@ -2,7 +2,7 @@
 // Chapter 8
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate defining and using enumerated types with 
+// Demonstrate defining and using enumerated types with
 // the switch statement.
 // This version completely handles all of the 9 shapes.
 //
@@ -60,7 +60,7 @@ int main( void )  {
 void PrintShapeInfo( enum shape aShape )  {
   int nSides = 0;
   switch( aShape )  {
-    case triangle: 
+    case triangle:
       nSides = 3;
       break;
     case square:
@@ -68,10 +68,10 @@ void PrintShapeInfo( enum shape aShape )  {
     case trapezoid:
       nSides = 4;
       break;
-    case pentagon: 
+    case pentagon:
       nSides = 5;
       break;
-    case hexagon: 
+    case hexagon:
       nSides = 6;
       break;
     case octagon:
@@ -94,7 +94,7 @@ void PrintShapeInfo( enum shape aShape )  {
 
 const char* GetShapeName( enum shape aShape)  {
   const char* name = nameUnknown;
-  switch( aShape )  { 
+  switch( aShape )  {
     case triangle:  name = nameTriangle;  break;
     case square:    name = nameSquare;    break;
     case rectangle: name = nameRectangle; break;
@@ -110,5 +110,4 @@ const char* GetShapeName( enum shape aShape)  {
 }
 
   //  eof
-  
-  
+

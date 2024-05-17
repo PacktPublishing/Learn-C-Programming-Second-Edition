@@ -2,7 +2,7 @@
 // Chapter 10
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to create header file of 
+// Demonstrate how to create header file of
 // typedefs, custom types, and function prototypes.
 //
 // Use #include "card.h" in C source files to access these definitions.
@@ -12,27 +12,27 @@
 #include <stdbool.h>
 
 typedef enum  {
-  eClub  = 1, 
-  eDiamond, 
+  eClub  = 1,
+  eDiamond,
   eHeart,
-  eSpade 
+  eSpade
 } Suit;
 
 
 typedef enum {
-  eOne = 1, 
-  eTwo, 
-  eThree, 
-  eFour, 
-  eFive, 
-  eSix, 
-  eSeven, 
-  eEight, 
-  eNine, 
-  eTen, 
-  eJack, 
-  eQueen, 
-  eKing, 
+  eOne = 1,
+  eTwo,
+  eThree,
+  eFour,
+  eFive,
+  eSix,
+  eSeven,
+  eEight,
+  eNine,
+  eTen,
+  eJack,
+  eQueen,
+  eKing,
   eAce
 } Face;
 
@@ -59,4 +59,4 @@ void printCard(  Card c );
 
 
   /* eof */
-  
+

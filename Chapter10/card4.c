@@ -16,26 +16,26 @@
 
 typedef enum  {
   eClub  = 1,
-  eDiamond, 
+  eDiamond,
   eHeart,
-  eSpade 
+  eSpade
 } Suit;
 
 
 typedef enum {
-  eOne = 1, 
-  eTwo, 
-  eThree, 
-  eFour, 
-  eFive, 
-  eSix, 
-  eSeven, 
-  eEight, 
-  eNine, 
-  eTen, 
-  eJack, 
-  eQueen, 
-  eKing, 
+  eOne = 1,
+  eTwo,
+  eThree,
+  eFour,
+  eFive,
+  eSix,
+  eSeven,
+  eEight,
+  eNine,
+  eTen,
+  eJack,
+  eQueen,
+  eKing,
   eAce
 } Face;
 
@@ -70,19 +70,19 @@ int main( void )  {
   Card c4 = { eClub    , (int)eClub    , eAce   , (int)eAce   , false };
   Card c5 = { eHeart   , (int)eHeart   , eJack  , (int)eJack  , false };
   Card c6 = { eClub    , (int)eClub    , eTwo   , (int)eTwo   , false };
-    
+
   h = addCard( h , c1 );
   h = addCard( h , c2 );
   h = addCard( h , c3 );
   h = addCard( h , c4 );
   h = addCard( h , c5 );
   h = addCard( h , c6 );
-  
+
   printHand( h );
   printf("\n");
   printHand2( h );
-  
-  return 0;  
+
+  return 0;
 }
 
 
@@ -128,7 +128,7 @@ void printHand( Hand h )  {
 void printHand2( Hand h )  {
   int dealt = h.cardsDealt;
   if( dealt == 0 ) return;
-  printCard( h.c1 ); if( dealt == 1 ) return;  
+  printCard( h.c1 ); if( dealt == 1 ) return;
   printCard( h.c2 ); if( dealt == 2 ) return;
   printCard( h.c3 ); if( dealt == 3 ) return;
   printCard( h.c4 ); if( dealt == 4 ) return;
@@ -179,4 +179,4 @@ void printCard( Card c )  {
 }
 
   /* eof */
-  
+

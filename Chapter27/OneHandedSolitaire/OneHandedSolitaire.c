@@ -20,13 +20,13 @@ int main( void )  {
   Deck  deck;
   Deck* pDeck = &deck;
   InitializeDeck( pDeck );
-  
+
   bRandomize = false;
-  
+
   Hand h1;
-  
+
   Command command;
-  
+
   do {
     command  = GetGameOption();
     switch( command ) {
@@ -71,14 +71,14 @@ Command GetGameOption( void ) {
   Command command;
   char*   prompt = "Would you like to play One Handed Solitaire? [ynQ?] " ;
   char    inputStr[80]={0};
-  
+
   printf( "%s" , prompt );
-  fgets( (char*)inputStr , 80 , stdin ); // Get a string, but...  
+  fgets( (char*)inputStr , 80 , stdin ); // Get a string, but...
   ch = inputStr[0];                 // Throw away everything but 1st character
   if( isspace( ch ) ) ch = 'q';     // <return>-only string. Set to default.
   ch = tolower( ch );
   switch( ch ) {
-    case 'y': 
+    case 'y':
       command = ePlay;
       break;
     case 'n':
@@ -101,14 +101,14 @@ Command GetPlayOption( void )  {
   Command command;
   char*   prompt = "same Suit, same Face, Neither ? [sfNpq?] " ;
   char    inputStr[80]={0};
-  
+
   printf( "%s" , prompt );
-  fgets( (char*)inputStr , 80 , stdin ); // Get a string, but...  
+  fgets( (char*)inputStr , 80 , stdin ); // Get a string, but...
   ch = inputStr[0];                 // Throw away everything but 1st character
   if( isspace( ch ) ) ch = 'N';     // <return>-only string. Set to default.
   ch = tolower( ch );
   switch( ch ) {
-    case 's': 
+    case 's':
       command = eSameSuit; break;
     case 'f':
       command = eSameFace; break;
@@ -128,26 +128,26 @@ Command GetPlayOption( void )  {
 
 
 void DoPlay( Deck* pDeck , Hand* pHand ) {
-  
+
   bool bDone = false;
-  
+
   ListNode* p1stNode;
   ListNode* p4thNode;
-  
+
   ShuffleDeck( pDeck );
-  
+
   InitializeHand( pHand );
-  
+
   for( int i = 0 ; i < kCardsInHand ; i++ )  {
     AddCardToHand( pHand , DealCardFromDeck( pDeck ) );
   }
-    
+
     // The goal is to remove all cards from deck.
-    // The game is over when all cards or removed or no additional 
+    // The game is over when all cards or removed or no additional
     // cards can be removed.
-  
+
     // Game logic is contained within each switch statement.
-  
+
   Command command;
   do {
     PrintTop4Cards( pHand );
@@ -159,7 +159,7 @@ void DoPlay( Deck* pDeck , Hand* pHand ) {
         if( p1stNode->data->suit == p4thNode->data->suit ) {
           RemovedCardsFromHand( pHand , pHand->currentTopCard+1 , 2 );
             // backup to show previous cards.
-          pHand->currentTopCard -= 2; 
+          pHand->currentTopCard -= 2;
           if( pHand->currentTopCard < 0 ) pHand->currentTopCard = 0;
         } else {
           printf( "\nOops! You can't do that, suits not equal!\n");
@@ -171,7 +171,7 @@ void DoPlay( Deck* pDeck , Hand* pHand ) {
         if( p1stNode->data->face == p4thNode->data->face )  {
           RemovedCardsFromHand( pHand , pHand->currentTopCard , 4 );
             // backup to show previous cards.
-          pHand->currentTopCard -= 4; 
+          pHand->currentTopCard -= 4;
           if( pHand->currentTopCard < 0 ) pHand->currentTopCard = 0;
         } else {
           printf( "\nOops! You can't do that, faces not equal!\n");
@@ -194,10 +194,10 @@ void DoPlay( Deck* pDeck , Hand* pHand ) {
       default:
         break;
     }
-    
+
     int cardsInHand = pHand->cardsRemaining;
     int leftToShow  = cardsInHand - pHand->currentTopCard;
-    
+
     if( cardsInHand == 0 )  {
       bDone = true;
     } else if( cardsInHand < 4 ) {
@@ -219,9 +219,9 @@ void DoPlay( Deck* pDeck , Hand* pHand ) {
         }
       }
     }
-      
+
   } while( !bDone );
-  
+
     // winner logic goes here.
 
   if( pHand->cardsRemaining == 0 )
@@ -230,16 +230,16 @@ void DoPlay( Deck* pDeck , Hand* pHand ) {
     printf( "\n    So close but you lost.\n\n" );
   else
     printf( "\n    Sorry, you lost.\n\n" );
-  
+
 }
 
 
 void PrintDeck( Deck* pDeck )  {
-  printf( "%d cards in the deck\n" , 
+  printf( "%d cards in the deck\n" ,
     kCardsInDeck );
-  printf( "Deck %s shuffled\n", 
+  printf( "Deck %s shuffled\n",
     pDeck->bIsShuffled ? "is" : "is not" );
-  
+
   if( pDeck->bIsShuffled == true )  {        // Deck is shuffled.
     if( pDeck->numDealt > 0 )  {
       printf( "The remaining shuffled deck:\n" );
@@ -262,15 +262,15 @@ void PrintDeck( Deck* pDeck )  {
       int index  = i + (0*kCardsInSuit);
       printf( "(%2d)" , index+1 );
       PrintCard( &(pDeck->ordered[ index ] ) );
-      
+
       index = i + (1*kCardsInSuit);
       printf( "   (%2d)" , index+1 );
       PrintCard( &(pDeck->ordered[ index ] ) );
-      
+
       index = i + (2*kCardsInSuit);
       printf( "   (%2d)" , index+1 );
       PrintCard( &(pDeck->ordered[ i + (2*kCardsInSuit) ] ) );
-      
+
       index = i + (3*kCardsInSuit);
       printf( "   (%2d)" , index+1 );
       PrintCard( &(pDeck->ordered[ index ] ) );
@@ -282,4 +282,3 @@ void PrintDeck( Deck* pDeck )  {
 
 
   /* eof */
-  

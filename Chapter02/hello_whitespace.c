@@ -3,8 +3,8 @@
 //  Chapter 2
 //  Learn C Programming, 2nd Ed.
 //
-//  Whitespace gone wild! 
-//  Just because you can do a thing does 
+//  Whitespace gone wild!
+//  Just because you can do a thing does
 //  mean that you must to that thing.
 //
 //  Don't do this, either.
@@ -13,22 +13,22 @@
 #             include                             <stdio.h>
 
 
-     int 
+     int
 main
 (
                  )
 {
 
-  printf 
+  printf
 
-  ( 
+  (
 
-                         "Hello, world!\n" 
-  
+                         "Hello, world!\n"
+
         )
 ;
 
-   return 
+   return
            0
              ;
 

@@ -2,7 +2,7 @@
 // Chapter 24
 // Learn C Programming, 2nd Edition
 //
-// Header file for dealer.c and common to 
+// Header file for dealer.c and common to
 // other source files: card.c, hand.c, and deck.c
 //
 // To compile:
@@ -21,4 +21,3 @@
 
 
   /* eof */
-  

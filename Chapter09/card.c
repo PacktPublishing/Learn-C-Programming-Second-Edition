@@ -14,27 +14,27 @@
 
 
 enum Suit  {
-  eClub  = 1, 
-  eDiamond, 
+  eClub  = 1,
+  eDiamond,
   eHeart,
-  eSpade 
+  eSpade
 };
 
 
-enum Face  { 
-  eOne = 1, 
-  eTwo, 
-  eThree, 
-  eFour, 
-  eFive, 
-  eSix, 
-  eSeven, 
-  eEight, 
-  eNine, 
-  eTen, 
-  eJack, 
-  eQueen, 
-  eKing, 
+enum Face  {
+  eOne = 1,
+  eTwo,
+  eThree,
+  eFour,
+  eFive,
+  eSix,
+  eSeven,
+  eEight,
+  eNine,
+  eTen,
+  eJack,
+  eQueen,
+  eKing,
   eAce
 };
 
@@ -58,8 +58,8 @@ int main( void )  {
 
   printf( "struct Card is %lu bytes\n" , sizeof( struct Card ) );
   printf( "       card is %lu bytes\n" , sizeof( card ) );
-  
-  return 0;  
+
+  return 0;
 }
 
 //  eof

@@ -24,19 +24,19 @@ int main( void )  {
   for( int i = 1 ; i < 8 ; i++ )
    printf( "%d => %sprime\n", i , isPrime( i ) ? "" : "not " );
   printf("\n");
-  
-  printf( "Sum of prime numbers 1..100     = %d\n" , sumPrimes( 100 ) );  
-  printf( "Sum of non-prime numbers 1..100 = %d\n" , sumNonPrimes( 100 ) );  
-  return 0; 
+
+  printf( "Sum of prime numbers 1..100     = %d\n" , sumPrimes( 100 ) );
+  printf( "Sum of non-prime numbers 1..100 = %d\n" , sumNonPrimes( 100 ) );
+  return 0;
 }
 
 
 bool isPrime( int num )  {
   if( num <  2 )  return false;  // given num could be 0 or 1 (not just 1)
   if( num == 2 )  return true;
- 
+
   bool isPrime = true;   // Make initial assumption that num is prime.
-  
+
   for( int i = 2 ; i < num ; i++ )  {
     if( (num % i) == 0 ) {  // We found a divisor of num; num is not prime.
       isPrime = false;
@@ -71,4 +71,4 @@ int  sumNonPrimes( int num )  {
 }
 
   //  eof
-  
+

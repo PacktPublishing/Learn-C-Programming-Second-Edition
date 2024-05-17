@@ -1,4 +1,4 @@
-// 
+//
 // printingEscapeSequences.c
 // Chapter 2
 // Learn C Programming, 2nd Ed.
@@ -18,9 +18,9 @@ int main( void )  {
   printf( "The\tquick\tbrown\n" );
   printf( "fox\tjumps\tover\n" );
   printf( "the\tlazy\tdog.\n\n" );
-  
+
   printf( "A line of text that\nspans three lines\nand completes the line\n\n" );
-  
+
   return 0;
 }
 

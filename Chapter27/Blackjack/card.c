@@ -17,12 +17,12 @@ const bool bNotWildCard = false;
 
 
 void InitializeCard( Card* pCard, Suit s , Face f , bool w )  {
-  pCard->suit = s; 
+  pCard->suit = s;
   pCard->suitValue = GetCardSuitValue( pCard );
-  
+
   pCard->face = f;
   pCard->faceValue = GetCardFaceValue( pCard );
-  
+
   pCard->isWild = w;
 }
 
@@ -63,13 +63,13 @@ void CardToString( Card* pCard , char pCardStr[20] )  {
 
 
   // In Blackjack, cards have specific values.
-  // This routines sets them initially for Blackjak.
+  // This routine sets them initially for Blackjack.
   // NOTE: Aces will start out with value=11. We'll later
   //       give the option to change to value = 1.
 inline int GetCardFaceValue( Card* pCard )  {
   int value = 0;
-  switch( pCard->face )  { 
-    case eTwo:    value = 2; break; 
+  switch( pCard->face )  {
+    case eTwo:    value = 2; break;
     case eThree:  value = 3; break;
     case eFour:   value = 4; break;
     case eFive:   value = 5; break;
@@ -90,8 +90,8 @@ inline int GetCardFaceValue( Card* pCard )  {
 }
 
 
-  // For now, realy upon proper definition of enum Suits.
-  // If, at some future time, the suit values need to chage,
+  // For now, rely upon proper definition of enum Suits.
+  // If, at some future time, the suit values need to change,
   // this function can be changed as needed and program will continue
   // to work as expected.
 inline int GetCardSuitValue( Card* pCard ) {
@@ -99,4 +99,3 @@ inline int GetCardSuitValue( Card* pCard ) {
 }
 
   /* eof */
-  

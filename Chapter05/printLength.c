@@ -2,8 +2,8 @@
   // Chapter 5: Exploring Operators and Expressions
   // Learn C Programming, 2nd Edition
   //
-  // Program to print a length in given meters as well as 
-  // in feed (converted from meters). Consideration must be 
+  // Program to print a length in given meters as well as
+  // in feed (converted from meters). Consideration must be
   // given to values effectively 1.0 feet but which will never
   // be exactly 1.0 feet -- they'll be more like 1.0000000987 feet,
   // or 1.0 for any practical purpose.
@@ -25,18 +25,18 @@ int main( void )  {
   printLength( 1.0 );
   printLength( inchesPerFoot / inchesPerMeter );
   printLength( 2.5 );
-  
+
   return 0;
 }
 
 
 void printLength(  double meters )  {
   double feet = meters * inchesPerMeter / inchesPerFoot;
-  printf( "Length = %f meter%c\n" , 
-          meters, 
+  printf( "Length = %f meter%c\n" ,
+          meters,
           meters == 1.0 ? ' ' : 's'  );
-  printf( "Length = %f %s\n\n" , 
-          feet, 
+  printf( "Length = %f %s\n\n" ,
+          feet,
           0.99995 < feet && feet < 1.00005 ? "foot" : "feet" );
 }
 

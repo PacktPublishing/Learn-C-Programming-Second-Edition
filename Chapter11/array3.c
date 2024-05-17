@@ -2,7 +2,7 @@
 // Chapter 11
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate using arrays in functions and 
+// Demonstrate using arrays in functions and
 // as parameters to functions..
 //
 // Compile with:
@@ -22,7 +22,7 @@ int main( void )  {
 
   int size = sizeof( array1 ) / sizeof( int );
   printf( "array1: range, mean, & standard deviation\n" );
-  printf( "    range = [%d..%d]\n" , 
+  printf( "    range = [%d..%d]\n" ,
           findMin( size , array1 ) ,
           findMax( size , array1 ) );
   printf( "     mean = %g\n" ,  findMean( size , array1 ) );
@@ -31,29 +31,29 @@ int main( void )  {
 
   size = sizeof( array2 ) / sizeof( int );
   printf( "array2: range, mean, & standard deviation\n" );
-  printf( "    range = [%d..%d]\n" , 
+  printf( "    range = [%d..%d]\n" ,
           findMin( size , array2 ) ,
           findMax( size , array2 ) );
   printf( "     mean = %g\n" ,  findMean( size , array2 ) );
   printf( "  std dev = %g\n\n", findStdDev( size , array2 ) );
-  
+
   return 0;
-} 
+}
 
 
 int findMin( int size , int a[] )  {
-  int min = a[0];  
+  int min = a[0];
   for( int i = 1 ; i < size ; i++ )
     if( a[i] < min )   min = a[i];
-  return min;  
+  return min;
 }
 
 
 int findMax( int size , int a[] )  {
-  int max = a[0];  
+  int max = a[0];
   for( int i = 1 ; i < size ; i++ )
     if( a[i] > max )  max = a[i];
-  return max;  
+  return max;
 }
 
 
@@ -74,7 +74,7 @@ double findStdDev( int size , int a[] )  {
   double mean     = findMean( size , a );
   double sum      = 0.0;
   double variance = 0.0;
-  
+
   for( int i = 0; i < size ; i++ )  {
     sum += pow( (a[i] - mean) , 2 );
   }
@@ -87,5 +87,4 @@ double findStdDev( int size , int a[] )  {
 }
 
   /* eof */
-  
-  
+

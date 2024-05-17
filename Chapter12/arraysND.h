@@ -7,10 +7,10 @@
 
 
   // Function prototypes.
-  
+
   // col is the x-axis (x-dimension)
   // row is the y-axis (y-dimension)
-  
+
 void initialize2DArray(  int col , int row , int array[row][col] );
 void print2DArray(       int col , int row , int array[row][col] );
 void prettyPrint2DArray( int col , int row , int array[row][col] );

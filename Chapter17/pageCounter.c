@@ -2,7 +2,7 @@
 // Chapter 18
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to use a static variable in 
+// Demonstrate how to use a static variable in
 // a function to print the next page number each time the
 // function is called.
 //
@@ -27,7 +27,7 @@ int main( void )  {
 void printPage( const char* aHeading )  {
 #if 0
   static int pageNo = 1;
-#else 
+#else
   int pageNo = 1;
 #endif
   printf( "---------------------\n"
@@ -35,7 +35,7 @@ void printPage( const char* aHeading )  {
 
   printf( "|                   |\n"
           "|    Page Content   |\n"
-          "|     Goes Here     |\n" 
+          "|     Goes Here     |\n"
           "|                   |\n");
 
   printf( "|            Page %1d |\n"

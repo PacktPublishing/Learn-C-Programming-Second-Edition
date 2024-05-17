@@ -3,7 +3,7 @@
 // Learn C Programming, 2nd Edition
 //
 // Demonstrate how to create source file with its
-// own header file of typedefs, custom types, and 
+// own header file of typedefs, custom types, and
 // function prototypes.
 //
 // Compile with:
@@ -26,19 +26,19 @@ int main( void )  {
   Card c4 = { eClub    , (int)eClub    , eAce   , (int)eAce   , false };
   Card c5 = { eHeart   , (int)eHeart   , eJack  , (int)eJack  , false };
   Card c6 = { eClub    , (int)eClub    , eTwo   , (int)eTwo   , false };
-  
+
   h = addCard( h , c1 );
   h = addCard( h , c2 );
   h = addCard( h , c3 );
   h = addCard( h , c4 );
   h = addCard( h , c5 );
   h = addCard( h , c6 );
-  
+
   printHand( h );
   printf("\n");
   printHand2( h );
-  
-  return 0;  
+
+  return 0;
 }
 
 
@@ -135,4 +135,4 @@ void printCard( Card c )  {
 }
 
   /* eof */
-  
+

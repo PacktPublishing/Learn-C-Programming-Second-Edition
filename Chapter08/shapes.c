@@ -2,7 +2,7 @@
 // Chapter 8
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate defining and using enumerated types with 
+// Demonstrate defining and using enumerated types with
 // the switch statement.
 // Are all 9 shapes handled everywhere?
 // This illustrated why 'default:' is important in 'switch()' statement.
@@ -27,12 +27,12 @@ const char* nameCircle    = "circle";
 const char* nameUnknown   = "unknown_name";
 
 enum shape  {
-  triangle, 
-  square, 
-  rectangle, 
-  trapezoid, 
-  pentagon, 
-  hexagon, 
+  triangle,
+  square,
+  rectangle,
+  trapezoid,
+  pentagon,
+  hexagon,
   octagon,
   decagon,
   circle
@@ -60,7 +60,7 @@ int main( void )  {
 void PrintShapeInfo( enum shape aShape)  {
   int nSides = 0;
   switch( aShape )  {
-    case triangle: 
+    case triangle:
       nSides = 3;
       break;
     case square:
@@ -74,7 +74,7 @@ void PrintShapeInfo( enum shape aShape)  {
       break;
     case  octagon:
       nSides = 8;
-      break; 
+      break;
     // missing something?
     case circle:
       printf( "A circle has an infinite number of sides\n" );
@@ -106,4 +106,3 @@ const char* GetShapeName( enum shape aShape)  {
 }
 
   //  eof
-  

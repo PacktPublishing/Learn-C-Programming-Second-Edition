@@ -26,11 +26,11 @@ void InitializeHand( Hand* pHand )  {
 void AddCardToHand( Hand* pHand , Card* pCard )  {
   if( pHand->cardsRemaining == kCardsInHand )  {
     printf( "ERROR: hand is full\n" );
-    return; 
+    return;
   }
-  
+
   ListNode* pNode = CreateNode( pCard );
-  AddNode( pHand->pHandList , pNode , eBack ); 
+  AddNode( pHand->pHandList , pNode , eBack );
   pHand->cardsRemaining++;
 }
 
@@ -46,14 +46,14 @@ void PrintHand( Hand* pHand , char* pHandStr , char* pLeadStr )  {
 }
 
 
-  // beginCard & endCard are indicds (0-based)
+  // beginCard & endCard are indices (0-based)
   // Do bounds-checking for beginCard & endCard.
 void PrintTop4Cards( Hand* pHand ) {
-  
+
   int beginCard = pHand->currentTopCard;
   int endCard   = beginCard+4;
   if( endCard > pHand->cardsRemaining ) endCard = pHand->cardsRemaining;
-  
+
   printf( "\n" );
   for( int i = beginCard ; i < endCard; i++ )  {
     printf( "\t" );
@@ -83,4 +83,3 @@ void RemovedCardsFromHand( Hand* pHand , int beginCard , int numCards )  {
 
 
   /* eof */
-  

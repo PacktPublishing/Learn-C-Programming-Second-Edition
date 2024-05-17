@@ -9,7 +9,7 @@ This is the code repository for [Learn C Programming - Second Edition](https://w
 **A beginner's guide to learning the most powerful and general-purpose programming language with ease**
 
 ## What is this book about?
-The foundation for many modern programming languages such as C++, C#, JavaScript, and Go, C is widely used as a system programming language as well as for embedded systems and high-performance computing. With this book, you'll be able to get up to speed with C in no time. 
+The foundation for many modern programming languages such as C++, C#, JavaScript, and Go, C is widely used as a system programming language as well as for embedded systems and high-performance computing. With this book, you'll be able to get up to speed with C in no time.
 
 This book covers the following exciting features:
 * Implement fundamental programming concepts through C programs
@@ -22,7 +22,7 @@ This book covers the following exciting features:
 
 If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1801078459) today!
 
-<a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
+<a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png"
 alt="https://www.packtpub.com/" border="5" /></a>
 
 ## Errata
@@ -35,7 +35,7 @@ alt="https://www.packtpub.com/" border="5" /></a>
 
 * **Page 62:** The term
   > significand x [baseexponent]()
-  
+
   leaves out proper superscripting. It should appear as
   > significand x [base<sup>exponent</sup>]()
 
@@ -55,16 +55,16 @@ alt="https://www.packtpub.com/" border="5" /></a>
 
 * **Page 105:** The format strings of the `printf()` do not match the output shown. The `printf()` format strings should include the expected numerical conversion for the given values. The format strings should have appropriate `"(int)"` or `"(double)"` as follows:
 
-          result = numerator / denominator; 
+          result = numerator / denominator;
           printf( "Truncation:       (int) %d   /    (int) %d    = %.1g\n\n" ,
                   numerator , denominator , result );
-  
+
           result = (double) numerator / denominator;
-          printf( "No truncation: (double) %.1f /    (int) %d    = %.1f\n" , 
+          printf( "No truncation: (double) %.1f /    (int) %d    = %.1f\n" ,
                   (double)numerator , denominator , result );
 
           result = numerator / (double)denominator;
-          printf( "                  (int) %d   / (double) %.1f  = %.1f\n" , 
+          printf( "                  (int) %d   / (double) %.1f  = %.1f\n" ,
                   numerator , (double)denominator , result );
 
 * **Page 107:** In code listing for `convertDigitToInt.c`, the line `#include <stdio.h>` is missing before `int main( void )`. It should be the first line of the code listing.
@@ -78,7 +78,7 @@ alt="https://www.packtpub.com/" border="5" /></a>
 * **Page 111:** In the function `main()`, the call shown is `PrintLogicalXOR(...)` whereas it should be initial lowercase, `printLogicalXOR(...)`
 
 * **Page 113:** At the bottom of the page, the declaration of constant values are missing the assignment operator (=). They should be declared as:
-  
+
         const unsigned char lowercase = 1;
         const unsigned char bold      = 2;
         const unsigned char italic    = 4;
@@ -95,7 +95,7 @@ The correct Operator precedence table may be found on Page 660.
              (i < maxlen) && (j > 0);
              i++ , j-- )
         { ... }
-  
+
   The 2nd `int` should be removed and the snippet should be
 
         for( int i = 0 , j = maxlen ;
@@ -116,14 +116,14 @@ The correct Operator precedence table may be found on Page 660.
 
 * **Page 198:** The following function is given:
 
-        int sumCards( struct Card c1 , struct Card c2 )  {   
+        int sumCards( struct Card c1 , struct Card c2 )  {
           int faceValue = c1.faceFalue + c2.faceValue;
           return faceValue;
         }
 
-  but the intent of the function would be much clearer if the local variable `faceValue` was renamed to `cardSum`: 
+  but the intent of the function would be much clearer if the local variable `faceValue` was renamed to `cardSum`:
 
-        int sumCards( struct Card c1 , struct Card c2 )  {   
+        int sumCards( struct Card c1 , struct Card c2 )  {
           int cardSum = c1.faceFalue + c2.faceValue;
           return cardSum;
         }
@@ -135,30 +135,30 @@ The correct Operator precedence table may be found on Page 660.
           if( dealt == 0 ) return;
 
 * **Page 206:** In the `main()` function code listing, `(int)eJeart` occurs. This should be `(int)eHeart`.
-  
+
 * **Page 229:** In the 3rd paragraph, the sentence should be:
   > The C compiler does not see any difference between a variable and constant variable [after]() they have been declared.
 
 * **Page 230:** The next to last paragraph should read
-  > All the values of each array are initialized to 0 when the value given within `{` and `}` is 0, 
-as in `int a[5] = {0};` otherwise the values are assigned in the sequence given within `{` and `}`, 
+  > All the values of each array are initialized to 0 when the value given within `{` and `}` is 0,
+as in `int a[5] = {0};` otherwise the values are assigned in the sequence given within `{` and `}`,
 as in `int b[5] = { 5 , 4 , 3 , 2 , 1 }`. Only values given will initialize the corresponding elements; so,
   >  `int c[5] = { 5 , 4 };` initializes onlly the first two elements while the remaining elements are unintialized.
 
 * **Page 252:** The initialization shown for `array3D` is for a 3 x 2 x 5 array.<br>
 The initialization for a 3 x 4 x 5 array should appear as
 
-        int array3D[size3d][size2D][size1D] = 
+        int array3D[size3d][size2D][size1D] =
           { { { 111 , 112 , 113 , 114 , 115 },
-              { 121 , 122 , 123 , 124 , 125 }, 
+              { 121 , 122 , 123 , 124 , 125 },
               { 131 , 132 , 133 , 134 , 135 },
               { 141 , 142 , 143 , 144 , 145 } },
             { { 211 , 212 , 213 , 214 , 215 },
-              { 221 , 222 , 223 , 224 , 225 }, 
+              { 221 , 222 , 223 , 224 , 225 },
               { 231 , 232 , 233 , 234 , 235 },
               { 241 , 242 , 243 , 244 , 245 } },
             { { 311 , 312 , 313 , 314 , 315 },
-              { 321 , 322 , 323 , 324 , 325 }, 
+              { 321 , 322 , 323 , 324 , 325 },
               { 331 , 332 , 333 , 334 , 335 },
               { 341 , 342 , 343 , 344 , 345 } } };
 
@@ -167,7 +167,7 @@ The initialization for a 3 x 4 x 5 array should appear as
         aPtr = &height;
 
 * **Page 286:** Inconsistent indentation of code. Throughout the text, 2 spaces have been used for each level of indentation. Note that the added whitespace, while inconsistent, does not alter program behavior. Consistent whitespace formatting is a desireable programming trait.
-  
+
 * **Page 290:** In the code snippet
 
         printf( "  address of pDimension = %#lx\n" , (unsigned long) &pDimension );
@@ -187,9 +187,9 @@ The initialization for a 3 x 4 x 5 array should appear as
   This should be
   > Finally, we declare an unsigned single-byte variable, `aByte`, which can hold a value between 0 and [256]().
 
-* **Page 447:** In the first code snippet, the text 
+* **Page 447:** In the first code snippet, the text
   > `The second is as follows:`
-  
+
   is shown as source code but it is not. It should be shown as descriptive text:
   > The second is as follows:
 
@@ -205,7 +205,7 @@ The initialization for a 3 x 4 x 5 array should appear as
 
 * **Page 504:** In the 3rd paragraph, it reads
   > The following program reads a group of digits, each of which is intended to represent a date—[the first four digits for the year, the next two for the month, and the last two for the day]():
-  
+
   This should read
   > The following program reads a group of digits, each of which is intended to represent a date—[the first two digits for the month, the next two for the day and the last four digits for the year]():
 
@@ -222,12 +222,12 @@ The initialization for a 3 x 4 x 5 array should appear as
         int trimStr( char* pStr )  {
           size_t first , last , lenIn , lenOut ;
           first = last = lenIn = lenOut = 0;
-  
+
             lenIn = strlen( pStr );   //
             char tmpStr[ lenIn+1 ];   // Create working copy.
-            strcpy( tmpStr , pStr );  // 
+            strcpy( tmpStr , pStr );  //
             char* pTmp = tmpStr;      // pTmp may change in Left Trim segment.
-  
+
               // Left Trim
               // Find 1st non-whitespace char; pStr will point to that.
             while( isspace( pTmp[ first ] ) )

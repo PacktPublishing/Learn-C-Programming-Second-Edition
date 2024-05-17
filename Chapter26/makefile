@@ -7,7 +7,7 @@
 # A general makefile
 # 1. All source & header files are in the same directory.
 # 2. Change ghe macro PROG to the name of the executable.
-# 3. 
+# 3.
 
 
 # Compiler & Linker flags
@@ -17,7 +17,7 @@ CCFLAGS = -Wall -Werror -std=c17
 LDLIBS  =
 
 
-# Project files (only need to change PROG to match your prorgram name)
+# Project files (only need to change PROG to match your program name)
 
 SRCS = $(wildcard *.c)
 HDRS = $(wildcard *.h)

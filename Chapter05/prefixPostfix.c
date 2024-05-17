@@ -16,17 +16,17 @@ int main( void )  {
   int aValue = 5;
 
     // Demonstrate prefix incrementation.
-    
+
   printf( "Initial: %d\n"   , aValue );
   printf( " Prefix: %d\n"   , ++aValue );  // Prefix incrementation.
   printf( "  Final: %d\n\n" , aValue );
 
     // Reset aValue.
-    
+
   aValue = 5;
 
    // Demonstrate postfix incrementation.
-   
+
   printf( "Initial: %d\n"   , aValue );
   printf( "Postfix: %d\n"   , aValue++ );   // Postfix incrementation.
   printf( "  Final: %d\n\n" , aValue );
@@ -40,9 +40,9 @@ int main( void )  {
   aValue = 5;
   aValue++;
   printf( "aValue++ (alone) == %d\n" , aValue );
-  
+
   return 0;
 }
 
   //  eof
-  
+

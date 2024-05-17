@@ -1,4 +1,4 @@
-// OneHandedSolitair.h
+// OneHandedSolitaire.h
 // Chapter 27 - Complete Solitaire Game
 // Learn C Programming, 2nd Edition
 //
@@ -39,4 +39,3 @@ void     PrintDeck( Deck* pDeck );
 #endif
 
   /* eof */
-  

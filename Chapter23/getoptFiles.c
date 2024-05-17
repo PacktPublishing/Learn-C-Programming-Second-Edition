@@ -2,7 +2,7 @@
 // Chapter 23
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to use getopt() to 
+// Demonstrate how to use getopt() to
 // 1) open an input file or use stdin
 // 2) open an output file or use stdout
 //
@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
   int   ch;
   FILE* inputFile  = NULL;
   FILE* outputFile = NULL;
-  
+
   while( ( ch = getopt( argc , argv , "i:o:h?" ) ) != -1 )  {
     switch (ch)  {
       case 'i':
@@ -57,19 +57,19 @@ int main(int argc, char *argv[]) {
         break;
     }
   }
-  
+
   if( !inputFile )  {
     inputFile = stdin;
     fprintf( stderr , "Using stdin for input.\n" );
   }
-  
+
   if( !outputFile )  {
     outputFile = stdout;
     fprintf( stderr , "Using stdout for output.\n" );
   }
-  
+
   fprintf( stderr , "Do work here.\n" );
-  
+
   fprintf( stderr , "Closing files.\n" );
   fclose( inputFile );
   fflush( outputFile );

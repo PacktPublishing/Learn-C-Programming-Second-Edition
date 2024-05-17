@@ -2,7 +2,7 @@
 // Chapter 19
 // <book title>
 //
-// Demonstrate how to 
+// Demonstrate how to
 // 1) print signed values using minimum field, precision, and alignment
 // 2) print 64-bit values (long long int)
 // 3) explore powers of 2 and powers of 9
@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-int main( void ) 
+int main( void )
 {
   int      smallInt       = 12;
   int      largeInt       = 0x7fffffff; // int32 max
@@ -23,7 +23,7 @@ int main( void )
 
   printf( " Signed Printf \n"
           "  Name    right     left         zero      right     left\n"
-          "        aligned     aligned    filled    minimum     minimum    whatever\n" 
+          "        aligned     aligned    filled    minimum     minimum    whatever\n"
           "  Specifier    %%10d           %%-10d        %%-.10d          %%10.3d        %%-10.3d     %%d\n" );
   printf( "        [%10d]    [%-10d]  [%-.10d]   [%10.3d]   [%-10.3d]    [%d]\n" ,
                    smallInt , smallInt , smallInt , smallInt , smallInt , smallInt );
@@ -36,11 +36,11 @@ int main( void )
 
   printf( "  Specifier            %%20lld                %%-20lld               %%-.20lld\n" );
   printf( "        [%20lld] [%-20lld] [%-.20lld]\n" ,
-                     reallyLargeInt , reallyLargeInt , reallyLargeInt ); 
+                     reallyLargeInt , reallyLargeInt , reallyLargeInt );
   printf( "                     %%20.3lld              %%-20.3lld                  %%lld\n" );
   printf( "        [%20.3lld] [%-20.3lld] [%lld]\n\n" ,
                      reallyLargeInt , reallyLargeInt , reallyLargeInt );
-  
+
 
   printf( "Powers of 2: 2^0, 2^2, 2^4, 2^6, 2^8 , 2^10\n" );
   int k = 1;

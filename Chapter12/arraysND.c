@@ -2,7 +2,7 @@
 // Chapter 12
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to declare, initialize, and 
+// Demonstrate how to declare, initialize, and
 // manipulate 2D and 3D arrays.
 // ND means N-dimensional. Here, N=2 and N=3.
 //
@@ -50,9 +50,9 @@ int main( void )  {
 
   int array2D[size2D][size1D]         = {0}; // define & initialize constant array
   int array3D[size3D][size2D][size1D] = {0}; // define & initialize constant array
-  
+
   int total = 0;
-  
+
     // 2D array
 
   initialize2DArray(  size1D , size2D , array2D );
@@ -62,7 +62,7 @@ int main( void )  {
 
   total = sum2DArray( size1D , size2D , array2D );
   printf( "Total for array2D is %d\n\n" , total );
-  
+
     // 3D array
 
   initialize3DArray(  size1D , size2D , size3D , array3D );
@@ -72,7 +72,7 @@ int main( void )  {
 
   total = sum3DArray( size1D , size2D , size3D , array3D );
   printf( "Total for array3D is %d\n\n" , total );
-  
+
   return 0;
 }
 
@@ -115,11 +115,11 @@ void prettyPrint2DArray( int col , int row , int array[row][col] )  {
   printf("   ");
   for( int i = 0; i < col ; i++) printf(" [%1d]", i);
   printf("\n");
-  
+
   for( int j = 0 ; j < row ; j++ )  {  // j : 0..(row-1)
       // Print row offset as lead-in.
     printf("[%1d]", j);
-    
+
     for( int i = 0 ; i < col ; i++ )  { // i : 0..(col-1)
       printf("%4d" , array[j][i]);
     }
@@ -156,7 +156,7 @@ void prettyPrint3DArray( int x , int y , int z , int array[z][y][x] )  {
     printf("\n");
 
     for( int j = 0 ; j < y ; j++ )  {  // j : 0..(y-1)
-        // Print y offset as lead-in. 
+        // Print y offset as lead-in.
       printf("    [%1d]", j);
       for( int i = 0; i < x ; i++ )  {  // i : 0..(x-1)
         printf("%4d" , array[k][j][i]);
@@ -194,4 +194,3 @@ int sum3DArray( int x , int y , int z , int array[z][y][x] )
 
 
  /* eof */
-  

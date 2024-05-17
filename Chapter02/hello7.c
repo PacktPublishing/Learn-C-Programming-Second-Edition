@@ -22,7 +22,7 @@ void printANewLine( void );
 int main( void )  {
   printGreeting( "Hi" , "Bub" );
 
-  return 0; 
+  return 0;
 }
 
 void printGreeting( char* aGreeting , char* aName )  {

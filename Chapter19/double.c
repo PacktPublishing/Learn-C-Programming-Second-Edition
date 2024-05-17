@@ -16,7 +16,7 @@
 
 int main( void )  {
   double aDouble = 987654321.987654321;
-  
+
   printf( "Use of the %%f, %%e, and %%E format specifiers:\n"
           " Specifier Formatted Value\n" );
   printf( " %%f        [%f]    whatever\n"  ,                                 aDouble );
@@ -36,10 +36,10 @@ int main( void )  {
   printf( " %%+015.3e  [%+015.3e]     exponent with 3 decimals, 15 wide, show sign, 0-fill\n" , aDouble );
   printf( " %%.0e      [%.0e]               exponent with no decimals\n"  ,   aDouble );
   printf( " %%15.0e    [%15.0e]     exponent 15 wide, no decimals\n\n"  ,     aDouble );
-  
+
   printf( " %%a        [%a] hexidecimal version of double, exponent=2^p\n" ,   aDouble );
   printf( " %%A        [%A] HEXIDECIMAL version of double, exponent=2^P\n\n" , aDouble );
-  
+
   printf( "Use of the %%g, and %%G format specifiers:\n" );
   printf( " Specifier             %%18.12g               %%18.3g" );
   printf( "                %%18.3G                  %%18g\n" );

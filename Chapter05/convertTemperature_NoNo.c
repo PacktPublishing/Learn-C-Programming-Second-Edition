@@ -1,7 +1,7 @@
   // convertTempertature_NoNo.c
   // Chapter 5: Exploring Operators and Expressions
   // Learn C Programming, 2nd Edition
-  // 
+  //
   // Demonstrate what happens with the C compiler
   // when we declare multiple functions of the same
   // name but with different parameter and return
@@ -29,7 +29,7 @@ int main( void )  {
   return 0;
 }
 
-double celsiusToFahrenheit( double degreesC )  { 
+double celsiusToFahrenheit( double degreesC )  {
   double degreesF = (degreesC * 9.0 / 5.0 ) + 32;
   return degreesF;
 }
@@ -40,7 +40,7 @@ double fahrenheitToCelcius( double degreesF )  {
 }
 
 
-int celsiusToFahrenheit( int degreesC )  { 
+int celsiusToFahrenheit( int degreesC )  {
   int degreesF = (degreesC * 9 / 5 ) + 32;
   return degreesF;
 }
@@ -60,7 +60,7 @@ double fahrenheitToCelcius( int degreesF )  {
 }
 
 
-int celsiusToFahrenheit( double degreesC )  { 
+int celsiusToFahrenheit( double degreesC )  {
   int degreesF = (degreesC * 9 / 5 ) + 32;
   return degreesF;
 }

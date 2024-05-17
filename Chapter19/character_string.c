@@ -2,7 +2,7 @@
 // Chapter 19
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to 
+// Demonstrate how to
 // 1) print a string using minimum field width, precision and alignment.
 // 2) print sub-strings with pointer arithmetic.
 // 3) print a character using minimum field width and alignment
@@ -17,8 +17,8 @@
 int main( void )  {
   char  aChar = 'C' ;
   char* pStr  = "Learn to program with C" ;
-  
-  printf( "String output\n" 
+
+  printf( "String output\n"
           " Specifier Formatted Value\n" );
   printf( " %%s       [%s]         everything\n" ,                       pStr );
   printf( " %%30s     [%30s]  everything right-aligned, field=30\n" ,    pStr );
@@ -30,7 +30,7 @@ int main( void )  {
   printf( "Sub-string output\n" );
   printf( " %%.7s     [%.7s]       3rd word (using array offset)\n" ,              &pStr[9] );
   printf( " %%.12s    [%.12s]  3rd and 4th words (using pointer arithmetic)\n\n" ,  pStr + 9 );
-  
+
   printf( "Character output\n" );
   printf( " %%c       [%c]             character\n" ,                    aChar );
   printf( " %%10c     [%10c]    character right-aligned, field=10\n" ,   aChar );

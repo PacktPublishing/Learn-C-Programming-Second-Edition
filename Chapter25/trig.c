@@ -18,12 +18,12 @@
 //
 // Compile with:
 //
-//    cc circle.c trig.c -o cirle -Wall -Werror -std=c18
+//    cc circle.c trig.c -o circle -Wall -Werror -std=c18
 //
 
-  // === trig.h 
+  // === trig.h
   //
-  // #incude "trig.h" 
+  // #incude "trig.h"
   //    becomes the following source code in this file
   //    before the file is compiled.
   //
@@ -33,7 +33,7 @@ double circle_volume( double radius );
 
 extern const long double global_Pi;
   // ===
-  
+
 
 static double square( double d );
 static double cube(   double d );

@@ -4,7 +4,7 @@
    C-style comment.   */
 
 /*
- * (3) A very common way to 
+ * (3) A very common way to
  * format a multi-line
  * C-Style comment.
  */
@@ -20,11 +20,11 @@
 printf( "Hello, world!\n" );  // (8) Say hello; yay!
 
 //
-// (9) A more common way 
+// (9) A more common way
 // of commenting with multi-line
 // C++ style comments.
 //
 
 // (10) Anything can appear after //, even /* ... */ and
-// more // after the first // but they will be 
+// more // after the first // but they will be
 // ignored because they are all in the comment.

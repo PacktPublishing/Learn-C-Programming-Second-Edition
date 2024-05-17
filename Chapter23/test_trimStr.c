@@ -4,12 +4,12 @@
 //
 // This program tests the trimStr() and trimStrInPlace()
 // functions.
-// 
+//
 //   trimStr() returns a pointer to the beginning of the trimmed string,
 //             modifying the original string.
 //
-//   trimStrInPlace() (1) copies the trimmed string back to the original 
-//             string using same pointer and (2) returns length of the 
+//   trimStrInPlace() (1) copies the trimmed string back to the original
+//             string using same pointer and (2) returns length of the
 //             trimmed string.
 //
 // Compile with:
@@ -38,7 +38,7 @@ int main( void )  {
 }
 
   // trimStr - Trims beginning and end of a string.
-  //           Pointer to beginning of input string may be 
+  //           Pointer to beginning of input string may be
   //           modified; therefore, return value is essential.
   //
   // Parameter:
@@ -70,13 +70,13 @@ char* trimStr( char* pStr )  {
 
 
   // trimStrInPlace - Trims beginning and end of a string.
-  //                  Creates a working copy of string, trims that, 
+  //                  Creates a working copy of string, trims that,
   //                  and copies the trimmed string back to original.
   //
-  //                  Because a trimmed string will always be the same 
-  //                  or fewer characters than the original, the only 
-  //                  side effect of this function is the modifiction of
-  //                  the original string in place. 
+  //                  Because a trimmed string will always be the same
+  //                  or fewer characters than the original, the only
+  //                  side effect of this function is the modification of
+  //                  the original string in place.
   //
   // Parameter:
   //   pStr - pointer of string to be trimmed/modified.
@@ -86,12 +86,12 @@ char* trimStr( char* pStr )  {
 int trimStrInPlace( char* pStr )  {
   size_t first , last , lenIn , lenOut ;
   first = last = lenIn = lenOut = 0;
-  
+
   lenIn = strlen( pStr );   //
   char tmpStr[ lenIn+1 ];   // Create working copy.
-  strcpy( tmpStr , pStr );  // 
+  strcpy( tmpStr , pStr );  //
   char* pTmp = tmpStr;      // pTmp may change in Left Trim segment.
-  
+
     // Left Trim
     // Find 1st non-whitespace char; pStr will point to that.
   while( isspace( pTmp[ first ] ) )
@@ -119,7 +119,7 @@ void testTrim( int testNum , char* pStr )  {
   size_t len;
   char testStr[ strlen( pStr ) + 1];
   char* pTest;
-  
+
   strcpy( testStr , pStr );
   fprintf( stderr , "%1d. original: \"%s\" [len:%d]\n"   , testNum, testStr , (int)strlen( pStr ) );
   pTest = trimStr( testStr );

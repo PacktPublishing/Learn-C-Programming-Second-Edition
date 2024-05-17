@@ -2,11 +2,11 @@
 // Chapter 20
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to 
+// Demonstrate how to
 // * retrieve arguments entered on the command line with the C Standard
 //   Library routine getopts().
 //
-// compile with: 
+// compile with:
 //   cc getopt_book.c -o getopt_book -Wall -Werror -std=c17
 //
 // sample inputs;
@@ -14,7 +14,7 @@
 //  ./getopt_book -t "There and Back" -a "Bilbo Baggins" -p -y 1955 -r
 //  ./getopt_book -a "Jeff Szuhay" -t "Learn C Programming" -y 2020 -p
 //  ./getopt_book -x
- 
+
 
 
 #include <stdbool.h>
@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
   Book book = { false , false , 0 , 0, 0 };
 
   PrintArgs( argc , argv );
-  
+
   while( (ch = getopt( argc , argv , options_string ) ) != -1 ) {
     switch (ch) {
       case 'p':
@@ -66,7 +66,7 @@ int main(int argc, char *argv[]) {
       case 'r':
         book.bReprint = true;
         break;
-      case 't': 
+      case 't':
         book.title = optarg;
         break;
       case 'a':

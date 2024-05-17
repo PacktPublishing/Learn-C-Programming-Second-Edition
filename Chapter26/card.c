@@ -18,12 +18,12 @@ const bool bNotWildCard = false;
 
 
 void InitializeCard( Card* pCard, Suit s , Face f , bool w )  {
-  pCard->suit = s; 
+  pCard->suit = s;
   pCard->suitValue = GetCardSuitValue( pCard );
-  
+
   pCard->face = f;
   pCard->faceValue = GetCardFaceValue( pCard );
-  
+
   pCard->isWild = w;
 }
 
@@ -63,7 +63,7 @@ void CardToString( Card* pCard , char pCardStr[20] )  {
 
 
   // For now, rely upon proper definition of enum Faces.
-  // If, at some future time, face values need to chage,
+  // If, at some future time, face values need to change,
   // this function can be changed as needed and program will continue
   // to work as expected.
 inline int GetCardFaceValue( Card* pCard )  {
@@ -71,8 +71,8 @@ inline int GetCardFaceValue( Card* pCard )  {
 }
 
 
-  // For now, realy upon proper definition of enum Suits.
-  // If, at some future time, the suit values need to chage,
+  // For now, rely upon proper definition of enum Suits.
+  // If, at some future time, the suit values need to change,
   // this function can be changed as needed and program will continue
   // to work as expected.
 inline int GetCardSuitValue( Card* pCard ) {
@@ -80,4 +80,3 @@ inline int GetCardSuitValue( Card* pCard ) {
 }
 
   /* eof */
-  

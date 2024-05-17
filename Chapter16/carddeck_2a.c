@@ -26,7 +26,7 @@
                         // cards, etc.
     kCardsInSuit = 13,  // For now, kCardsInDeck / 4. This will change
                         // depending upon the card game.
-    kCardsInHand = 5,   // For now, 5 cards dealt for each hange. This will
+    kCardsInHand = 5,   // For now, 5 cards dealt for each change. This will
                         // change depending upon the card game.
     kNumHands    = 4    // For now, for hands per "table". This will change
                         // depending on the game we want to implement.
@@ -42,10 +42,10 @@ const bool kNotWildCard = false;
 
   // Card Suits
 typedef enum  {
-  eClub  = 1, 
-  eDiamond, 
+  eClub  = 1,
+  eDiamond,
   eHeart,
-  eSpade 
+  eSpade
 } Suit;
 
   // Card Faces
@@ -84,7 +84,7 @@ int  GetCardSuitValue( Card* pCard );
 
 
   // ============================================
-  // Defintions related to a hand
+  // Definitions related to a hand
   // ============================================
 
   // A Hand
@@ -109,7 +109,7 @@ Card*  GetCardInHand(  Hand* pHand , int   cardIndex );
   // ============================================
 
   // A Deck
-  
+
   // For now, the deck will be declared as an array of Cards in main().
   // So, nothing to declare here.
 
@@ -124,14 +124,14 @@ int main( void )  {
   Card* pDeck = deck;
 
   InitializeDeck( &deck[0] );
-  
+
   Hand h1 , h2 , h3 , h4;
-  
+
   InitializeHand( &h1 );
   InitializeHand( &h2 );
   InitializeHand( &h3 );
   InitializeHand( &h4 );
-  
+
   for( int i = 0 ; i < kCardsInHand ; i++ )  {
     AddCardToHand( &h1 , DealCardFromDeck( pDeck , i    ) );
     AddCardToHand( &h2 , DealCardFromDeck( pDeck , i+13 ) );
@@ -146,12 +146,12 @@ int main( void )  {
   // ============================================
 
 void InitializeCard( Card* pCard, Suit s , Face f , bool w )  {
-  pCard->suit = s; 
+  pCard->suit = s;
   pCard->suitValue = GetCardSuitValue( pCard );
-  
+
   pCard->face = f;
   pCard->faceValue = GetCardFaceValue( pCard );
-  
+
   pCard->isWild = w;
 }
 
@@ -191,7 +191,7 @@ void CardToString( Card* pCard , char pCardStr[20] )  {
 
 
   // For now, rely upon proper definition of enum Faces.
-  // If, at some future time, face values need to chage,
+  // If, at some future time, face values need to change,
   // this function can be changed as needed and program will continue
   // to work as expected.
 inline int GetCardFaceValue( Card* pCard )  {
@@ -199,8 +199,8 @@ inline int GetCardFaceValue( Card* pCard )  {
 }
 
 
-  // For now, realy upon proper definition of enum Suits.
-  // If, at some future time, the suit values need to chage,
+  // For now, rely upon proper definition of enum Suits.
+  // If, at some future time, the suit values need to change,
   // this function can be changed as needed and program will continue
   // to work as expected.
 inline int GetCardSuitValue( Card* pCard ) {
@@ -221,7 +221,7 @@ void AddCardToHand( Hand* pHand , Card* pCard )  {
   int numInHand = pHand->cardsDealt;
   if( numInHand == kCardsInHand )  {
     printf( "ERROR: hand is full\n" );
-    return; 
+    return;
   }
 
 
@@ -264,17 +264,17 @@ Card* GetCardInHand(  Hand* pHand , int cardIndex )  {
 void InitializeDeck( Card* pDeck )  {
   Face f[] = { eTwo   , eThree , eFour , eFive , eSix   , eSeven ,
     eEight , eNine  , eTen  , eJack , eQueen , eKing  , eAce };
-  Card* pC;  
+  Card* pC;
   for( int i = 0 ; i < kCardsInSuit ; i++ )  {
     pC = &(pDeck[ i + (0*kCardsInSuit) ]);
     InitializeCard( pC , eSpade , f[i], kNotWildCard );
-    
+
     pC = &(pDeck[ i + (1*kCardsInSuit) ]);
     InitializeCard( pC , eHeart , f[i], kNotWildCard );
-    
+
     pC = &(pDeck[ i + (2*kCardsInSuit) ]);
     InitializeCard( pC , eDiamond , f[i], kNotWildCard );
-    
+
     pC = &(pDeck[ i + (3*kCardsInSuit) ]);
     InitializeCard( pC , eClub , f[i], kNotWildCard );
   }
@@ -283,12 +283,12 @@ void InitializeDeck( Card* pDeck )  {
 
 Card* DealCardFromDeck( Card pDeck[] , int index )  {
   Card* pCard = &pDeck[ index ];
-  return pCard;  
+  return pCard;
 }
 
 
 void PrintDeck( Card* pDeck )  {
-  printf( "%d cards in the deck\n\n" , 
+  printf( "%d cards in the deck\n\n" ,
           kCardsInDeck );
   printf( "The ordered deck: \n" );
   for( int i = 0 ; i < kCardsInSuit ; i++ )
@@ -296,7 +296,7 @@ void PrintDeck( Card* pDeck )  {
     int index  = i + (0*kCardsInSuit);
     printf( "(%2d)" , index+1 );
     PrintCard( &(pDeck[ index ] ) );
-    
+
     index = i + (1*kCardsInSuit);
     printf( "   (%2d)" , index+1 );
     PrintCard( &(pDeck[ index ] ) );
@@ -314,4 +314,4 @@ void PrintDeck( Card* pDeck )  {
 }
 
   /*  eof  */
-  
+

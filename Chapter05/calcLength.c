@@ -3,7 +3,7 @@
   // Learn C Programming, 2nd Edition
   //
   // Program to demonstrate a complex expression
-  // two different ways. 
+  // two different ways.
   // First compute the value with a complex expression.
   // Then compute the value again with a sequence of simple expressions.
 
@@ -13,13 +13,13 @@
 
 int feetToInches( double feet )  {
   int inches = feet * 12;
-  
+
   return inches;
 }
 
 
 int main(int argc, char *argv[])  {
-  int inches   = 8; 
+  int inches   = 8;
   int totalInches  = 0;
 
     // 3 additions in 1 statement with single assignment to totalInches

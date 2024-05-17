@@ -37,4 +37,3 @@ void     PrintDeck( Deck* pDeck );
 #endif
 
   /* eof */
-  

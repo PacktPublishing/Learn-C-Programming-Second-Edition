@@ -2,11 +2,11 @@
 // Chapter 15
 // Learn C Programming, 2nd Edition
 //
-// Demonstrate how to 
+// Demonstrate how to
 // 1) builds upon showChar.c
 // 2) print the ASCII values 32 through 64
 //
-// compile with: 
+// compile with:
 //   cc printASCII_version1.c -o printASCII_version1 -Wall -Werror -std=c17
 
 

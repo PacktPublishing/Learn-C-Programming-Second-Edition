@@ -23,7 +23,7 @@ int main( void )  {
   printWord( "world" );
   printf( "!\n" );
 
-  return 0; 
+  return 0;
 }
 
 //  <eof>

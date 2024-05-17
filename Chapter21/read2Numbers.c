@@ -12,7 +12,7 @@
 
 
 // Test Input
-// * 5 cases are given. 
+// * 5 cases are given.
 // * Each test ends with the final <return>.
 // * Notice how whitespace is important or ignored.
 // * Notice how non-numbers terminate number parsing.
@@ -39,11 +39,11 @@
 int main( void )  {
   int     anInteger   = -1;
   double  aDouble     = -1.0;
-  
+
   printf( "Enter an integer and a decimal number: " );
   scanf( "%d%lf" , &anInteger , &aDouble );
   printf( "1. integer:  %d\n" , anInteger );
-  printf( "2.  double:  %lf\n\n" , aDouble );    
+  printf( "2.  double:  %lf\n\n" , aDouble );
 
   return 0;
 }
